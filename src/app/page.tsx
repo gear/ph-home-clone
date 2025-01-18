@@ -6,19 +6,21 @@ import { Video } from "@/components/Video";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
-
 import { benefitOne, benefitTwo } from "@/components/data";
+import { translations } from "@/components/Dictionary";
+
+
+const text = translations.en;
+
 export default function Home() {
   return (
     <Container>
       <Hero />
       <SectionTitle
-        preTitle="Nextly Benefits"
-        title=" Why should you use this landing page"
+        preTitle={text.highlights}
+        title={text.goal}
       >
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        <span className="text-justify"> {text.department_p1}</span>
       </SectionTitle>
 
       <Benefits data={benefitOne} />
