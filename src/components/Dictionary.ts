@@ -5,14 +5,36 @@ export const translations = {
     blogs: 'Blogs',
     data_dashboard: 'Data Dashboard',
     contact: 'Contact',
-    hero: 'We work on data-driven research in healthcare to understand longevity and common diseases risk from real-time wearable devices data, inflammation markers, and omics profiles.' ,
+    hero: `We work on data-driven research in healthcare 
+           to understand longevity and common diseases risk 
+           from real-time wearable devices data, inflammation 
+           markers, and omics profiles.` ,
     explore: 'Our Research',
     github: 'Visit our GitHub',
     partners: 'Academia and industry collaborators',
     highlights: 'Research highlights',
     goal: 'Toward extending healthy lifespan',
-    department_p1: 'We are the Department of Bioengineering’s Social Collaboration Course, named "Personalized Health and Medical Care Course". We aim to integrate engineering techniques such as digital data analysis, high-resolution omics analysis of biological information, and AI (artificial intelligence) to refine individual health conditions and present them in a clear, accessible way. By doing so, we provide society with effective tools for preventing the onset and progression of diseases.',
-    department_p2: 'Our research involves experts in medical engineering (engineers, physicians, public health nurses, and data scientists) who aim to not only advance medical care but also apply their knowledge to preventive fields in general society—such as corporate health management and well-being. By promoting education and research in this area of medical-engineering collaboration that merges expertise from both fields, we seek to generate a powerful synergistic effect.'
+    department_p1: `We are the Department of Bioengineering’s 
+                    Social Collaboration Course, named "Personalized 
+                    Health and Medical Care Course". We aim to 
+                    integrate engineering techniques such as 
+                    digital data analysis, high-resolution omics 
+                    analysis of biological information, and AI 
+                    (artificial intelligence) to refine individual 
+                    health conditions and present them in a clear, 
+                    accessible way. By doing so, we provide society 
+                    with effective tools for preventing the 
+                    onset and progression of diseases.`,
+    department_p2: `Our research involves experts in medical engineering 
+                    (engineers, physicians, public health nurses, and data 
+                    scientists) who aim to not only advance medical care 
+                    but also apply their knowledge to preventive fields 
+                    in general society—such as corporate health management 
+                    and well-being. By promoting education and research 
+                    in this area of medical-engineering collaboration 
+                    that merges expertise from both fields, we seek to 
+                    generate a powerful synergistic effect.`
+    
   },
   jp: {
     research: '研究',

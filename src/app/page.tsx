@@ -20,7 +20,10 @@ export default function Home() {
         preTitle={text.highlights}
         title={text.goal}
       >
-        <span className="text-justify"> {text.department_p1}</span>
+        <div className="leading-relaxed text-justify flex gap-5 flex-col">
+          <span> {text.department_p1}</span>
+          <span> {text.department_p2}</span>
+        </div>
       </SectionTitle>
 
       <Benefits data={benefitOne} />
