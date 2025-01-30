@@ -21,13 +21,13 @@ export const SectionTitle = (props: Readonly<SectionTitleProps>) => {
       )}
 
       {props.title && (
-        <h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">
+        <h2 className="max-w-2xl mt-3 text-2xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl ">
           {props.title}
         </h2>
       )}
 
       {props.children && (
-        <p className="max-w-2xl text-justify hyphens-auto py-7 text-lg leading-8 text-gray-500 lg:text-xl xl:text-xl ">
+        <p className="max-w-2xl text-justify hyphens-auto py-5 text-lg text-gray-500 lg:text-xl xl:text-xl ">
           {props.children}
         </p>
       )}

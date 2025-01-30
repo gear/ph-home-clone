@@ -1,12 +1,12 @@
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
-import { Benefits } from "@/components/Benefits";
+import { Topics } from "@/components/ResearchTopics";
 import { Video } from "@/components/Video";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
-import { benefitOne, benefitTwo } from "@/components/data";
+import { healthyAgingResearch, sleepResearch, metabolicSyndromes } from "@/components/data";
 import { translations } from "@/components/Dictionary";
 
 
@@ -26,8 +26,8 @@ export default function Home() {
         </div>
       </SectionTitle>
 
-      <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
+      <Topics data={healthyAgingResearch} />
+      <Topics imgPos="right" data={sleepResearch} />
 
       <SectionTitle
         preTitle="Watch a video"

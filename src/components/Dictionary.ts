@@ -33,8 +33,30 @@ export const translations = {
                     and well-being. By promoting education and research 
                     in this area of medical-engineering collaboration 
                     that merges expertise from both fields, we seek to 
-                    generate a powerful synergistic effect.`
-    
+                    generate a powerful synergistic effect.`,
+    healthy_aging_research_title: `Healthy Aging Discovery`,
+    har_desc: `Healthy aging research using wearable 
+           devices, omics, and genetics integrates 
+           real-time physiological monitoring with 
+           molecular and genetic insights to 
+           understand aging processes. Wearables 
+           track vital signs and activity, 
+           while omics (e.g., genomics, proteomics, metabolomics) 
+           and genetic data help identify biomarkers 
+           and risk factors for age-related diseases. 
+           Our multidisciplinary approach enables personalized 
+           interventions and early disease detection, 
+           promoting longevity and well-being.`,
+    har_hai_title: `Healthy Aging Index`,
+    har_hai_desc: `Simple and effective healthy aging calculator`,
+    har_omics_title: `Healthy Aging Biomarkers`,
+    har_omics_desc: `Associations between biomarkers and healthy aging trajectories`,
+    har_dev_title: `Healthy Lifestyle Factors`,
+    har_dev_desc: `Insights to lifestyles, environments, and nuitrition for healthy aging`,
+    har_data_title: `Healthy Lifestyle Datasets`,
+    har_data_desc: `Comprehensive and multi-modals healthy aging datasets`,
+    sleep_research_title: `Sleep Research`,
+    sleep_desc: `Sleep Research`,
   },
   jp: {
     research: '研究',
@@ -48,7 +70,18 @@ export const translations = {
     partners: '学術機関・産業界とのコラボレーター',
     highlights: '研究ハイライト',
     goal: '健康寿命の延伸に向けて',
-    department_p1: '我々はバイオエンジニアリング専攻 社会連携講座 「個別化保健医療講座」としてデジタルデータ解析、生体情報の精緻なオミックス解析、AI (人工知能）、などの工学技術を取り入れた解析と、個人の健康状態を個別に精緻化し、解りやすく理解できるように示すことで、疾患の発症・重症予防に有効な手段を社会に提供しています。',
-    department_p2: '医工学の専門家（エンジニア・医師・保健師・データサイエンティスト家）等が、医療だけではなく、健康経営・ウェルビーイングなどの一般社会の健康・福祉の予防領域においても知識を還元することを目指した研究を行っています。このような医工連携領域の両者の知識を融合させた学問分野の教育・研究を推進することで、効果的なシナジー効果を生み出す予定です。'
+    department_p1: `我々はバイオエンジニアリング専攻 社会連携講座 
+                   「個別化保健医療講座」としてデジタルデータ解析、
+                    生体情報の精緻なオミックス解析、AI (人工知能）、
+                    などの工学技術を取り入れた解析と、個人の健康状態
+                    を個別に精緻化し、解りやすく理解できるように示すことで、
+                    疾患の発症・重症予防に有効な手段を社会に提供しています。`,
+    department_p2: `医工学の専門家（エンジニア・医師・保健師・データサイエ
+                    ンティスト家）等が、医療だけではなく、健康経営・ウェル
+                    ビーイングなどの一般社会の健康・福祉の予防領域において
+                    も知識を還元することを目指した研究を行っています。
+                    このような医工連携領域の両者の知識を融合させた学問分
+                    野の教育・研究を推進することで、効果的なシナジー効
+                    果を生み出す予定です。`
   }
 }

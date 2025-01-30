@@ -1,45 +1,54 @@
 import {
-  FaceSmileIcon,
-  ChartBarSquareIcon,
-  CursorArrowRaysIcon,
+  ChartPieIcon,
+  BeakerIcon,
   DevicePhoneMobileIcon,
   AdjustmentsHorizontalIcon,
   SunIcon,
+  CircleStackIcon
 } from "@heroicons/react/24/solid";
 import { translations } from "./Dictionary";
-import benefitOneImg from "@/public/img/benefit-one.png";
-import benefitTwoImg from "@/public/img/benefit-two.png";
+import healthyAgingImg from "@/public/img/healthy-ageing.svg";
+import sleepImg from "@/public/img/sleep.svg";
 
 
-const text = translations.en
+const text = translations.en;
 
 const healthyAgingResearch = {
-  title: "Healthy Aging Discovery",
-  desc: "What makes people so healthy",
-  image: benefitOneImg,
+  title: text.healthy_aging_research_title,
+  desc: text.har_desc,
+  image: healthyAgingImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
-      icon: <FaceSmileIcon />,
+      title: text.har_hai_title,
+      desc: text.har_hai_desc,
+      icon: <ChartPieIcon />,
+      href: "/research/healthy-aging#hai"
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
-      icon: <ChartBarSquareIcon />,
+      title: text.har_omics_title,
+      desc: text.har_omics_desc,
+      icon: <BeakerIcon />,
+      href: "/research/healthy-aging#omics"
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
-      icon: <CursorArrowRaysIcon />,
+      title: text.har_dev_title,
+      desc: text.har_dev_desc,
+      icon: <SunIcon />,
+      href: "/research/healthy-aging#lifestyles"
+    },
+    {
+      title: text.har_data_title,
+      desc: text.har_data_desc,
+      icon: <CircleStackIcon />,
+      href: "/research/healthy-aging#datasets"
     },
   ],
 };
 
-const sleepResearch  = {
-  title: "",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
-  image: benefitTwoImg,
+const sleepResearch = {
+  title: text.sleep_research_title,
+  desc: text.sleep_desc,
+  image: sleepImg,
   bullets: [
     {
       title: "Mobile Responsive Template",
@@ -59,5 +68,27 @@ const sleepResearch  = {
   ],
 };
 
+const metabolicSyndromes = {
+  title: "",
+  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  image: sleepImg,
+  bullets: [
+    {
+      title: "Mobile Responsive Template",
+      desc: "Nextly is designed as a mobile first responsive template.",
+      icon: <DevicePhoneMobileIcon />,
+    },
+    {
+      title: "Powered by Next.js & TailwindCSS",
+      desc: "This template is powered by latest technologies and tools.",
+      icon: <AdjustmentsHorizontalIcon />,
+    },
+    {
+      title: "Dark & Light Mode",
+      desc: "Nextly comes with a zero-config light & dark mode. ",
+      icon: <SunIcon />,
+    },
+  ],
+};
 
-export {benefitOne, benefitTwo};
+export {healthyAgingResearch, sleepResearch, metabolicSyndromes};
