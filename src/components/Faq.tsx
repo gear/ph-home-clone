@@ -3,6 +3,9 @@ import React from "react";
 import { Container } from "@/components/Container";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
+import { translations } from "./Dictionary";
+
+const text = translations.en;
 
 export const Faq = () => {
   return (
@@ -36,21 +39,19 @@ export const Faq = () => {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: text.faq_q1,
+    answer: text.faq_a1,
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: text.faq_q2,
+    answer: text.faq_a2,
   },
   {
-    question: "What is your refund policy? ",
-    answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+    question: text.faq_q3,
+    answer: text.faq_a3,
   },
   {
-    question: "Do you offer technical support? ",
-    answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+    question: text.faq_q4,
+    answer: text.faq_a4,
   },
 ];

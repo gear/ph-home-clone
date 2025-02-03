@@ -4,7 +4,8 @@ import {
   DevicePhoneMobileIcon,
   AdjustmentsHorizontalIcon,
   SunIcon,
-  CircleStackIcon
+  CircleStackIcon,
+  CalendarDateRangeIcon
 } from "@heroicons/react/24/solid";
 import { translations } from "./Dictionary";
 import healthyAgingImg from "@/public/img/healthy-ageing.svg";
@@ -51,26 +52,29 @@ const sleepResearch = {
   image: sleepImg,
   bullets: [
     {
-      title: "Mobile Responsive Template",
-      desc: "Nextly is designed as a mobile first responsive template.",
-      icon: <DevicePhoneMobileIcon />,
-    },
-    {
-      title: "Powered by Next.js & TailwindCSS",
-      desc: "This template is powered by latest technologies and tools.",
+      title: text.sleep_lifestyle_title,
+      desc: text.sleep_lifestyle_desc,
       icon: <AdjustmentsHorizontalIcon />,
+      href: "/research/sleep#lifestyles"
     },
     {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
-      icon: <SunIcon />,
+      title: text.sleep_datasets_title,
+      desc: text.sleep_datasets_desc,
+      icon: <CalendarDateRangeIcon />,
+      href: "/research/sleep#datasets"
     },
+    {
+      title: text.sleep_app_title,
+      desc: text.sleep_app_desc,
+      icon: <DevicePhoneMobileIcon />,
+      href: "/research/sleep#mirasleep"
+    }
   ],
 };
 
 const metabolicSyndromes = {
-  title: "",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  title: text.metabo_title,
+  desc: text.metabo_desc,
   image: sleepImg,
   bullets: [
     {

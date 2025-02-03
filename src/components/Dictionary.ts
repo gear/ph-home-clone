@@ -46,7 +46,7 @@ export const translations = {
            and risk factors for age-related diseases. 
            Our multidisciplinary approach enables personalized 
            interventions and early disease detection, 
-           promoting longevity and well-being.`,
+           promoting healthy longevity.`,
     har_hai_title: `Healthy Aging Index`,
     har_hai_desc: `Simple and effective healthy aging calculator`,
     har_omics_title: `Healthy Aging Biomarkers`,
@@ -56,7 +56,43 @@ export const translations = {
     har_data_title: `Healthy Lifestyle Datasets`,
     har_data_desc: `Comprehensive and multi-modals healthy aging datasets`,
     sleep_research_title: `Sleep Research`,
-    sleep_desc: `Sleep Research`,
+    sleep_desc: `Our research uses wearable devices to collect real-time data, 
+                 such as heart rate, movement, and sleep stages from wearable
+                 devices (wrist-worn and ring). Leverage these large datasets, 
+                 we develop ML algorithms to uncover patterns between daily 
+                 habits—like exercise routines and sleep patterns. We then implemented 
+                 reinforcement learning and small langauge models to nudge 
+                 individuals into making targeted habit changes, such as 
+                 adjusting physical activity levels or optimizing 
+                 bedtime routines, ultimately improving sleep efficiency 
+                 and overall life quality.`,
+    sleep_app_title: `MiraSleep`,
+    sleep_app_desc: `Evidence-based sleep guidance application with a focus on regularities`,
+    sleep_lifestyle_title: `Better Sleep`,
+    sleep_lifestyle_desc: `Discover the relations between lifestyles and sleep metrics`,
+    sleep_datasets_title: `1,000,000+ Person-days Sleep Datasets`,
+    sleep_datasets_desc: `Objective sleep time measure and subjective questionnaires on sleep quality`,
+    social_implementation: `Social Implementation`,
+    mira_sleep_demo: `Based on our research results, we developed MiraSleep,
+                      an application which tracks and gives activity recommendations 
+                      as challenges to improve personal and organizational sleep.`,
+    faq: `Frequently Answered Questions`,
+    faq_q1: `How do I join the Precision Health Lab as a member?`,
+    faq_a1: `Contact <email> with the email title "[PH-Apply][Position] <email-title>",
+             attach your resume and tell us a bit about yourself as well as your expected
+             timeline.`,
+    faq_q2: `How do we start colaboration with the Precision Health Lab?`,
+    faq_a2: `Contact <email> and start the conversation.`,
+    faq_q3: `How do I request data access?`,
+    faq_a3: `If our manuscript mentioned the contact person 
+             for a specific dataset, please contact that person.
+             Otherwise, please send an email to <email> with the
+             detailed description of your purpose and plan to use
+             the data if access is granted.`,
+    faq_q4: `Where is the Precision Health Lab?`,
+    faq_a4: `We are located at the 8th floor of the 
+             Molecular & Life Innovation Building at 
+             the University of Tokyo`,
   },
   jp: {
     research: '研究',
