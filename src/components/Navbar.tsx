@@ -4,15 +4,19 @@ import Image from "next/image"
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import logo from "@/public/img/precision-health-logo.svg";
 import { mont } from "./fonts";
+import { translations } from "./Dictionary";
+
+
+const text = translations.en;
+
 
 export const Navbar = () => {
   const navigation = [
-    { name: "Research", href: "/research" },
-    { name: "Members", href: "/members" },
-    { name: "Blogs", href: "/blogs" },
-    { name: "Data Dashboard", href: "/dashboard" },
+    { name: text.research, href: "/research" },
+    { name: text.members, href: "/members" },
+    { name: text.blogs, href: "/blogs" },
+    { name: text.data_dashboard, href: "/dashboard" },
   ];
-
   return (
     <div className="w-full">
       <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
@@ -36,7 +40,7 @@ export const Navbar = () => {
         <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
             <div className="hidden mr-3 lg:flex nav__item">
               <Link href="/" className="px-6 py-2 text-white bg-blue-500 rounded-md md:ml-5">
-                Contact
+                {text.contact}
               </Link>
             </div>
         </div>

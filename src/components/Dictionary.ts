@@ -1,5 +1,5 @@
 export const translations = {
-  en: {
+  jp: {
     research: 'Research',
     members: 'Members',
     blogs: 'Blogs',
@@ -94,13 +94,16 @@ export const translations = {
              Molecular & Life Innovation Building at 
              the University of Tokyo`,
   },
-  jp: {
+  en: {
     research: '研究',
     members: 'メンバー',
     blogs: 'ブログ',
     data_dashboard: 'データダッシュボード',
     contact: 'お問い合わせ',
-    hero: '私たちはヘルスケア分野において、ウェアラブルデバイスから得られるリアルタイムデータ、炎症マーカー、オミクスプロファイルに基づくデータドリブンの研究を行い、長寿や一般的な疾患リスクを解明することを目指しています。',
+    hero: `私たちはヘルスケア分野において、ウェアラブルデバイスから得られ
+           るリアルタイムデータ、炎症マーカー、オミクスプロファイルに基づ
+           くデータドリブンの研究を行い、長寿や一般的な疾患リスクを解明す
+           ることを目指しています。`,
     explore: '私たちの研究',
     github: 'GitHub を見る',
     partners: '学術機関・産業界とのコラボレーター',
