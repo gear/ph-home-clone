@@ -50,7 +50,7 @@ export const Topics = (props: Readonly<TopicsProps>) => {
                 </a>
               </h3>
 
-              <p className="max-w-2xl py-4 text-lg leading-relaxed hyphens-auto text-justify text-gray-500 lg:text-xl xl:text-xl">
+              <p className="max-w-2xl text-pretty py-4 text-lg leading-relaxed hyphens-auto text-justify text-gray-500 lg:text-xl xl:text-xl">
                 {data.desc}
               </p>
             </div>

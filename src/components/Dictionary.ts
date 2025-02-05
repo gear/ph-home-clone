@@ -1,5 +1,5 @@
 export const translations = {
-  jp: {
+  en: {
     research: 'Research',
     members: 'Members',
     blogs: 'Blogs',
@@ -93,8 +93,17 @@ export const translations = {
     faq_a4: `We are located at the 8th floor of the 
              Molecular & Life Innovation Building at 
              the University of Tokyo`,
+    sns: `Follow Us`,
+    rp_title_flip_fixed: `Our Research:`,
+    rp_title_flip_1: `Healthy Aging`,
+    rp_title_flip_2: `Sleep Physiology`,
+    rp_title_flip_3: `Metabolic Syndromes`,
+    rp_title_flip_4: `Machine Learning`,
+    rp_vision_pretitle: `Our Vision`,
+    rp_vision_title: `Disease-free Society`,
+    rp_vision_desc: `The Precision Health Group studies mechanisms of healthy aging from multiple modalities including wearable device data, blood proteomics, metabolomics, and medical imaging.`,
   },
-  en: {
+  jp: {
     research: '研究',
     members: 'メンバー',
     blogs: 'ブログ',

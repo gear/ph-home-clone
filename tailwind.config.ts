@@ -15,16 +15,32 @@ const config: Config = {
     extend: {
       colors: {
         trueGray: colors.neutral,
+        foreground: "hsl(var(--foreground))",
       },
     },
     fontFamily: {
       sans: ["Inter", ...defaultTheme.fontFamily.sans],
       stock: [defaultTheme.fontFamily.sans],
     },
+    keyframes: {
+      "flip-words": {
+        "10%": { transform: "translateY(-112%)" },
+        "25%": { transform: "translateY(-100%)" },
+        "35%": { transform: "translateY(-212%)" },
+        "50%": { transform: "translateY(-200%)" },
+        "60%": { transform: "translateY(-312%)" },
+        "75%": { transform: "translateY(-300%)" },
+        "85%": { transform: "translateY(-412%)" },
+        "100%": { transform: "translateY(-400%)" },
+      },
+    },
+    animation: {
+      "flip-words": "flip-words 6s infinite",
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
 export default config;

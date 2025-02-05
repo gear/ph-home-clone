@@ -1,7 +1,9 @@
-import Link from "next/link";
-import Image from "next/image";
 import React from "react";
+import { translations } from "./Dictionary";
 import { Container } from "@/components/Container";
+
+
+const text = translations.en;
 
 export function Footer() {
   return (
@@ -9,10 +11,9 @@ export function Footer() {
       <Container>
         <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100  lg:grid-cols-5">
           <div className="">
-            <div>Follow us</div>
             <div className="flex mt-5 space-x-5 text-gray-400 ">
               <a
-                href="https://twitter.com/web3templates"
+                href="https://twitter.com/utprecisionhealth"
                 target="_blank"
                 rel="noopener"
               >
@@ -20,7 +21,7 @@ export function Footer() {
                 <Twitter />
               </a>
               <a
-                href="https://facebook.com/web3templates"
+                href="https://facebook.com/utprecisionhealth"
                 target="_blank"
                 rel="noopener"
               >
@@ -28,7 +29,7 @@ export function Footer() {
                 <Facebook />
               </a>
               <a
-                href="https://instagram.com/web3templates"
+                href="https://instagram.com/utprecisionhealth"
                 target="_blank"
                 rel="noopener"
               >
