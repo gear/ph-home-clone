@@ -4,8 +4,8 @@ import "./globals.css";
 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { PopupWidget }  from "@/components/PopupWidget";
-
+import { PopupWidget } from "@/components/PopupWidget";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   title: "Precision Health",
   description: "Precision Health Laboratory at The University of Tokyo",
   icons: {
-    icon: '@/public/img/favicon.ico',
-  }
+    icon: "img/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -25,10 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        <LanguageProvider>
           <Navbar />
           <div>{children}</div>
           <Footer />
           <PopupWidget />
+        </LanguageProvider>
       </body>
     </html>
   );

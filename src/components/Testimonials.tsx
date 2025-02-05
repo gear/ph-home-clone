@@ -2,10 +2,6 @@ import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
 
-import userOneImg from "@/public/img/user1.jpg";
-import userTwoImg from "@/public/img/user2.jpg";
-import userThreeImg from "@/public/img/user3.jpg";
-
 export const Testimonials = () => {
   return (
     <Container>
@@ -18,7 +14,7 @@ export const Testimonials = () => {
             </p>
 
             <Avatar
-              image={userOneImg}
+              image="/img/user1.jpg"
               name="Sarah Steiner"
               title="VP Sales at Google"
             />
@@ -32,7 +28,7 @@ export const Testimonials = () => {
             </p>
 
             <Avatar
-              image={userTwoImg}
+              image="/img/user2.jpg"
               name="Dylan Ambrose"
               title="Lead marketer at Netflix"
             />
@@ -46,7 +42,7 @@ export const Testimonials = () => {
             </p>
 
             <Avatar
-              image={userThreeImg}
+              image="/img/user3.jpg"
               name="Gabrielle Winn"
               title="Co-founder of Acme Inc"
             />
