@@ -101,7 +101,10 @@ export const translations = {
     rp_title_flip_4: `Machine Learning`,
     rp_vision_pretitle: `Our Vision`,
     rp_vision_title: `Disease-free Society`,
-    rp_vision_desc: `The Precision Health Group studies mechanisms of healthy aging from multiple modalities including wearable device data, blood proteomics, metabolomics, and medical imaging.`,
+    rp_vision_desc: `The Precision Health Group studies mechanisms of 
+                     healthy aging from multiple modalities including 
+                     wearable device data, blood proteomics, 
+                     metabolomics, and medical imaging.`,
   },
   jp: {
     research: '研究',
