@@ -1,6 +1,10 @@
 import TextFlip from "@/components/FlipText";
 import { SectionTitle } from "@/components/SectionTitle";
 import { translations } from "@/components/Dictionary";
+import haFlipImg from "@/public/img/ha-flip.png"
+import sleepFlipImg from "@/public/img/sleep-flip.png"
+import metaboFlipImg from "@/public/img/metabo-flip.png"
+import mlFlipImg from "@/public/img/ml-flip.png"
 import FlipCard from "@/components/FlipCard";
 
 const text = translations.en;
@@ -17,13 +21,38 @@ export default function ResearchPage() {
       <div className="text-justify">
         <TextFlip />
       </div>
-      <div>
+      <div className="flex gap-[30px] justify-center flex-row mt-10">
         <FlipCard
           description="Computer programming or coding is the composition of sequences of instructions, called programs, that computers can follow to perform tasks."
-          image="/img/il11.png"
+          image={haFlipImg}
+          rotate="y"
+          subtitle="Healthy Aging"
+          textcolor="text-black"
+          title="Healthy Aging"
+        />
+        <FlipCard
+          description="Computer programming or coding is the composition of sequences of instructions, called programs, that computers can follow to perform tasks."
+          image={sleepFlipImg}
+          rotate="y"
+          subtitle="Sleep"
+          textcolor="text-black"
+          title="Sleep Physiology"
+        />
+        <FlipCard
+          description="Computer programming or coding is the composition of sequences of instructions, called programs, that computers can follow to perform tasks."
+          image={metaboFlipImg}
+          rotate="y"
+          subtitle="Metabolic Syndromes"
+          textcolor="text-black"
+          title="Metabolic Syndromes"
+        />
+        <FlipCard
+          description="Computer programming or coding is the composition of sequences of instructions, called programs, that computers can follow to perform tasks."
+          image={mlFlipImg}
           rotate="y"
           subtitle="Stuffs"
-          title="Healthy Aging"
+          textcolor="text-black"
+          title="Machine Learning"
         />
       </div>
     </div>

@@ -1,11 +1,14 @@
 import { cn } from "@/libs/utils";
 import Image from "next/image";
+import { StaticImageData } from "next/image";
+ 
 
 interface FlipCardProps extends React.HTMLAttributes<HTMLDivElement> {
-  image: string;
+  image: StaticImageData;
   title: string;
   description: string;
   subtitle?: string;
+  textcolor: string;
   rotate?: "x" | "y";
 }
 
@@ -14,6 +17,7 @@ export default function FlipCard({
   title,
   description,
   subtitle,
+  textcolor,
   rotate = "y",
   className,
   ...props
@@ -43,25 +47,24 @@ export default function FlipCard({
       >
         {/* Front */}
         <div className="absolute h-full w-full [backface-visibility:hidden]">
-          <div className="h-full w-full rounded-2xl object-cover shadow-2xl shadow-black/40">
+          <div>
             <Image
               src={image}
               alt="image"
-              width={200}
-              height={100}
-              style={{ width: "auto", height: "auto" }}
+              width={600}
+              height={750}
+              className="h-full w-full rounded-2xl object-cover shadow-2xl shadow-black/40"
             />
           </div>
-          <div className="absolute bottom-4 left-4 text-xl font-bold text-foreground">
-            {title}
-          </div>
+          <div className={`absolute bottom-4 left-4 text-xl text-left ${textcolor}`}>{title}</div>
         </div>
 
         {/* Back */}
         <div
           className={cn(
-            "absolute h-full w-full rounded-2xl bg-black/80 p-4 text-slate-200 [backface-visibility:hidden]",
-            self[1]
+
+            "absolute text-left h-full w-full rounded-2xl bg-black/80 p-4 text-slate-200 [backface-visibility:hidden]",
+            self[1],
           )}
         >
           <div className="flex min-h-full flex-col gap-2">
