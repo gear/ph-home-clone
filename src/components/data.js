@@ -7,39 +7,34 @@ import {
   CircleStackIcon,
   CalendarDateRangeIcon
 } from "@heroicons/react/24/solid";
-import { translations } from "./Dictionary";
-import healthyAgingImg from "@/public/img/healthy-ageing.svg";
-import sleepImg from "@/public/img/sleep.svg";
-
-
-const text = translations.en;
+import i18next from "i18next";
 
 const healthyAgingResearch = {
-  title: text.healthy_aging_research_title,
-  desc: text.har_desc,
-  image: healthyAgingImg,
+  title: i18next.t("healthy_aging_research_title"),
+  desc: i18next.t("har_desc"),
+  image: '/img/healthy-ageing.svg',
   bullets: [
     {
-      title: text.har_hai_title,
-      desc: text.har_hai_desc,
+      title: i18next.t("har_hai_title"),
+      desc: i18next.t("har_hai_desc"),
       icon: <ChartPieIcon />,
       href: "/research/healthy-aging#hai"
     },
     {
-      title: text.har_omics_title,
-      desc: text.har_omics_desc,
+      title: i18next.t("har_omics_title"),
+      desc: i18next.t("har_omics_desc"),
       icon: <BeakerIcon />,
       href: "/research/healthy-aging#omics"
     },
     {
-      title: text.har_dev_title,
-      desc: text.har_dev_desc,
+      title: i18next.t("har_dev_title"),
+      desc: i18next.t("har_dev_desc"),
       icon: <SunIcon />,
       href: "/research/healthy-aging#lifestyles"
     },
     {
-      title: text.har_data_title,
-      desc: text.har_data_desc,
+      title: i18next.t("har_data_title"),
+      desc: i18next.t("har_data_desc"),
       icon: <CircleStackIcon />,
       href: "/research/healthy-aging#datasets"
     },
@@ -47,25 +42,25 @@ const healthyAgingResearch = {
 };
 
 const sleepResearch = {
-  title: text.sleep_research_title,
-  desc: text.sleep_desc,
-  image: sleepImg,
+  title: i18next.t("sleep_research_title"),
+  desc: i18next.t("sleep_desc"),
+  image: '/img/sleep.svg',
   bullets: [
     {
-      title: text.sleep_lifestyle_title,
-      desc: text.sleep_lifestyle_desc,
+      title: i18next.t("sleep_lifestyle_title"),
+      desc: i18next.t("sleep_lifestyle_desc"),
       icon: <AdjustmentsHorizontalIcon />,
       href: "/research/sleep#lifestyles"
     },
     {
-      title: text.sleep_datasets_title,
-      desc: text.sleep_datasets_desc,
+      title: i18next.t("sleep_datasets_title"),
+      desc: i18next.t("sleep_datasets_desc"),
       icon: <CalendarDateRangeIcon />,
       href: "/research/sleep#datasets"
     },
     {
-      title: text.sleep_app_title,
-      desc: text.sleep_app_desc,
+      title: i18next.t("sleep_app_title"),
+      desc: i18next.t("sleep_app_desc"),
       icon: <DevicePhoneMobileIcon />,
       href: "/research/sleep#mirasleep"
     }
@@ -73,26 +68,26 @@ const sleepResearch = {
 };
 
 const metabolicSyndromes = {
-  title: text.metabo_title,
-  desc: text.metabo_desc,
-  image: sleepImg,
+  title: i18next.t("metabo_title"),
+  desc: i18next.t("metabo_desc"),
+  image: '/img/sleep.svg',
   bullets: [
     {
-      title: "Mobile Responsive Template",
-      desc: "Nextly is designed as a mobile first responsive template.",
+      title: i18next.t("metabo_mobile_title"),
+      desc: i18next.t("metabo_mobile_desc"),
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Powered by Next.js & TailwindCSS",
-      desc: "This template is powered by latest technologies and tools.",
+      title: i18next.t("metabo_tech_title"),
+      desc: i18next.t("metabo_tech_desc"),
       icon: <AdjustmentsHorizontalIcon />,
     },
     {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
+      title: i18next.t("metabo_mode_title"),
+      desc: i18next.t("metabo_mode_desc"),
       icon: <SunIcon />,
     },
   ],
 };
 
-export {healthyAgingResearch, sleepResearch, metabolicSyndromes};
+export { healthyAgingResearch, sleepResearch, metabolicSyndromes };

@@ -37,7 +37,7 @@ export function DisclosureClient(props: Readonly<DisclosureClientProps>) {
   const cta = props.topnav.cta;
 
   return (
-    <Disclosure>
+    <Disclosure as="div">
       {({ open }) => (
         <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
           <Link href={logo.href || "/"}>

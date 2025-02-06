@@ -2,15 +2,14 @@ import React from "react";
 import { translations } from "./Dictionary";
 import { Container } from "@/components/Container";
 
-
 const text = translations.en;
 
 export function Footer() {
   return (
     <div className="relative">
       <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100  lg:grid-cols-5">
-          <div className="">
+        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100">
+          <div className="w-full flex justify-center">
             <div className="flex mt-5 space-x-5 text-gray-400 ">
               <a
                 href="https://twitter.com/utprecisionhealth"
@@ -45,7 +44,7 @@ export function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 ">
-          Copyright © {new Date().getFullYear()} The University of Tokyo        
+          Copyright © {new Date().getFullYear()} The University of Tokyo
         </div>
       </Container>
     </div>
