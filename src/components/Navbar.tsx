@@ -9,15 +9,17 @@ import {
 import { mont } from "./fonts";
 import { translations } from "./Dictionary";
 import LanguageToggle from "./LanguageToggle";
-
-const text = translations.en;
+import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
+  const { t } = useTranslation("common");
   const navigation = [
-    { name: text.research, href: "/research" },
-    { name: text.members, href: "/members" },
-    { name: text.blogs, href: "/blogs" },
-    { name: text.data_dashboard, href: "/dashboard" },
+    { name: t("home"), href: "/" },
+    { name: t("research"), href: "/research" },
+    { name: t("publications"), href: "/publications" },
+    { name: t("members"), href: "/members" },
+    { name: t("news"), href: "/news" },
+    { name: t("datasets"), href: "/datasets" },
   ];
   return (
     <nav className="w-full container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between">
@@ -46,7 +48,7 @@ export const Navbar = () => {
             href="/"
             className="px-6 py-2 text-white bg-blue-500 rounded-md md:ml-5"
           >
-            {text.contact}
+            {t("contact")}
           </Link>
         </div>
         <LanguageToggle />

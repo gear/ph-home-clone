@@ -27,7 +27,7 @@ export const LanguageToggle = () => {
         className={cn(
           "px-2 py-1 rounded transition-colors",
           currentLanguage === "en"
-            ? "bg-blue-500 text-white"
+            ? "bg-yellow-400 text-white"
             : "text-gray-600 hover:bg-gray-100"
         )}
       >
@@ -38,7 +38,7 @@ export const LanguageToggle = () => {
         className={cn(
           "px-2 py-1 rounded transition-colors",
           currentLanguage === "ja"
-            ? "bg-blue-500 text-white"
+            ? "bg-yellow-400 text-white"
             : "text-gray-600 hover:bg-gray-100"
         )}
       >
