@@ -6,7 +6,6 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { Topics } from "@/components/ResearchTopics";
 import { Video } from "@/components/Video";
 import { Faq } from "@/components/Faq";
-import { Cta } from "@/components/Cta";
 import { useTranslation } from "react-i18next";
 import {
   ChartPieIcon,
