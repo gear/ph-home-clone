@@ -1,7 +1,10 @@
 FROM node:20.18.0-alpine AS builder
-WORKDIR /app
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN npm install -g pnpm
+
+WORKDIR /app
 
 COPY package.json pnpm-lock.yaml* ./
 
@@ -12,16 +15,17 @@ COPY . .
 RUN pnpm build
 
 FROM node:20.18.0-alpine
-WORKDIR /app
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN npm install -g pnpm
+
+WORKDIR /app
 
 COPY --from=builder /app/package.json ./
 COPY --from=builder /app/pnpm-lock.yaml* ./
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/next.config.mjs ./
-COPY --from=builder /app/next-sitemap.config.js ./
 
 RUN pnpm install --prod --frozen-lockfile
 
