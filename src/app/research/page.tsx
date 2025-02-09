@@ -20,7 +20,16 @@ export default function ResearchPage() {
         {t("rp_vision_desc")}
       </SectionTitle>
       <div className="text-justify">
-        <TextFlip />
+        <TextFlip
+        words={[
+          t("rp_title_flip_1"),
+          t("rp_title_flip_2"),
+          t("rp_title_flip_3"),
+          t("rp_title_flip_4"),
+          t("rp_title_flip_1"),
+        ]}
+        fixedWord={t("rp_title_flip_fixed")}
+    />
       </div>
       <div className="flex gap-[30px] justify-center flex-row mt-10">
         <FlipCard
