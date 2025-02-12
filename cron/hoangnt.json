@@ -1,0 +1,216 @@
+{
+  "info": {
+    "name": "Hoang NT",
+    "affiliations": "University of Tokyo",
+    "email": "Verified email at mail.u-tokyo.ac.jp - Homepage",
+    "interests": [
+      "Biomedicine",
+      "Graphs",
+      "Machine Learning"
+    ]
+  },
+  "co-authors": [
+    {
+      "name": "Takanori Maehara",
+      "profile_link": "https://scholar.google.com/citations?user=3ei4ZqoAAAAJ&hl=en",
+      "affiliation": "Roku, inc."
+    },
+    {
+      "name": "Jun Jin Choong",
+      "profile_link": "https://scholar.google.com/citations?user=mh7M6LcAAAAJ&hl=en",
+      "affiliation": "Tokyo Institute of Technology"
+    },
+    {
+      "name": "Ung-il Chung",
+      "profile_link": "https://scholar.google.com/citations?user=k3786XIAAAAJ&hl=en",
+      "affiliation": "University of Tokyo Schools of Engineering and Medicine; Kanagawa University of Human Services"
+    },
+    {
+      "name": "Thomas Svensson",
+      "profile_link": "https://scholar.google.com/citations?user=HZqcTTMAAAAJ&hl=en",
+      "affiliation": "Lund University Faculty of Medicine"
+    },
+    {
+      "name": "Akiko K Svensson",
+      "profile_link": "https://scholar.google.com/citations?user=-WJ47IUAAAAJ&hl=en",
+      "affiliation": "Junior Associate Professor"
+    },
+    {
+      "name": "Kaushalya Madhawa",
+      "profile_link": "https://scholar.google.com/citations?user=5ZSfU5wAAAAJ&hl=en",
+      "affiliation": "University of Tokyo"
+    },
+    {
+      "name": "Nuttapong Chairatanakul",
+      "profile_link": "https://scholar.google.com/citations?user=qbNjqGIAAAAJ&hl=en",
+      "affiliation": "Machine Learning Engineer, SmartNews"
+    },
+    {
+      "name": "Xin Liu",
+      "profile_link": "https://scholar.google.com/citations?user=wviRTP0AAAAJ&hl=en",
+      "affiliation": "Chief Senior Researcher, Artificial Intelligence Reseach Center, AIST, Japan"
+    }
+  ],
+  "articles": [
+    {
+      "title": "Revisiting Graph Neural Networks: All We Have is Low-Pass Filters",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:d1gkVwhDpl0C",
+      "authors": [
+        "H NT",
+        "T Maehara"
+      ],
+      "publication": "arXiv preprint arXiv:1905.09550, 2019",
+      "publication_year": 2019,
+      "cited_by_count": 515
+    },
+    {
+      "title": "Graph homomorphism convolution",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:UebtZRa9Y70C",
+      "authors": [
+        "H NT",
+        "T Maehara"
+      ],
+      "publication": "37th International Conference on Machine Learning (ICML-20), 7306-7316, 2020",
+      "publication_year": 2020,
+      "cited_by_count": 52
+    },
+    {
+      "title": "Learning Graph Neural Networks with Noisy Labels",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:IjCSPb-OGe4C",
+      "authors": [
+        "H NT",
+        "CJ Jin",
+        "T Murata"
+      ],
+      "publication": "LLD - International Conference on Learning Representations (ICLR-19), 2019",
+      "publication_year": 2019,
+      "cited_by_count": 48
+    },
+    {
+      "title": "Revisiting graph neural networks: Graph filtering perspective",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:ULOm3_A8WrAC",
+      "authors": [
+        "NT Hoang",
+        "T Maehara",
+        "T Murata"
+      ],
+      "publication": "25th International Conference on Pattern Recognition (ICPR), 8376-8383, 2021",
+      "publication_year": 2021,
+      "cited_by_count": 40
+    },
+    {
+      "title": "A Simple Proof of the Universality of Invariant/Equivariant Graph Neural Networks",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:2osOgNQ5qMEC",
+      "authors": [
+        "T Maehara",
+        "H NT"
+      ],
+      "publication": "arXiv preprint arXiv:1910.03802, 2019",
+      "publication_year": 2019,
+      "cited_by_count": 26
+    },
+    {
+      "title": "Validity and reliability of the Oura Ring Generation 3 (Gen3) with Oura sleep staging algorithm 2.0 (OSSA 2.0) when compared to multi-night ambulatory polysomnography: A\u00a0\u2026",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:4TOpqqG69KYC",
+      "authors": [
+        "T Svensson",
+        "K Madhawa",
+        "H NT",
+        "U Chung",
+        "AK Svensson"
+      ],
+      "publication": "Sleep Medicine, 2024",
+      "publication_year": 2024,
+      "cited_by_count": 20
+    },
+    {
+      "title": "Stacked graph filter",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:eQOLeE2rZwMC",
+      "authors": [
+        "H NT",
+        "T Maehara",
+        "T Murata"
+      ],
+      "publication": "arXiv preprint arXiv:2011.10988, 2020",
+      "publication_year": 2020,
+      "cited_by_count": 8
+    },
+    {
+      "title": "Heterogeneous graph embedding with single-level aggregation and infomax encoding",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:kNdYIx-mwKoC",
+      "authors": [
+        "N Chairatanakul",
+        "X Liu",
+        "H NT",
+        "T Murata"
+      ],
+      "publication": "Machine Learning 112 (11), 4227-4256, 2023",
+      "publication_year": 2023,
+      "cited_by_count": 5
+    },
+    {
+      "title": "Learning on Random Balls is Sufficient for Estimating (Some) Graph Parameters",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:8k81kl-MbHgC",
+      "authors": [
+        "T Maehara",
+        "H NT"
+      ],
+      "publication": "35th Conference on Neural Information Processing Systems (NeurIPS-21), 2021",
+      "publication_year": 2021,
+      "cited_by_count": 4
+    },
+    {
+      "title": "Associations of Subjective Sleep Quality with Wearable Device-Derived Resting Heart Rate During REM Sleep and Non-REM Sleep in a Cohort of Japanese Office Workers",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:aqlVkmm33-oC",
+      "authors": [
+        "O Sj\u00f6land",
+        "T Svensson",
+        "K Madhawa",
+        "H NT",
+        "UI Chung",
+        "AK Svensson"
+      ],
+      "publication": "Nature and Science of Sleep, 867-877, 2024",
+      "publication_year": 2024,
+      "cited_by_count": 1
+    },
+    {
+      "title": "Deep Homomorphism Networks",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:Wp0gIr-vW9MC",
+      "authors": [
+        "T Maehara",
+        "H NT"
+      ],
+      "publication": "The Thirty-eighth Annual Conference on Neural Information Processing Systems, 2024",
+      "publication_year": 2024,
+      "cited_by_count": null
+    },
+    {
+      "title": "Response to comment on\" Validity and reliability of the Oura Ring Generation 3 (Gen3) with Oura Sleep Staging Algorithm 2.0 (OSSA 2.0) when compared to multi-night ambulatory\u00a0\u2026",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:4DMP91E08xMC",
+      "authors": [
+        "T Svensson",
+        "K Madhawa",
+        "H NT",
+        "UI Chung",
+        "AK Svensson"
+      ],
+      "publication": "Sleep medicine 117, 217-218, 2024",
+      "publication_year": 2024,
+      "cited_by_count": null
+    },
+    {
+      "title": "Leaping Through Time with Gradient-based Adaptation for Recommendation",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iuSBSHsAAAAJ&pagesize=100&citation_for_view=iuSBSHsAAAAJ:3fE2CSJIrl8C",
+      "authors": [
+        "N Chairatanakul",
+        "H NT",
+        "X Liu",
+        "T Murata"
+      ],
+      "publication": "36th AAAI Conference on Artificial Intelligence (AAAI-22), 2022",
+      "publication_year": 2022,
+      "cited_by_count": null
+    }
+  ]
+}

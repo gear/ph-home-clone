@@ -1,0 +1,377 @@
+{
+  "info": {
+    "name": "Kaushalya Madhawa",
+    "affiliations": "University of Tokyo",
+    "email": "Verified email at g.ecc.u-tokyo.ac.jp - Homepage",
+    "interests": [
+      "Machine Learning",
+      "Artificial Intelligence",
+      "Computer Vision",
+      "Bioinformatics"
+    ]
+  },
+  "co-authors": [
+    {
+      "name": "Katsuhiko Ishiguro",
+      "profile_link": "https://scholar.google.com/citations?user=V-MO1ygAAAAJ&hl=en",
+      "affiliation": "Preferred networks"
+    },
+    {
+      "name": "Tsuyoshi Murata",
+      "profile_link": "https://scholar.google.com/citations?user=ws2fHhsAAAAJ&hl=en",
+      "affiliation": "Professor, Department of Computer Science, Tokyo Institute of Technology"
+    },
+    {
+      "name": "Danaja Maldeniya",
+      "profile_link": "https://scholar.google.com/citations?user=etulWQsAAAAJ&hl=en",
+      "affiliation": "University of Michigan"
+    },
+    {
+      "name": "Hoang NT",
+      "profile_link": "https://scholar.google.com/citations?user=iuSBSHsAAAAJ&hl=en",
+      "affiliation": "University of Tokyo"
+    },
+    {
+      "name": "Madhushi Bandara",
+      "profile_link": "https://scholar.google.com/citations?user=xSnx4NEAAAAJ&hl=en",
+      "affiliation": "Lecturer at University of Technology Sydney"
+    },
+    {
+      "name": "Ajantha Atukorale",
+      "profile_link": "https://scholar.google.com/citations?user=245C4lYAAAAJ&hl=en",
+      "affiliation": "Senior Lecturer in Computer Science, University of Colombo School of Computing (UCSC)"
+    }
+  ],
+  "articles": [
+    {
+      "title": "GraphNVP: An Invertible Flow Model for Generating Molecular Graphs",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:4TOpqqG69KYC",
+      "authors": [
+        "K Madhawa",
+        "K Ishiguro",
+        "K Nakago",
+        "M Abe"
+      ],
+      "publication": "arXiv preprint arXiv:1905.11600, 2019",
+      "publication_year": 2019,
+      "cited_by_count": 209
+    },
+    {
+      "title": "Active learning for node classification: An evaluation",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:9ZlFYXVOiuMC",
+      "authors": [
+        "K Madhawa",
+        "T Murata"
+      ],
+      "publication": "Entropy 22 (10), 1164, 2020",
+      "publication_year": 2020,
+      "cited_by_count": 35
+    },
+    {
+      "title": "Big data to improve urban planning",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:IjCSPb-OGe4C",
+      "authors": [
+        "R Samarajiva",
+        "S Lokanathan",
+        "K Madhawa",
+        "G Kreindler",
+        "D Maldeniya"
+      ],
+      "publication": "Economic and Political Weekly, 42-48, 2015",
+      "publication_year": 2015,
+      "cited_by_count": 33
+    },
+    {
+      "title": "Towards robust compressed convolutional neural networks",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:_kc_bZDykSQC",
+      "authors": [
+        "AW Wijayanto",
+        "JJ Choong",
+        "K Madhawa",
+        "T Murata"
+      ],
+      "publication": "2019 IEEE International Conference on Big Data and Smart Computing (BigComp\u00a0\u2026, 2019",
+      "publication_year": 2019,
+      "cited_by_count": 24
+    },
+    {
+      "title": "Validity and reliability of the Oura Ring Generation 3 (Gen3) with Oura sleep staging algorithm 2.0 (OSSA 2.0) when compared to multi-night ambulatory polysomnography: A\u00a0\u2026",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:mB3voiENLucC",
+      "authors": [
+        "T Svensson",
+        "K Madhawa",
+        "NT Hoang",
+        "U Chung",
+        "AK Svensson"
+      ],
+      "publication": "Sleep Medicine 115, 251-263, 2024",
+      "publication_year": 2024,
+      "cited_by_count": 20
+    },
+    {
+      "title": "A multi-armed bandit approach for exploring partially observed networks",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:M3ejUd6NZC8C",
+      "authors": [
+        "K Madhawa",
+        "T Murata"
+      ],
+      "publication": "Applied Network Science 4, 1-18, 2019",
+      "publication_year": 2019,
+      "cited_by_count": 13
+    },
+    {
+      "title": "Dengue propagation prediction using human mobility",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:dhFuZR0502QC",
+      "authors": [
+        "M Abeyrathna",
+        "DA Abeygunawrdane",
+        "R Wijesundara",
+        "VB Mudalige",
+        "..."
+      ],
+      "publication": "2016 Moratuwa Engineering Research Conference (MERCon), 156-161, 2016",
+      "publication_year": 2016,
+      "cited_by_count": 10
+    },
+    {
+      "title": "Metal: Active semi-supervised learning on graphs via meta-learning",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:mVmsd5A6BfQC",
+      "authors": [
+        "K Madhawa",
+        "T Murata"
+      ],
+      "publication": "Asian Conference on Machine Learning, 561-576, 2020",
+      "publication_year": 2020,
+      "cited_by_count": 8
+    },
+    {
+      "title": "Using mobile network big data for land use classification",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:Zph67rFs4hoC",
+      "authors": [
+        "K Madhawa",
+        "S Lokanathan",
+        "D Maldeniya",
+        "R Samarajiva"
+      ],
+      "publication": "Communication Policy Research South Conference, 2015",
+      "publication_year": 2015,
+      "cited_by_count": 7
+    },
+    {
+      "title": "Where did you come from?: where did you go?; robust policy relevant evidence from mobile network big data",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:_FxGoFyzp5QC",
+      "authors": [
+        "D Maldeniya",
+        "A Kumarage",
+        "S Lokanathan",
+        "G Kreindler",
+        "K Madhawa"
+      ],
+      "publication": "LIRNEasia, Colombo, LK, 2015",
+      "publication_year": 2015,
+      "cited_by_count": 7
+    },
+    {
+      "title": "Robustness of Compressed Convolutional Neural Networks",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:ULOm3_A8WrAC",
+      "authors": [
+        "K Madhawa",
+        "CJ Jin",
+        "AW Wijayanto",
+        "T Murata"
+      ],
+      "publication": "2018 IEEE International Conference on Big Data (Big Data), 4829-4836, 2018",
+      "publication_year": 2018,
+      "cited_by_count": 6
+    },
+    {
+      "title": "Active Learning on Graphs via Meta Learning",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:aqlVkmm33-oC",
+      "authors": [
+        "K Madhawa",
+        "T Murata"
+      ],
+      "publication": "Graph Representation Learning and Beyond Workshop, ICML 2020, 2020",
+      "publication_year": 2020,
+      "cited_by_count": 5
+    },
+    {
+      "title": "Exploring Partially Observed Networks with Nonparametric Bandits",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:kNdYIx-mwKoC",
+      "authors": [
+        "K Madhawa",
+        "T Murata"
+      ],
+      "publication": "International Conference on Complex Networks and their Applications, 158-168, 2018",
+      "publication_year": 2018,
+      "cited_by_count": 5
+    },
+    {
+      "title": "Graphnvp: an invertible flow model for generating molecular graphs (2019)",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:R3hNpaxXUhUC",
+      "authors": [
+        "K Madhawa",
+        "K Ishiguro",
+        "K Nakago",
+        "M Abe"
+      ],
+      "publication": "arXiv preprint arXiv:1905.11600, 1905",
+      "publication_year": 1905,
+      "cited_by_count": 5
+    },
+    {
+      "title": "GraphNVP: An Invertible Flow-Based Model for Generating Molecular Graphs",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:hC7cP41nSMkC",
+      "authors": [
+        "K Madhawa",
+        "K Ishiguro",
+        "K Nakago",
+        "M Abe"
+      ],
+      "publication": null,
+      "publication_year": 2019,
+      "cited_by_count": 4
+    },
+    {
+      "title": "A robust algorithm for determining the newsworthiness of microblogs",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:MXK_kJrjxJIC",
+      "authors": [
+        "PKK Madhawa",
+        "AS Atukorale"
+      ],
+      "publication": "2015 Fifteenth International Conference on Advances in ICT for Emerging\u00a0\u2026, 2015",
+      "publication_year": 2015,
+      "cited_by_count": 4
+    },
+    {
+      "title": "Understanding communities using mobile network big data",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:e5wmG9Sq2KIC",
+      "authors": [
+        "K Madhawa",
+        "R SAMARAJIVA",
+        "S LOKANATHAN",
+        "D MALDENIYA"
+      ],
+      "publication": null,
+      "publication_year": 2015,
+      "cited_by_count": 4
+    },
+    {
+      "title": "Deep Geometric Framework to Predict Antibody-Antigen Binding Affinity",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:_Qo2XoVZTnwC",
+      "authors": [
+        "N Bandara",
+        "D Premathilaka",
+        "S Chandanayake",
+        "S Hettiarachchi",
+        "..."
+      ],
+      "publication": "bioRxiv, 2024.06. 09.598103, 2024",
+      "publication_year": 2024,
+      "cited_by_count": 1
+    },
+    {
+      "title": "Land use classification using call detail records",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:UeHWp8X0CEIC",
+      "authors": [
+        "K Madhawa",
+        "S Lokanathan",
+        "D Maldeniya",
+        "R Samarajiva"
+      ],
+      "publication": "NetMob 2015, 2015",
+      "publication_year": 2015,
+      "cited_by_count": 1
+    },
+    {
+      "title": "Image diagnosis support device, image diagnosis support method, and image diagnosis support program",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:-f6ydRqryjwC",
+      "authors": [
+        "Kaushalya Madhawa",
+        "Yuu Jinnai",
+        "Takashi Azuma"
+      ],
+      "publication": "JP Patent JP 2023-178791  A, 2023",
+      "publication_year": 2023,
+      "cited_by_count": null
+    },
+    {
+      "title": "Information processing method, program and image diagnosis device",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:hFOr9nPyWt4C",
+      "authors": [
+        "Koike Itsuki",
+        "Yuu Jinnai",
+        "Kaushalya Madhawa",
+        "Takasi Azuma"
+      ],
+      "publication": "WO Patent WO2023032954A1, 2023",
+      "publication_year": 2023,
+      "cited_by_count": null
+    },
+    {
+      "title": "Training device, inferring device, training method, inferring method, and non-transitory computer readable medium",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:L8Ckcad2t8MC",
+      "authors": [
+        "MK PITUWALAKANKANAMGE",
+        "K NAKAGO",
+        "K Ishiguro"
+      ],
+      "publication": "US Patent US20220044121A1, 2022",
+      "publication_year": 2022,
+      "cited_by_count": null
+    },
+    {
+      "title": "Understanding communities using mobile network big data CPRsouth 2015",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:WF5omc3nYNoC",
+      "authors": [
+        "K Madhawa",
+        "S Lokanathan",
+        "R Samarajiva",
+        "D Maldeniya"
+      ],
+      "publication": "LIRNEasia, Colombo, LK, 2015",
+      "publication_year": 2015,
+      "cited_by_count": null
+    },
+    {
+      "title": "Using mobile network big data for land use classification CPRsouth 2015",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:zYLM7Y9cAGgC",
+      "authors": [
+        "K Madhawa",
+        "S Lokanathan",
+        "D Maldeniya",
+        "R Samarajiva"
+      ],
+      "publication": "LIRNEasia, Colombo, LK, 2015",
+      "publication_year": 2015,
+      "cited_by_count": null
+    },
+    {
+      "title": "Big data for development: Responsible use of mobile meta-\u2010data to support public purposes",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:KlAtU1dfN6UC",
+      "authors": [
+        "S Lokanathan",
+        "D Maldeniya",
+        "K Madhawa",
+        "S Lokanathan",
+        "TBA Panelists"
+      ],
+      "publication": null,
+      "publication_year": null,
+      "cited_by_count": null
+    },
+    {
+      "title": "A bitmap based apriori algorithm on Graphic processors",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:hqOjcs7Dif8C",
+      "authors": [
+        "V Sandaruwan",
+        "K Madhawa",
+        "M Jeewananda",
+        "C Malmi"
+      ],
+      "publication": null,
+      "publication_year": null,
+      "cited_by_count": null
+    }
+  ]
+}

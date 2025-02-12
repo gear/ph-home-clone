@@ -1,0 +1,386 @@
+{
+  "info": {
+    "name": "Akiko K Svensson",
+    "affiliations": "University of Tokyo",
+    "email": "Verified email at g.ecc.u-tokyo.ac.jp",
+    "interests": []
+  },
+  "co-authors": [],
+  "articles": [
+    {
+      "title": "Association of sleep duration with all-and major-cause mortality among adults in Japan, China, Singapore, and Korea",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:8k81kl-MbHgC",
+      "authors": [
+        "T Svensson",
+        "E Saito",
+        "AK Svensson",
+        "O Melander",
+        "M Orho-Melander",
+        "..."
+      ],
+      "publication": "JAMA network open 4 (9), e2122837-e2122837, 2021",
+      "publication_year": 2021,
+      "cited_by_count": 111
+    },
+    {
+      "title": "A validation study of a consumer wearable sleep tracker compared to a portable EEG system in naturalistic conditions",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:zYLM7Y9cAGgC",
+      "authors": [
+        "T Svensson",
+        "U Chung",
+        "S Tokuno",
+        "M Nakamura",
+        "AK Svensson"
+      ],
+      "publication": "Journal of Psychosomatic Research 126, 109822, 2019",
+      "publication_year": 2019,
+      "cited_by_count": 48
+    },
+    {
+      "title": "Association measures of claims-based algorithms for common chronic conditions were assessed using regularly collected data in Japan",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:LkGwnXOMwfcC",
+      "authors": [
+        "K Hara",
+        "J Tomio",
+        "T Svensson",
+        "R Ohkuma",
+        "AK Svensson",
+        "T Yamazaki"
+      ],
+      "publication": "Journal of Clinical Epidemiology 99, 84-95, 2018",
+      "publication_year": 2018,
+      "cited_by_count": 39
+    },
+    {
+      "title": "Heart rate modeling and prediction using autoregressive models and deep learning",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:roLk4NBRz8UC",
+      "authors": [
+        "A Staffini",
+        "T Svensson",
+        "U Chung",
+        "AK Svensson"
+      ],
+      "publication": "Sensors 22 (1), 34, 2021",
+      "publication_year": 2021,
+      "cited_by_count": 35
+    },
+    {
+      "title": "eHealth delivery of educational content using selected visual methods to improve health literacy on lifestyle-related diseases: literature review",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:_FxGoFyzp5QC",
+      "authors": [
+        "A Aida",
+        "T Svensson",
+        "AK Svensson",
+        "UI Chung",
+        "T Yamauchi"
+      ],
+      "publication": "JMIR mHealth and uHealth 8 (12), e18316, 2020",
+      "publication_year": 2020,
+      "cited_by_count": 26
+    },
+    {
+      "title": "Incident diabetes mellitus may explain the association between sleep duration and incident coronary heart disease",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:d1gkVwhDpl0C",
+      "authors": [
+        "AK Svensson",
+        "T Svensson",
+        "M Kitlinski",
+        "P Almgren",
+        "G Engstr\u00f6m",
+        "..."
+      ],
+      "publication": "Diabetologia 61, 331-341, 2018",
+      "publication_year": 2018,
+      "cited_by_count": 22
+    },
+    {
+      "title": "An agent-based model of the local spread of SARS-CoV-2: Modeling study",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:qjMakFHDy7sC",
+      "authors": [
+        "A Staffini",
+        "AK Svensson",
+        "UI Chung",
+        "T Svensson"
+      ],
+      "publication": "JMIR medical informatics 9 (4), e24192, 2021",
+      "publication_year": 2021,
+      "cited_by_count": 21
+    },
+    {
+      "title": "Validity and reliability of the Oura Ring Generation 3 (Gen3) with Oura sleep staging algorithm 2.0 (OSSA 2.0) when compared to multi-night ambulatory polysomnography: A\u00a0\u2026",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:UebtZRa9Y70C",
+      "authors": [
+        "T Svensson",
+        "K Madhawa",
+        "NT Hoang",
+        "U Chung",
+        "AK Svensson"
+      ],
+      "publication": "Sleep Medicine 115, 251-263, 2024",
+      "publication_year": 2024,
+      "cited_by_count": 20
+    },
+    {
+      "title": "Successfully achieving target weight loss influences subsequent maintenance of lower weight and dropout from treatment",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:u5HHmVD_uO8C",
+      "authors": [
+        "T Yamada",
+        "K Hara",
+        "AK Svensson",
+        "N Shojima",
+        "J Hosoe",
+        "M Iwasaki",
+        "..."
+      ],
+      "publication": "Obesity 23 (1), 183-191, 2015",
+      "publication_year": 2015,
+      "cited_by_count": 16
+    },
+    {
+      "title": "Statistical methods for item reduction in a representative lifestyle questionnaire: pilot questionnaire study",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:Tyk-4Ss8FVUC",
+      "authors": [
+        "A Staffini",
+        "K Fujita",
+        "AK Svensson",
+        "UI Chung",
+        "T Svensson"
+      ],
+      "publication": "Interactive Journal of Medical Research 11 (1), e28692, 2022",
+      "publication_year": 2022,
+      "cited_by_count": 14
+    },
+    {
+      "title": "A disentangled VAE-BILSTM model for heart rate anomaly detection",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:Se3iqnhoufwC",
+      "authors": [
+        "A Staffini",
+        "T Svensson",
+        "U Chung",
+        "AK Svensson"
+      ],
+      "publication": "Bioengineering 10 (6), 683, 2023",
+      "publication_year": 2023,
+      "cited_by_count": 12
+    },
+    {
+      "title": "Using mHealth to provide mobile app users with visualization of health checkup data and educational videos on lifestyle-related diseases: Methodological framework for content\u00a0\u2026",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:eQOLeE2rZwMC",
+      "authors": [
+        "A Aida",
+        "T Svensson",
+        "AK Svensson",
+        "H Urushiyama",
+        "K Okushin",
+        "G Oguri",
+        "..."
+      ],
+      "publication": "JMIR mHealth and uHealth 8 (10), e20982, 2020",
+      "publication_year": 2020,
+      "cited_by_count": 10
+    },
+    {
+      "title": "Association of managerial position with cardiovascular risk factors: A fixed-effects analysis for Japanese employees",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:5nxA0vEk-isC",
+      "authors": [
+        "R Ikesu",
+        "A Miyawaki",
+        "AK Svensson",
+        "T Svensson",
+        "Y Kobayashi",
+        "U Chung"
+      ],
+      "publication": "Scandinavian Journal of Work, Environment & Health 47 (6), 425, 2021",
+      "publication_year": 2021,
+      "cited_by_count": 8
+    },
+    {
+      "title": "Associations of work-related stress and total sleep time with cholesterol levels in an occupational cohort of Japanese office workers",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:u-x6o8ySG0sC",
+      "authors": [
+        "K Meguro",
+        "T Svensson",
+        "U Chung",
+        "AK Svensson"
+      ],
+      "publication": "journal of Occupational Health 63 (1), e12275, 2021",
+      "publication_year": 2021,
+      "cited_by_count": 8
+    },
+    {
+      "title": "A first\u2010in\u2010human study of the anti\u2010inflammatory profibrinolytic TMS\u2010007, an SMTP family triprenyl phenol",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:MXK_kJrjxJIC",
+      "authors": [
+        "T Moritoyo",
+        "N Nishimura",
+        "K Hasegawa",
+        "S Ishii",
+        "K Kirihara",
+        "M Takata",
+        "..."
+      ],
+      "publication": "British Journal of Clinical Pharmacology 89 (6), 1809-1819, 2023",
+      "publication_year": 2023,
+      "cited_by_count": 7
+    },
+    {
+      "title": "Association between metabolic syndrome status and daily physical activity measured by a wearable device in Japanese office workers",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:0EnyYjriUFMC",
+      "authors": [
+        "Y Yamaga",
+        "T Svensson",
+        "U Chung",
+        "AK Svensson"
+      ],
+      "publication": "International Journal of Environmental Research and Public Health 20 (5), 4315, 2023",
+      "publication_year": 2023,
+      "cited_by_count": 7
+    },
+    {
+      "title": "Plasma concentration of caspase-8 is associated with short sleep duration and the risk of incident diabetes mellitus",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:9yKSN-GCB0IC",
+      "authors": [
+        "T Svensson",
+        "AK Svensson",
+        "M Kitlinski",
+        "P Almgren",
+        "G Engstr\u00f6m",
+        "J Nilsson",
+        "..."
+      ],
+      "publication": "The Journal of Clinical Endocrinology & Metabolism 103 (4), 1592-1600, 2018",
+      "publication_year": 2018,
+      "cited_by_count": 6
+    },
+    {
+      "title": "Association of Sleep Duration with All-and major-cause mortality among adults in Japan, China, Singapore, and Korea. JAMA Netw open. 2021; 4 (9): e2122837",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:hqOjcs7Dif8C",
+      "authors": [
+        "T Svensson",
+        "E Saito",
+        "AK Svensson",
+        "O Melander",
+        "M Orho-Melander",
+        "..."
+      ],
+      "publication": null,
+      "publication_year": 2021,
+      "cited_by_count": 5
+    },
+    {
+      "title": "Sleep satisfaction may modify the association between metabolic syndrome and BMI, respectively, and occupational stress in Japanese Office Workers",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:W7OEmFMy1HYC",
+      "authors": [
+        "H Pham",
+        "T Svensson",
+        "U Chung",
+        "AK Svensson"
+      ],
+      "publication": "International Journal of Environmental Research and Public Health 19 (9), 5095, 2022",
+      "publication_year": 2022,
+      "cited_by_count": 3
+    },
+    {
+      "title": "Association between electroencephalogram-derived sleep measures and the change of emotional status analyzed using voice patterns: observational pilot study",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:2osOgNQ5qMEC",
+      "authors": [
+        "H Miyashita",
+        "M Nakamura",
+        "AK Svensson",
+        "M Nakamura",
+        "S Tokuno",
+        "..."
+      ],
+      "publication": "JMIR Formative Research 4 (6), e16880, 2020",
+      "publication_year": 2020,
+      "cited_by_count": 3
+    },
+    {
+      "title": "Associations of Subjective Sleep Quality with Wearable Device-Derived Resting Heart Rate During REM Sleep and Non-REM Sleep in a Cohort of Japanese Office Workers",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:YsMSGLbcyi4C",
+      "authors": [
+        "O Sj\u00f6land",
+        "T Svensson",
+        "K Madhawa",
+        "H Nt",
+        "UI Chung",
+        "AK Svensson"
+      ],
+      "publication": "Nature and Science of Sleep, 867-877, 2024",
+      "publication_year": 2024,
+      "cited_by_count": 1
+    },
+    {
+      "title": "The Association Between Hemoglobin Upswing in the Reference Range and Sleep Apnea Syndrome",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:ufrVoPGSRksC",
+      "authors": [
+        "H Miyashita",
+        "T Svensson",
+        "M Nakamura",
+        "AK Svensson"
+      ],
+      "publication": "Sleep and Vigilance 4, 205-212, 2020",
+      "publication_year": 2020,
+      "cited_by_count": 1
+    },
+    {
+      "title": "Response to comment on\" Validity and reliability of the Oura Ring Generation 3 (Gen3) with Oura Sleep Staging Algorithm 2.0 (OSSA 2.0) when compared to multi-night ambulatory\u00a0\u2026",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:IjCSPb-OGe4C",
+      "authors": [
+        "T Svensson",
+        "K Madhawa",
+        "H Nt",
+        "UI Chung",
+        "AK Svensson"
+      ],
+      "publication": "Sleep medicine 117, 217-218, 2024",
+      "publication_year": 2024,
+      "cited_by_count": null
+    },
+    {
+      "title": "Very short sleep duration reveals a proteomic fingerprint that is selectively associated with incident diabetes mellitus but not with incident coronary heart disease: a cohort\u00a0\u2026",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:WF5omc3nYNoC",
+      "authors": [
+        "T Svensson",
+        "AK Svensson",
+        "M Kitlinski",
+        "G Engstr\u00f6m",
+        "J Nilsson",
+        "..."
+      ],
+      "publication": "BMC medicine 22 (1), 173, 2024",
+      "publication_year": 2024,
+      "cited_by_count": null
+    },
+    {
+      "title": "Claims-based algorithms for common chronic conditions were efficiently constructed using machine learning methods",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:Y0pCki6q_DkC",
+      "authors": [
+        "K Hara",
+        "Y Kobayashi",
+        "J Tomio",
+        "Y Ito",
+        "T Svensson",
+        "R Ikesu",
+        "U Chung",
+        "..."
+      ],
+      "publication": "Plos one 16 (9), e0254394, 2021",
+      "publication_year": 2021,
+      "cited_by_count": null
+    },
+    {
+      "title": "An Agent-Based Model of the Local Spread of SARS-CoV-2: Modeling Study (Preprint)",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-WJ47IUAAAAJ&pagesize=100&citation_for_view=-WJ47IUAAAAJ:UeHWp8X0CEIC",
+      "authors": [
+        "A Staffini",
+        "AK Svensson",
+        "UI Chung",
+        "T Svensson"
+      ],
+      "publication": "(No Title), 2020",
+      "publication_year": 2020,
+      "cited_by_count": null
+    }
+  ]
+}
