@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Precision Health",
   description: "Precision Health Laboratory at The University of Tokyo",
   icons: {
-    icon: "img/favicon.ico",
+    icon: "img/favicon.svg",
   },
 };
 

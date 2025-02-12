@@ -53,17 +53,17 @@ export default function FlipCard({
               alt="image"
               width={600}
               height={750}
-              className="h-full w-full rounded-2xl object-cover shadow-2xl shadow-black/40"
+              className="h-full w-full rounded-2xl object-cover shadow-2xl shadow-black/20"
             />
           </div>
-          <div className={`absolute bottom-4 left-4 text-xl text-left ${textcolor}`}>{title}</div>
+          <div className={`absolute font-bold bottom-4 left-4 text-xl text-left ${textcolor}`}>{title}</div>
         </div>
 
         {/* Back */}
         <div
           className={cn(
 
-            "absolute text-left h-full w-full rounded-2xl bg-black/80 p-4 text-slate-200 [backface-visibility:hidden]",
+            "absolute text-left h-full w-full rounded-2xl bg-blue-500/80 p-4 text-slate-200 [backface-visibility:hidden]",
             self[1],
           )}
         >

@@ -1,25 +1,35 @@
+'use client';
+
 import TextFlip from "@/components/FlipText";
 import { SectionTitle } from "@/components/SectionTitle";
-import { translations } from "@/components/Dictionary";
 import haFlipImg from "@/public/img/ha-flip.png"
 import sleepFlipImg from "@/public/img/sleep-flip.png"
 import metaboFlipImg from "@/public/img/metabo-flip.png"
 import mlFlipImg from "@/public/img/ml-flip.png"
 import FlipCard from "@/components/FlipCard";
-
-const text = translations.en;
+import { useTranslation } from "react-i18next";
 
 export default function ResearchPage() {
+  const { t } = useTranslation("common");
   return (
     <div className="grid grid-cols-1 content-center text-center">
       <SectionTitle
-        preTitle={text.rp_vision_pretitle}
-        title={text.rp_vision_title}
+        preTitle={t("rp_vision_pretitle")}
+        title={t("rp_vision_title")}
       >
-        {text.rp_vision_desc}
+        {t("rp_vision_desc")}
       </SectionTitle>
       <div className="text-justify">
-        <TextFlip />
+        <TextFlip
+        words={[
+          t("rp_title_flip_1"),
+          t("rp_title_flip_2"),
+          t("rp_title_flip_3"),
+          t("rp_title_flip_4"),
+          t("rp_title_flip_1"),
+        ]}
+        fixedWord={t("rp_title_flip_fixed")}
+    />
       </div>
       <div className="flex gap-[30px] justify-center flex-row mt-10">
         <FlipCard
@@ -43,7 +53,7 @@ export default function ResearchPage() {
           image={metaboFlipImg}
           rotate="y"
           subtitle="Metabolic Syndromes"
-          textcolor="text-black"
+          textcolor="text-white"
           title="Metabolic Syndromes"
         />
         <FlipCard
@@ -51,7 +61,7 @@ export default function ResearchPage() {
           image={mlFlipImg}
           rotate="y"
           subtitle="Stuffs"
-          textcolor="text-black"
+          textcolor="text-white"
           title="Machine Learning"
         />
       </div>
