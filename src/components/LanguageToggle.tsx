@@ -11,11 +11,11 @@ export const LanguageToggle = () => {
     if (currentLanguage === "en")
       return {
         en: "EN",
-        jp: "JP",
+        jp: "日本語",
       };
     else if (currentLanguage === "ja")
       return {
-        en: "英語",
+        en: "EN",
         jp: "日本語",
       };
   }, [currentLanguage]);
