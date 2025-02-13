@@ -6,6 +6,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PopupWidget } from "@/components/PopupWidget";
 import { LanguageProvider } from "@/context/LanguageContext";
+import StoreProvider from "@/components/provider/StoreProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,12 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <LanguageProvider>
-          <Navbar />
-          <div>{children}</div>
-          <Footer />
-          <PopupWidget />
-        </LanguageProvider>
+        <StoreProvider>
+          <LanguageProvider>
+            <Navbar />
+            <div>{children}</div>
+            <Footer />
+            <PopupWidget />
+          </LanguageProvider>
+        </StoreProvider>
       </body>
     </html>
   );

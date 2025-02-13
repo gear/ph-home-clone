@@ -7,19 +7,25 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { mont } from "./fonts";
-import { translations } from "./Dictionary";
 import LanguageToggle from "./LanguageToggle";
 import { useTranslation } from "react-i18next";
+import { useAppDispatch, useAppSelector } from "@/lib/hook";
+import { cn } from "@/libs/utils";
+import { setCurrentTab } from "@/lib/features/appSlice";
+import { NavBar } from "@/types";
 
 export const Navbar = () => {
   const { t } = useTranslation("common");
+  const currentTab = useAppSelector((state) => state.app.currentTab);
+  const dispatch = useAppDispatch();
+
   const navigation = [
-    { name: t("home"), href: "/" },
-    { name: t("research"), href: "/research" },
-    { name: t("publications"), href: "/publications" },
-    { name: t("members"), href: "/members" },
-    { name: t("news"), href: "/news" },
-    { name: t("datasets"), href: "/datasets" },
+    { name: t("home"), href: "/", value: "home" },
+    { name: t("research"), href: "/research", value: "research" },
+    { name: t("publications"), href: "/publications", value: "publications" },
+    { name: t("members"), href: "/members", value: "members" },
+    { name: t("news"), href: "/news", value: "news" },
+    { name: t("datasets"), href: "/datasets", value: "datasets" },
   ];
   return (
     <nav className="w-full container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between">
@@ -112,7 +118,13 @@ export const Navbar = () => {
             <li className="mr-3" key={index}>
               <Link
                 href={menu.href}
-                className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-blue-500 focus:text-blue-500 focus:bg-indigo-100 focus:outline-none "
+                className={cn(
+                  "inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-blue-500 focus:text-blue-500 focus:bg-indigo-100 focus:outline-none",
+                  currentTab === menu.value && "text-blue-500"
+                )}
+                onClick={() => {
+                  dispatch(setCurrentTab(menu.value as NavBar));
+                }}
               >
                 {menu.name}
               </Link>
