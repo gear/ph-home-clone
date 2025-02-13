@@ -51,5 +51,15 @@
   "rp_title_flip_4": "機械学習",
   "rp_vision_pretitle": "ビジョン",
   "rp_vision_title": "疾病のない社会",
-  "rp_vision_desc": "Precision Health Groupは、ウェアラブルデバイスデータ、血液プロテオミクス、メタボロミクス、医療画像など、複数のモダリティから健康的な老化のメカニズムを研究しています。"
+  "rp_vision_desc": "Precision Health Groupは、ウェアラブルデバイスデータ、血液プロテオミクス、メタボロミクス、医療画像など、複数のモダリティから健康的な老化のメカニズムを研究しています。",
+  "no_articles_found": "記事が見つかりません",
+  "adjust_filters_message": "フィルタを調整して、より多くの記事を見つけてください。",
+  "read_more": "もっと読む",
+  "view_in_google_scholar": "Google Scholar で見る",
+  "by": "著者",
+  "publication_unknown": "出版物不明",
+  "cited_by": "引用数",
+  "unknown": "不明",
+  "filter_sidebar_topics_label": "トピック",
+  "filter_sidebar_years_label": "年"
 }

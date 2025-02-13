@@ -53,5 +53,15 @@
   "rp_title_flip_4": "Machine Learning",
   "rp_vision_pretitle": "Our Vision",
   "rp_vision_title": "Disease-free Society",
-  "rp_vision_desc": "The Precision Health Group studies mechanisms of healthy aging from multiple modalities including wearable device data, blood proteomics, metabolomics, and medical imaging."
+  "rp_vision_desc": "The Precision Health Group studies mechanisms of healthy aging from multiple modalities including wearable device data, blood proteomics, metabolomics, and medical imaging.",
+  "no_articles_found": "No articles found",
+  "adjust_filters_message": "Adjust your filters to find more articles.",
+  "read_more": "Read More",
+  "view_in_google_scholar": "View in Google Scholar",
+  "by": "By",
+  "publication_unknown": "Publication Unknown",
+  "cited_by": "Cited By",
+  "unknown": "Unknown",
+  "filter_sidebar_topics_label": "Topics",
+  "filter_sidebar_years_label": "Years"
 }
