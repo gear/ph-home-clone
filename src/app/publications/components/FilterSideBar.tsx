@@ -3,7 +3,7 @@
 import { FILTER_TOPICS, FILTER_YEAR } from "@/constants";
 import { SelectOption } from "@/types";
 import { useEffect } from "react";
-import { usePublicationsContext } from "../context/PublicationsContext";
+import { usePublicationsContext } from "../../../context/PublicationsContext";
 import moment from "moment";
 import { useTranslation } from "react-i18next";
 

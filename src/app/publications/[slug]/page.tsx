@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import { usePublicationsContext } from "../context/PublicationsContext";
+import { usePublicationsContext } from "../../../context/PublicationsContext";
 import { validateNameWithSlug } from "@/libs/utils";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";

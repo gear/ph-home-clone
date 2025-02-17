@@ -8,15 +8,30 @@ export const NAVBARS = [
 ] as const;
 
 export const FILTER_TOPICS = [
-  "Cancer",
-  "Computational Methods",
-  "Genomics",
+  // Technical Topics
+  "Machine Learning",
+  "Artificial Intelligence",
+  "Computer Vision",
+  "Bioinformatics",
+  "Graph Neural Networks",
+  "Big Data",
+  "Urban Planning",
+  "Network Science",
+  "Graph Theory",
+  "Semi-Supervised Learning",
+  "Text Mining",
+  "Medical Imaging",
+
+  // Health & Medical
+  "Sleep Research",
+  "Wearable Technology",
+  "Epidemiology",
+  "Human Mobility",
   "Immunology",
-  "Infectious Disease",
-  "Nanotechnology",
-  "Pre-Prints",
-  "Review",
-  "Technology Development",
+
+  // Other
+  "Social Media",
+  "Public Policy",
 ] as const;
 
 export const FILTER_YEAR = 2005;
