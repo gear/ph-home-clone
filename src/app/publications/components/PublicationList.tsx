@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { usePublicationsContext } from "../context/PublicationsContext";
+import { usePublicationsContext } from "../../../context/PublicationsContext";
 import ArticleItem from "./ArticleItem";
 import { useTranslation } from "react-i18next";
 

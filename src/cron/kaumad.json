@@ -46,26 +46,20 @@
     {
       "title": "GraphNVP: An Invertible Flow Model for Generating Molecular Graphs",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:4TOpqqG69KYC",
-      "authors": [
-        "K Madhawa",
-        "K Ishiguro",
-        "K Nakago",
-        "M Abe"
-      ],
+      "authors": ["K Madhawa", "K Ishiguro", "K Nakago", "M Abe"],
       "publication": "arXiv preprint arXiv:1905.11600, 2019",
       "publication_year": 2019,
-      "cited_by_count": 209
+      "cited_by_count": 209,
+      "topics": ["Machine Learning", "Artificial Intelligence"]
     },
     {
       "title": "Active learning for node classification: An evaluation",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:9ZlFYXVOiuMC",
-      "authors": [
-        "K Madhawa",
-        "T Murata"
-      ],
+      "authors": ["K Madhawa", "T Murata"],
       "publication": "Entropy 22 (10), 1164, 2020",
       "publication_year": 2020,
-      "cited_by_count": 35
+      "cited_by_count": 35,
+      "topics": ["Machine Learning", "Graph Neural Networks"]
     },
     {
       "title": "Big data to improve urban planning",
@@ -79,20 +73,17 @@
       ],
       "publication": "Economic and Political Weekly, 42-48, 2015",
       "publication_year": 2015,
-      "cited_by_count": 33
+      "cited_by_count": 33,
+      "topics": ["Big Data", "Urban Planning"]
     },
     {
       "title": "Towards robust compressed convolutional neural networks",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:_kc_bZDykSQC",
-      "authors": [
-        "AW Wijayanto",
-        "JJ Choong",
-        "K Madhawa",
-        "T Murata"
-      ],
+      "authors": ["AW Wijayanto", "JJ Choong", "K Madhawa", "T Murata"],
       "publication": "2019 IEEE International Conference on Big Data and Smart Computing (BigComp\u00a0\u2026, 2019",
       "publication_year": 2019,
-      "cited_by_count": 24
+      "cited_by_count": 24,
+      "topics": ["Deep Learning", "Computer Vision"]
     },
     {
       "title": "Validity and reliability of the Oura Ring Generation 3 (Gen3) with Oura sleep staging algorithm 2.0 (OSSA 2.0) when compared to multi-night ambulatory polysomnography: A\u00a0\u2026",
@@ -106,18 +97,17 @@
       ],
       "publication": "Sleep Medicine 115, 251-263, 2024",
       "publication_year": 2024,
-      "cited_by_count": 20
+      "cited_by_count": 20,
+      "topics": ["Sleep Research", "Wearable Technology"]
     },
     {
       "title": "A multi-armed bandit approach for exploring partially observed networks",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:M3ejUd6NZC8C",
-      "authors": [
-        "K Madhawa",
-        "T Murata"
-      ],
+      "authors": ["K Madhawa", "T Murata"],
       "publication": "Applied Network Science 4, 1-18, 2019",
       "publication_year": 2019,
-      "cited_by_count": 13
+      "cited_by_count": 13,
+      "topics": ["Network Science", "Graph Theory"]
     },
     {
       "title": "Dengue propagation prediction using human mobility",
@@ -131,31 +121,26 @@
       ],
       "publication": "2016 Moratuwa Engineering Research Conference (MERCon), 156-161, 2016",
       "publication_year": 2016,
-      "cited_by_count": 10
+      "cited_by_count": 10,
+      "topics": ["Epidemiology", "Human Mobility"]
     },
     {
       "title": "Metal: Active semi-supervised learning on graphs via meta-learning",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:mVmsd5A6BfQC",
-      "authors": [
-        "K Madhawa",
-        "T Murata"
-      ],
+      "authors": ["K Madhawa", "T Murata"],
       "publication": "Asian Conference on Machine Learning, 561-576, 2020",
       "publication_year": 2020,
-      "cited_by_count": 8
+      "cited_by_count": 8,
+      "topics": ["Semi-Supervised Learning", "Graph Neural Networks"]
     },
     {
       "title": "Using mobile network big data for land use classification",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:Zph67rFs4hoC",
-      "authors": [
-        "K Madhawa",
-        "S Lokanathan",
-        "D Maldeniya",
-        "R Samarajiva"
-      ],
+      "authors": ["K Madhawa", "S Lokanathan", "D Maldeniya", "R Samarajiva"],
       "publication": "Communication Policy Research South Conference, 2015",
       "publication_year": 2015,
-      "cited_by_count": 7
+      "cited_by_count": 7,
+      "topics": ["Urban Planning", "Big Data"]
     },
     {
       "title": "Where did you come from?: where did you go?; robust policy relevant evidence from mobile network big data",
@@ -169,92 +154,71 @@
       ],
       "publication": "LIRNEasia, Colombo, LK, 2015",
       "publication_year": 2015,
-      "cited_by_count": 7
+      "cited_by_count": 7,
+      "topics": ["Public Policy", "Big Data"]
     },
     {
       "title": "Robustness of Compressed Convolutional Neural Networks",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:ULOm3_A8WrAC",
-      "authors": [
-        "K Madhawa",
-        "CJ Jin",
-        "AW Wijayanto",
-        "T Murata"
-      ],
+      "authors": ["K Madhawa", "CJ Jin", "AW Wijayanto", "T Murata"],
       "publication": "2018 IEEE International Conference on Big Data (Big Data), 4829-4836, 2018",
       "publication_year": 2018,
-      "cited_by_count": 6
+      "cited_by_count": 6,
+      "topics": ["Deep Learning", "Computer Vision"]
     },
     {
       "title": "Active Learning on Graphs via Meta Learning",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:aqlVkmm33-oC",
-      "authors": [
-        "K Madhawa",
-        "T Murata"
-      ],
+      "authors": ["K Madhawa", "T Murata"],
       "publication": "Graph Representation Learning and Beyond Workshop, ICML 2020, 2020",
       "publication_year": 2020,
-      "cited_by_count": 5
+      "cited_by_count": 5,
+      "topics": ["Semi-Supervised Learning", "Graph Neural Networks"]
     },
     {
       "title": "Exploring Partially Observed Networks with Nonparametric Bandits",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:kNdYIx-mwKoC",
-      "authors": [
-        "K Madhawa",
-        "T Murata"
-      ],
+      "authors": ["K Madhawa", "T Murata"],
       "publication": "International Conference on Complex Networks and their Applications, 158-168, 2018",
       "publication_year": 2018,
-      "cited_by_count": 5
+      "cited_by_count": 5,
+      "topics": ["Network Science", "Graph Theory"]
     },
     {
       "title": "Graphnvp: an invertible flow model for generating molecular graphs (2019)",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:R3hNpaxXUhUC",
-      "authors": [
-        "K Madhawa",
-        "K Ishiguro",
-        "K Nakago",
-        "M Abe"
-      ],
+      "authors": ["K Madhawa", "K Ishiguro", "K Nakago", "M Abe"],
       "publication": "arXiv preprint arXiv:1905.11600, 1905",
       "publication_year": 1905,
-      "cited_by_count": 5
+      "cited_by_count": 5,
+      "topics": ["Machine Learning", "Artificial Intelligence"]
     },
     {
       "title": "GraphNVP: An Invertible Flow-Based Model for Generating Molecular Graphs",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:hC7cP41nSMkC",
-      "authors": [
-        "K Madhawa",
-        "K Ishiguro",
-        "K Nakago",
-        "M Abe"
-      ],
+      "authors": ["K Madhawa", "K Ishiguro", "K Nakago", "M Abe"],
       "publication": null,
       "publication_year": 2019,
-      "cited_by_count": 4
+      "cited_by_count": 4,
+      "topics": ["Machine Learning", "Artificial Intelligence"]
     },
     {
       "title": "A robust algorithm for determining the newsworthiness of microblogs",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:MXK_kJrjxJIC",
-      "authors": [
-        "PKK Madhawa",
-        "AS Atukorale"
-      ],
+      "authors": ["PKK Madhawa", "AS Atukorale"],
       "publication": "2015 Fifteenth International Conference on Advances in ICT for Emerging\u00a0\u2026, 2015",
       "publication_year": 2015,
-      "cited_by_count": 4
+      "cited_by_count": 4,
+      "topics": ["Social Media", "Text Mining"]
     },
     {
       "title": "Understanding communities using mobile network big data",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:e5wmG9Sq2KIC",
-      "authors": [
-        "K Madhawa",
-        "R SAMARAJIVA",
-        "S LOKANATHAN",
-        "D MALDENIYA"
-      ],
+      "authors": ["K Madhawa", "R SAMARAJIVA", "S LOKANATHAN", "D MALDENIYA"],
       "publication": null,
       "publication_year": 2015,
-      "cited_by_count": 4
+      "cited_by_count": 4,
+      "topics": ["Network Science", "Urban Planning"]
     },
     {
       "title": "Deep Geometric Framework to Predict Antibody-Antigen Binding Affinity",
@@ -268,32 +232,26 @@
       ],
       "publication": "bioRxiv, 2024.06. 09.598103, 2024",
       "publication_year": 2024,
-      "cited_by_count": 1
+      "cited_by_count": 1,
+      "topics": ["Bioinformatics", "Immunology"]
     },
     {
       "title": "Land use classification using call detail records",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:UeHWp8X0CEIC",
-      "authors": [
-        "K Madhawa",
-        "S Lokanathan",
-        "D Maldeniya",
-        "R Samarajiva"
-      ],
+      "authors": ["K Madhawa", "S Lokanathan", "D Maldeniya", "R Samarajiva"],
       "publication": "NetMob 2015, 2015",
       "publication_year": 2015,
-      "cited_by_count": 1
+      "cited_by_count": 1,
+      "topics": ["Urban Planning", "Big Data"]
     },
     {
       "title": "Image diagnosis support device, image diagnosis support method, and image diagnosis support program",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:-f6ydRqryjwC",
-      "authors": [
-        "Kaushalya Madhawa",
-        "Yuu Jinnai",
-        "Takashi Azuma"
-      ],
+      "authors": ["Kaushalya Madhawa", "Yuu Jinnai", "Takashi Azuma"],
       "publication": "JP Patent JP 2023-178791  A, 2023",
       "publication_year": 2023,
-      "cited_by_count": null
+      "cited_by_count": null,
+      "topics": ["Medical Imaging", "Deep Learning"]
     },
     {
       "title": "Information processing method, program and image diagnosis device",
@@ -306,42 +264,31 @@
       ],
       "publication": "WO Patent WO2023032954A1, 2023",
       "publication_year": 2023,
-      "cited_by_count": null
+      "cited_by_count": null,
+      "topics": ["Medical Imaging", "Deep Learning"]
     },
     {
       "title": "Training device, inferring device, training method, inferring method, and non-transitory computer readable medium",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:L8Ckcad2t8MC",
-      "authors": [
-        "MK PITUWALAKANKANAMGE",
-        "K NAKAGO",
-        "K Ishiguro"
-      ],
+      "authors": ["MK PITUWALAKANKANAMGE", "K NAKAGO", "K Ishiguro"],
       "publication": "US Patent US20220044121A1, 2022",
       "publication_year": 2022,
-      "cited_by_count": null
+      "cited_by_count": null,
+      "topics": ["Machine Learning", "Artificial Intelligence"]
     },
     {
       "title": "Understanding communities using mobile network big data CPRsouth 2015",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:WF5omc3nYNoC",
-      "authors": [
-        "K Madhawa",
-        "S Lokanathan",
-        "R Samarajiva",
-        "D Maldeniya"
-      ],
+      "authors": ["K Madhawa", "S Lokanathan", "R Samarajiva", "D Maldeniya"],
       "publication": "LIRNEasia, Colombo, LK, 2015",
       "publication_year": 2015,
-      "cited_by_count": null
+      "cited_by_count": null,
+      "topics": ["Network Science", "Urban Planning"]
     },
     {
       "title": "Using mobile network big data for land use classification CPRsouth 2015",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:zYLM7Y9cAGgC",
-      "authors": [
-        "K Madhawa",
-        "S Lokanathan",
-        "D Maldeniya",
-        "R Samarajiva"
-      ],
+      "authors": ["K Madhawa", "S Lokanathan", "D Maldeniya", "R Samarajiva"],
       "publication": "LIRNEasia, Colombo, LK, 2015",
       "publication_year": 2015,
       "cited_by_count": null
@@ -363,12 +310,7 @@
     {
       "title": "A bitmap based apriori algorithm on Graphic processors",
       "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5ZSfU5wAAAAJ&pagesize=100&citation_for_view=5ZSfU5wAAAAJ:hqOjcs7Dif8C",
-      "authors": [
-        "V Sandaruwan",
-        "K Madhawa",
-        "M Jeewananda",
-        "C Malmi"
-      ],
+      "authors": ["V Sandaruwan", "K Madhawa", "M Jeewananda", "C Malmi"],
       "publication": null,
       "publication_year": null,
       "cited_by_count": null

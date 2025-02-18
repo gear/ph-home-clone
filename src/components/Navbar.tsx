@@ -13,6 +13,7 @@ import { useAppDispatch, useAppSelector } from "@/lib/hook";
 import { cn } from "@/libs/utils";
 import { setCurrentTab } from "@/lib/features/appSlice";
 import { NavBar } from "@/types";
+import AppDropdown from "./AppDropdown";
 
 export const Navbar = () => {
   const { t } = useTranslation("common");
@@ -21,9 +22,23 @@ export const Navbar = () => {
 
   const navigation = [
     { name: t("home"), href: "/", value: "home" },
-    { name: t("research"), href: "/research", value: "research" },
+    {
+      name: t("research"),
+      href: "/research",
+      value: "research",
+      links: [
+        { href: "/research/healthy-aging", label: "Healthy Aging" },
+        { href: "/research/sleep-medicine", label: "Sleep Medicine" },
+        { href: "/research/metabolic-syndrome", label: "Metabolic Syndrome" },
+        { href: "/research/machine-learning", label: "Machine Learning" },
+      ],
+    },
     { name: t("publications"), href: "/publications", value: "publications" },
-    { name: t("members"), href: "/members", value: "members" },
+    {
+      name: t("members"),
+      href: "/members",
+      value: "members",
+    },
     { name: t("news"), href: "/news", value: "news" },
     { name: t("datasets"), href: "/datasets", value: "datasets" },
     { name: t("dashboard"), href: "/dashboard", value: "dashboard" },
@@ -117,18 +132,38 @@ export const Navbar = () => {
         <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
           {navigation.map((menu, index) => (
             <li className="mr-3" key={index}>
-              <Link
-                href={menu.href}
-                className={cn(
-                  "inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-blue-500 focus:text-blue-500 focus:bg-indigo-100 focus:outline-none",
-                  currentTab === menu.value && "text-blue-500"
-                )}
-                onClick={() => {
-                  dispatch(setCurrentTab(menu.value as NavBar));
-                }}
-              >
-                {menu.name}
-              </Link>
+              {menu.links ? (
+                <AppDropdown
+                  links={menu.links}
+                  content={() => (
+                    <Link
+                      href={menu.href}
+                      className={cn(
+                        "inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-blue-500 focus:text-blue-500 focus:bg-indigo-100 focus:outline-none",
+                        currentTab === menu.value && "text-blue-500"
+                      )}
+                      onClick={() => {
+                        dispatch(setCurrentTab(menu.value as NavBar));
+                      }}
+                    >
+                      {menu.name}
+                    </Link>
+                  )}
+                />
+              ) : (
+                <Link
+                  href={menu.href}
+                  className={cn(
+                    "inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-blue-500 focus:text-blue-500 focus:bg-indigo-100 focus:outline-none",
+                    currentTab === menu.value && "text-blue-500"
+                  )}
+                  onClick={() => {
+                    dispatch(setCurrentTab(menu.value as NavBar));
+                  }}
+                >
+                  {menu.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
