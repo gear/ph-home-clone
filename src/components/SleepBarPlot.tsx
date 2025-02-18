@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import * as Plot from "@observablehq/plot";
+import { SleepMosaicPlot } from "./SleepMosaicPlot";
 
 export const SleepBarPlot = () => {
   const [selectedDataset, setSelectedDataset] = useState("healthy-aging");
@@ -185,15 +186,18 @@ export const SleepBarPlot = () => {
 
   return (
     <div className="space-y-8">
-      <div className="w-64">
-        <select
-          value={selectedDataset}
-          onChange={(e) => setSelectedDataset(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-        >
-          <option value="healthy-aging">Healthy Aging</option>
-          <option value="jmdc">JMDC</option>
-        </select>
+      <div className="flex items-center gap-4">
+        <span className="text-gray-700 font-medium">Select a dataset:</span>
+        <div className="w-64">
+          <select
+            value={selectedDataset}
+            onChange={(e) => setSelectedDataset(e.target.value)}
+            className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+          >
+            <option value="healthy-aging">Healthy Aging</option>
+            <option value="jmdc">JMDC</option>
+          </select>
+        </div>
       </div>
 
       <div className="text-2xl font-bold text-gray-700">
@@ -214,6 +218,10 @@ export const SleepBarPlot = () => {
               <div ref={distributionPlotRef} />
               <div ref={weekdayPlotRef} />
             </div>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-700 mb-4">Sleep Data Analysis</h3>
+            <SleepMosaicPlot />
           </div>
         </>
       ) : null}

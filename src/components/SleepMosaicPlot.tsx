@@ -1,0 +1,155 @@
+"use client";
+import { useEffect, useRef } from 'react';
+import * as vgplot from "@uwdata/vgplot";
+
+export const SleepMosaicPlot = () => {
+  const plotRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    console.log('=== SleepMosaicPlot mounted ===');
+
+    const initializePlot = async () => {
+      console.log('=== initializePlot started ===');
+      if (!plotRef.current) {
+        console.log('plotRef is null');
+        return;
+      }
+
+      try {
+        const coordinator = vgplot.coordinator();
+        console.log('=== PATHS INFO ===');
+        console.log('Window location:', window.location.href);
+        console.log('Base URL:', window.location.origin);
+        console.log('Coordinator:', coordinator);
+        
+        console.log('=== Setting up database ===');
+        await coordinator.databaseConnector(vgplot.wasmConnector());
+        
+        const parquetPath = '/data/fitbit_main_sleep.parquet';
+        console.log('Attempting to load from:', parquetPath);
+
+        await vgplot.coordinator().exec(`
+          CREATE TABLE IF NOT EXISTS sleep_patterns AS 
+          SELECT 
+            EXTRACT(HOUR FROM FB_starthms) + 
+            CASE 
+              WHEN EXTRACT(HOUR FROM FB_starthms) >= 18 THEN -24
+              ELSE 0 
+            END as sleep_onset_hour,
+            EXTRACT(HOUR FROM FB_endhms) as wake_hour,
+            EXTRACT(MINUTE FROM FB_starthms) as onset_minutes,
+            EXTRACT(MINUTE FROM FB_endhms) as wake_minutes,
+            FB_minutesasleep_stages / 60.0 as sleep_duration
+          FROM '${parquetPath}';
+        `);
+
+        const onsetBrush = vgplot.Selection.crossfilter();
+
+        const makeSleepOnsetPlot = () => vgplot.plot(
+          vgplot.rectY(
+            vgplot.from("sleep_patterns"),
+            { 
+              x: vgplot.bin("sleep_onset_hour", { thresholds: 18 }),
+              y: vgplot.count(),
+              fill: "steelblue",
+              title: (d: any) => {
+                const count = d?.count ?? 0;
+                const hour = d?.sleep_onset_hour != null ? 
+                  (d.sleep_onset_hour < 0 ? d.sleep_onset_hour + 24 : d.sleep_onset_hour) : 'N/A';
+                const minutes = d?.onset_minutes != null 
+                  ? Math.floor(d.onset_minutes).toString().padStart(2, '0')
+                  : '00';
+                return `${count} people\nSleep onset: ${hour}:${minutes}`;
+              },
+              inset: 0.5
+            }
+          ),
+          vgplot.intervalX({ as: onsetBrush }),
+          vgplot.xDomain([-6, 3]), // 6PM to 3AM
+          vgplot.xLabel("Sleep Onset Time (hour)"),
+          vgplot.yLabel("Number of Records"),
+          vgplot.marginLeft(75),
+          vgplot.width(600),
+          vgplot.height(200)
+        );
+
+        const makeWakeTimePlot = () => vgplot.plot(
+          vgplot.rectY(
+            vgplot.from("sleep_patterns", { filterBy: onsetBrush }),
+            { 
+              x: vgplot.bin("wake_hour", { thresholds: 16 }),
+              y: vgplot.count(),
+              fill: "#8B4513",
+              title: (d: any) => {
+                const count = d?.count ?? 0;
+                const hour = d?.wake_hour ?? 'N/A';
+                const minutes = d?.wake_minutes != null 
+                  ? Math.floor(d.wake_minutes).toString().padStart(2, '0')
+                  : '00';
+                return `${count} records\nWake time: ${hour}:${minutes}`;
+              },
+              inset: 0.5
+            }
+          ),
+          vgplot.xDomain([3, 11]), // 3AM to 11AM
+          vgplot.xLabel("Wake-up Time (hour)"),
+          vgplot.yLabel("Number of Records"),
+          vgplot.marginLeft(75),
+          vgplot.width(600),
+          vgplot.height(200)
+        );
+
+        const makeSleepDurationPlot = () => vgplot.plot(
+          vgplot.rectY(
+            vgplot.from("sleep_patterns", { filterBy: onsetBrush }),
+            { 
+              x: vgplot.bin("sleep_duration", { thresholds: 24 }),
+              y: vgplot.count(),
+              fill: "darkgreen",
+              title: (d: any) => {
+                const count = d?.count ?? 0;
+                const duration = d?.sleep_duration != null 
+                  ? Number(d.sleep_duration).toFixed(1) 
+                  : 'N/A';
+                return `${count} records\nSleep duration: ${duration} hours`;
+              },
+              inset: 0.5
+            }
+          ),
+          vgplot.xDomain([4, 12]), // 4 to 12 hours
+          vgplot.xLabel("Sleep Duration (hours)"),
+          vgplot.yLabel("Number of Records"),
+          vgplot.marginLeft(75),
+          vgplot.width(600),
+          vgplot.height(200)
+        );
+
+        const dashboard = vgplot.vconcat(
+          makeSleepOnsetPlot(),
+          makeWakeTimePlot(),
+          makeSleepDurationPlot()
+        );
+
+        plotRef.current.innerHTML = '';
+        plotRef.current.appendChild(dashboard);
+
+      } catch (error) {
+        console.error('=== Error Details ===');
+        console.error('Type:', error);
+      }
+    };
+
+    initializePlot().catch(error => {
+      console.error('=== Top level error ===');
+      console.error(error);
+    });
+
+    return () => {
+      if (plotRef.current) {
+        plotRef.current.innerHTML = '';
+      }
+    };
+  }, []);
+
+  return <div ref={plotRef} />;
+};
