@@ -40,4 +40,5 @@ export type Article = {
   publication: string | null;
   publication_year: number | null;
   cited_by_count: number | null;
+  topics: string[];
 };

@@ -1,5 +1,5 @@
 import BaseLayout from "@/components/layout/BaseLayout";
-import { PublicationsProvider } from "./context/PublicationsContext";
+import { PublicationsProvider } from "../../context/PublicationsContext";
 
 interface PublicationLayoutProps {
   children: React.ReactElement;
