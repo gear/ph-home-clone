@@ -28,61 +28,39 @@ export const SleepMosaicPlot = () => {
 
         const brush = vg.Selection.crossfilter();
 
-        const makeSleepOnsetPlot = () => vg.plot(
-          vg.rectY(vg.from("sleep_patterns", { filterBy: brush }), {
-            x: vg.bin("start_hour", { thresholds: 24 }),
-            y: vg.count(),
-            fill: "steelblue",
-            inset: 0.5
-          }),
-          vg.intervalX({ as: brush }),
-          vg.xDomain(vg.Fixed),
-          vg.marginLeft(75),
-          vg.width(600),
-          vg.height(200),
-          vg.xLabel("Sleep Onset Time (hour)"),
-          vg.yLabel("Number of Records")
-        );
-
-        const makeWakeTimePlot = () => vg.plot(
-          vg.rectY(
-            vg.from("sleep_patterns", { filterBy: brush }),
-            {
-              x: vg.bin("end_hour", { thresholds: 24 }),
+        // helper method to generate a binned plot filtered by brush
+        const makePlot = (
+          column: string, 
+          xlabel: string, 
+          ylabel: string, 
+          color: string = "steelblue"
+        ): vg.Plot => {
+          return vg.plot(
+            vg.rectY(vg.from("sleep_patterns", { filterBy: brush }), {
+              x: vg.bin(column),
               y: vg.count(),
-              fill: "#8B4513",
+              fill: color,
               inset: 0.5
-            }
-          ),
-          // vg.xDomain([3, 11]), // 3AM to 11AM
-          vg.xLabel("Wake-up Time (hour)"),
-          vg.yLabel("Number of Records"),
-          vg.marginLeft(75),
-          vg.width(600),
-          vg.height(200)
-        );
-
-        const makeSleepDurationPlot = () => vg.plot(
-          vg.rectY(
-            vg.from("sleep_patterns", { filterBy: brush }),
-            {
-              x: vg.bin("FB_minutesasleep_stages", { thresholds: 24 }),
-              y: vg.count(),
-              fill: "darkgreen",
-              inset: 0.5
-            }
-          ),
-          vg.xLabel("Sleep Duration (minutes)"),
-          vg.yLabel("Number of Records"),
-          vg.marginLeft(75),
-          vg.width(600),
-          vg.height(200)
-        );
+            }),
+            vg.intervalX({ as: brush }),
+            vg.xDomain(vg.Fixed),
+            vg.marginLeft(75),
+            vg.width(600),
+            vg.height(200),
+            vg.xLabel(xlabel),
+            vg.yLabel(ylabel)
+          );
+        };
 
         const dashboard = vg.vconcat(
-          makeSleepOnsetPlot(),
-          makeWakeTimePlot(),
-          makeSleepDurationPlot()
+          makePlot("start_hour", "Sleep onset (hour)", "Number of records"),
+          makePlot("end_hour", "Wake-up time (hour)", "Number of records", "#8B4513"),
+          makePlot(
+            "FB_minutesasleep_stages",
+            "Sleep duration (minutes)",
+            "Number of records",
+            "green"
+          )
         );
 
         plotRef.current.innerHTML = '';
