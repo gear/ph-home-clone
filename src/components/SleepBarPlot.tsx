@@ -6,7 +6,6 @@ import { SleepMosaicPlot } from "./SleepMosaicPlot";
 export const SleepBarPlot = () => {
   const [selectedDataset, setSelectedDataset] = useState("healthy-aging");
   const individualPlotRef = useRef<HTMLDivElement>(null);
-  const distributionPlotRef = useRef<HTMLDivElement>(null);
   const weekdayPlotRef = useRef<HTMLDivElement>(null);
   const ageDistributionRef = useRef<HTMLDivElement>(null);
 
@@ -96,10 +95,9 @@ export const SleepBarPlot = () => {
     ageDistributionRef.current.appendChild(ageDistPlot);
 
     if (selectedDataset === "healthy-aging") {
-      if (individualPlotRef.current && distributionPlotRef.current && weekdayPlotRef.current) {
+      if (individualPlotRef.current && weekdayPlotRef.current) {
         // Clear previous plots
         individualPlotRef.current.innerHTML = "";
-        distributionPlotRef.current.innerHTML = "";
         weekdayPlotRef.current.innerHTML = "";
 
         // Create individual sleep duration plot
@@ -116,33 +114,6 @@ export const SleepBarPlot = () => {
               title: (d) => `${d.sleepHours.toFixed(1)} hours`,
             }),
             Plot.ruleX([0]),
-          ],
-        });
-
-        // Create sleep duration distribution plot
-        const distributionPlot = Plot.plot({
-          marginLeft: 60,
-          height: 300,
-          x: {
-            label: "Sleep Duration (hours)",
-            domain: [4, 10], // Reasonable sleep range
-            ticks: 12, // Show tick every 0.5 hours
-          },
-          y: { label: "Number of Participants" },
-          marks: [
-            Plot.rectY(
-              healthyAgingData.sleep,
-              Plot.binX(
-                { y: "count" },
-                {
-                  x: "sleepHours",
-                  fill: "steelblue",
-                  title: (d) => `${d.count} participants\n${d.sleepHours.toFixed(1)}-${(d.sleepHours + 0.5).toFixed(1)} hours`, // Updated tooltip
-                  thresholds: 12, // Creates 30-minute blocks
-                }
-              )
-            ),
-            Plot.ruleY([0]),
           ],
         });
 
@@ -171,7 +142,6 @@ export const SleepBarPlot = () => {
 
         // Append plots to containers
         individualPlotRef.current.appendChild(individualPlot);
-        distributionPlotRef.current.appendChild(distributionPlot);
         weekdayPlotRef.current.appendChild(weekdayPlot);
       }
     }
@@ -179,7 +149,6 @@ export const SleepBarPlot = () => {
     return () => {
       if (ageDistributionRef.current) ageDistributionRef.current.innerHTML = "";
       if (individualPlotRef.current) individualPlotRef.current.innerHTML = "";
-      if (distributionPlotRef.current) distributionPlotRef.current.innerHTML = "";
       if (weekdayPlotRef.current) weekdayPlotRef.current.innerHTML = "";
     };
   }, [selectedDataset]);
@@ -214,8 +183,7 @@ export const SleepBarPlot = () => {
           <div>
             <h3 className="text-xl font-semibold text-gray-700 mb-4">Sleep Analysis</h3>
             <div ref={individualPlotRef} />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div ref={distributionPlotRef} />
+            <div className="grid grid-cols-1 gap-4">
               <div ref={weekdayPlotRef} />
             </div>
           </div>
