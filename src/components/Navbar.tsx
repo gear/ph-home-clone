@@ -41,6 +41,7 @@ export const Navbar = () => {
     },
     { name: t("news"), href: "/news", value: "news" },
     { name: t("datasets"), href: "/datasets", value: "datasets" },
+    { name: t("dashboard"), href: "/dashboard", value: "dashboard" },
   ];
   return (
     <nav className="w-full container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between">
