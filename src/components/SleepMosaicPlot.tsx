@@ -20,54 +20,27 @@ export const SleepMosaicPlot = () => {
         console.log('=== PATHS INFO ===');
         console.log('Window location:', window.location.href);
         console.log('Base URL:', window.location.origin);
-        console.log('Coordinator:', coordinator);
         
-        console.log('=== Setting up database ===');
         await coordinator.databaseConnector(vgplot.wasmConnector());
         
-        const parquetPath = '/data/fitbit_main_sleep.parquet';
-        console.log('Attempting to load from:', parquetPath);
+        const parquetPath = "/data/fitbit_main_sleep.parquet";
+        console.info('Creating FileAttachment for:', parquetPath);
+        const sleep_url = `${window.location.origin}/data/fitbit_main_sleep.parquet`;
+        console.info('File URL:', sleep_url);
+        
+        await coordinator.exec([vgplot.loadParquet("sleep_patterns", sleep_url)]);
 
-        await vgplot.coordinator().exec(`
-          CREATE TABLE IF NOT EXISTS sleep_patterns AS 
-          SELECT 
-            EXTRACT(HOUR FROM FB_starthms) + 
-            CASE 
-              WHEN EXTRACT(HOUR FROM FB_starthms) >= 18 THEN -24
-              ELSE 0 
-            END as sleep_onset_hour,
-            EXTRACT(HOUR FROM FB_endhms) as wake_hour,
-            EXTRACT(MINUTE FROM FB_starthms) as onset_minutes,
-            EXTRACT(MINUTE FROM FB_endhms) as wake_minutes,
-            FB_minutesasleep_stages / 60.0 as sleep_duration
-          FROM '${parquetPath}';
-        `);
-
-        const onsetBrush = vgplot.Selection.crossfilter();
+        const brush = vgplot.Selection.crossfilter();
 
         const makeSleepOnsetPlot = () => vgplot.plot(
-          vgplot.rectY(
-            vgplot.from("sleep_patterns"),
-            { 
-              x: vgplot.bin("sleep_onset_hour", { thresholds: 18 }),
-              y: vgplot.count(),
-              fill: "steelblue",
-              title: (d: any) => {
-                const count = d?.count ?? 0;
-                const hour = d?.sleep_onset_hour != null ? 
-                  (d.sleep_onset_hour < 0 ? d.sleep_onset_hour + 24 : d.sleep_onset_hour) : 'N/A';
-                const minutes = d?.onset_minutes != null 
-                  ? Math.floor(d.onset_minutes).toString().padStart(2, '0')
-                  : '00';
-                return `${count} people\nSleep onset: ${hour}:${minutes}`;
-              },
-              inset: 0.5
-            }
-          ),
-          vgplot.intervalX({ as: onsetBrush }),
-          vgplot.xDomain([-6, 3]), // 6PM to 3AM
-          vgplot.xLabel("Sleep Onset Time (hour)"),
-          vgplot.yLabel("Number of Records"),
+          vgplot.rectY(vgplot.from("sleep_patterns", { filterBy: brush }), {
+            x: vgplot.bin("start_hour", { thresholds: 24 }),
+            y: vgplot.count(),
+            fill: "steelblue",
+            inset: 0.5
+          }),
+          vgplot.intervalX({ as: brush }),
+          vgplot.xDomain(vgplot.Fixed),
           vgplot.marginLeft(75),
           vgplot.width(600),
           vgplot.height(200)
@@ -75,16 +48,16 @@ export const SleepMosaicPlot = () => {
 
         const makeWakeTimePlot = () => vgplot.plot(
           vgplot.rectY(
-            vgplot.from("sleep_patterns", { filterBy: onsetBrush }),
+            vgplot.from("sleep_patterns", { filterBy: brush }),
             { 
-              x: vgplot.bin("wake_hour", { thresholds: 16 }),
+              x: vgplot.bin("end_hour", { thresholds: 24 }),
               y: vgplot.count(),
               fill: "#8B4513",
               title: (d: any) => {
                 const count = d?.count ?? 0;
-                const hour = d?.wake_hour ?? 'N/A';
-                const minutes = d?.wake_minutes != null 
-                  ? Math.floor(d.wake_minutes).toString().padStart(2, '0')
+                const hour = d?.end_hour ?? 'N/A';
+                const minutes = d?.end_minutes != null 
+                  ? Math.floor(d.end_minutes).toString().padStart(2, '0')
                   : '00';
                 return `${count} records\nWake time: ${hour}:${minutes}`;
               },
@@ -101,9 +74,9 @@ export const SleepMosaicPlot = () => {
 
         const makeSleepDurationPlot = () => vgplot.plot(
           vgplot.rectY(
-            vgplot.from("sleep_patterns", { filterBy: onsetBrush }),
+            vgplot.from("sleep_patterns", { filterBy: brush }),
             { 
-              x: vgplot.bin("sleep_duration", { thresholds: 24 }),
+              x: vgplot.bin("FB_minutesasleep_stages", { thresholds: 24 }),
               y: vgplot.count(),
               fill: "darkgreen",
               title: (d: any) => {
@@ -134,13 +107,11 @@ export const SleepMosaicPlot = () => {
         plotRef.current.appendChild(dashboard);
 
       } catch (error) {
-        console.error('=== Error Details ===');
         console.error('Type:', error);
       }
     };
 
     initializePlot().catch(error => {
-      console.error('=== Top level error ===');
       console.error(error);
     });
 
