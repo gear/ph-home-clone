@@ -1,14 +1,15 @@
 "use client";
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import dynamic from 'next/dynamic';
 import * as vg from "@uwdata/vgplot";
 
 export const SleepMosaicPlot = () => {
   const plotRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    console.log('=== SleepMosaicPlot mounted ===');
-
     const initializePlot = async () => {
+      setMounted(true);
       console.log('=== initializePlot started ===');
       if (!plotRef.current) {
         console.log('plotRef is null');
@@ -21,7 +22,7 @@ export const SleepMosaicPlot = () => {
 
         const parquetPath = "/data/fitbit_main_sleep.parquet";
         console.info('Creating FileAttachment for:', parquetPath);
-        const sleep_url = `${window.location.origin}/data/fitbit_main_sleep.parquet`;
+        const sleep_url = `${process.env.NEXT_PUBLIC_BASE_URL}${process.env.NEXT_PUBLIC_DATA_PATH}`;
         console.info('File URL:', sleep_url);
 
         await coordinator.exec([vg.loadParquet("sleep_patterns", sleep_url)]);
@@ -30,9 +31,9 @@ export const SleepMosaicPlot = () => {
 
         // helper method to generate a binned plot filtered by brush
         const makePlot = (
-          column: string, 
-          xlabel: string, 
-          ylabel: string, 
+          column: string,
+          xlabel: string,
+          ylabel: string,
           color: string = "steelblue"
         ): vg.Plot => {
           return vg.plot(
@@ -80,7 +81,10 @@ export const SleepMosaicPlot = () => {
         plotRef.current.innerHTML = '';
       }
     };
-  }, []);
+  }, [mounted]);
+
+  // Don't render anything until mounted
+  if (!mounted) return null;
 
   return <div ref={plotRef} />;
 };
