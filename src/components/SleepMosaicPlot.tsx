@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from 'react';
-import dynamic from 'next/dynamic';
+import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import * as vg from "@uwdata/vgplot";
 
 export const SleepMosaicPlot = () => {
@@ -10,9 +10,9 @@ export const SleepMosaicPlot = () => {
   useEffect(() => {
     const initializePlot = async () => {
       setMounted(true);
-      console.log('=== initializePlot started ===');
+      console.log("=== initializePlot started ===");
       if (!plotRef.current) {
-        console.log('plotRef is null');
+        console.log("plotRef is null");
         return;
       }
 
@@ -21,9 +21,7 @@ export const SleepMosaicPlot = () => {
         await coordinator.databaseConnector(vg.wasmConnector());
 
         const parquetPath = "/data/fitbit_main_sleep.parquet";
-        console.info('Creating FileAttachment for:', parquetPath);
-        const sleep_url = `${process.env.NEXT_PUBLIC_BASE_URL}${process.env.NEXT_PUBLIC_DATA_PATH}`;
-        console.info('File URL:', sleep_url);
+        const sleep_url = `${window.location.origin}${parquetPath}`;
 
         await coordinator.exec([vg.loadParquet("sleep_patterns", sleep_url)]);
 
@@ -41,7 +39,7 @@ export const SleepMosaicPlot = () => {
               x: vg.bin(column),
               y: vg.count(),
               fill: color,
-              inset: 0.5
+              inset: 0.5,
             }),
             vg.intervalX({ as: brush }),
             vg.xDomain(vg.Fixed),
@@ -55,7 +53,12 @@ export const SleepMosaicPlot = () => {
 
         const dashboard = vg.vconcat(
           makePlot("start_hour", "Sleep onset (hour)", "Number of records"),
-          makePlot("end_hour", "Wake-up time (hour)", "Number of records", "#8B4513"),
+          makePlot(
+            "end_hour",
+            "Wake-up time (hour)",
+            "Number of records",
+            "#8B4513"
+          ),
           makePlot(
             "FB_minutesasleep_stages",
             "Sleep duration (minutes)",
@@ -64,21 +67,20 @@ export const SleepMosaicPlot = () => {
           )
         );
 
-        plotRef.current.innerHTML = '';
+        plotRef.current.innerHTML = "";
         plotRef.current.appendChild(dashboard);
-
       } catch (error) {
-        console.error('Type:', error);
+        console.error("Type:", error);
       }
     };
 
-    initializePlot().catch(error => {
+    initializePlot().catch((error) => {
       console.error(error);
     });
 
     return () => {
       if (plotRef.current) {
-        plotRef.current.innerHTML = '';
+        plotRef.current.innerHTML = "";
       }
     };
   }, [mounted]);
