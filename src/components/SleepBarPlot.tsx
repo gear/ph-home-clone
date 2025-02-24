@@ -5,7 +5,6 @@ import { SleepMosaicPlot } from "./SleepMosaicPlot";
 
 export const SleepBarPlot = () => {
   const [selectedDataset, setSelectedDataset] = useState("healthy-aging");
-  const individualPlotRef = useRef<HTMLDivElement>(null);
   const weekdayPlotRef = useRef<HTMLDivElement>(null);
   const ageDistributionRef = useRef<HTMLDivElement>(null);
 
@@ -60,8 +59,8 @@ export const SleepBarPlot = () => {
     ageDistributionRef.current.innerHTML = "";
 
     // Create age distribution plot
-    const data = selectedDataset === "healthy-aging" 
-      ? healthyAgingData.participants 
+    const data = selectedDataset === "healthy-aging"
+      ? healthyAgingData.participants
       : jmdcData.participants;
 
     const ageDistPlot = Plot.plot({
@@ -71,9 +70,9 @@ export const SleepBarPlot = () => {
         label: "Age (years)",
         domain: selectedDataset === "healthy-aging" ? [75, 95] : [20, 70],
       },
-      y: { 
+      y: {
         label: "Number of Participants",
-        grid: true 
+        grid: true
       },
       marks: [
         Plot.rectY(
@@ -95,28 +94,9 @@ export const SleepBarPlot = () => {
     ageDistributionRef.current.appendChild(ageDistPlot);
 
     if (selectedDataset === "healthy-aging") {
-      if (individualPlotRef.current && weekdayPlotRef.current) {
+      if (weekdayPlotRef.current) {
         // Clear previous plots
-        individualPlotRef.current.innerHTML = "";
         weekdayPlotRef.current.innerHTML = "";
-
-        // Create individual sleep duration plot
-        const individualPlot = Plot.plot({
-          marginLeft: 60,
-          height: 400,
-          x: { label: "Sleep Hours" },
-          y: { label: "Person" },
-          marks: [
-            Plot.barX(healthyAgingData.sleep, {
-              y: "name",
-              x: "sleepHours",
-              fill: "steelblue",
-              title: (d) => `${d.sleepHours.toFixed(1)} hours`,
-            }),
-            Plot.ruleX([0]),
-          ],
-        });
-
         // Create weekday average sleep plot
         const weekdayPlot = Plot.plot({
           marginLeft: 60,
@@ -141,16 +121,25 @@ export const SleepBarPlot = () => {
         });
 
         // Append plots to containers
-        individualPlotRef.current.appendChild(individualPlot);
         weekdayPlotRef.current.appendChild(weekdayPlot);
       }
     }
 
-    return () => {
-      if (ageDistributionRef.current) ageDistributionRef.current.innerHTML = "";
-      if (individualPlotRef.current) individualPlotRef.current.innerHTML = "";
-      if (weekdayPlotRef.current) weekdayPlotRef.current.innerHTML = "";
+    // Cleanup function
+    const cleanup = () => {
+      // Clear all plot containers
+      const plotContainers = [
+        ageDistributionRef.current,
+        weekdayPlotRef.current
+      ];
+
+      plotContainers.forEach(container => {
+        if (container) container.innerHTML = '';
+      });
     };
+
+    // Run cleanup before next effect or unmount
+    return cleanup;
   }, [selectedDataset]);
 
   return (
@@ -182,7 +171,6 @@ export const SleepBarPlot = () => {
         <>
           <div>
             <h3 className="text-xl font-semibold text-gray-700 mb-4">Sleep Analysis</h3>
-            <div ref={individualPlotRef} />
             <div className="grid grid-cols-1 gap-4">
               <div ref={weekdayPlotRef} />
             </div>
