@@ -27,7 +27,8 @@ export const HealthyAgingViz = ({ ageDistributionRef, weekdayPlotRef }: DatasetP
             {
               x: "age",
               fill: "steelblue",
-              title: (d) => `${d.count} participants\nAge: ${Math.floor(d.age)}-${Math.floor(d.age + 5)}`,
+              title: (d) =>
+                `${d.count} participants\nAge: ${Math.floor(d.age)}-${Math.floor(d.age + 5)}`,
               thresholds: 10,
             }
           )
@@ -64,20 +65,24 @@ export const HealthyAgingViz = ({ ageDistributionRef, weekdayPlotRef }: DatasetP
 
   return (
     <>
-      <div>
-        <h3 className="text-xl font-semibold text-gray-700 mb-4">Age Distribution</h3>
-        <div ref={ageDistributionRef} />
-      </div>
-      <div>
-        <h3 className="text-xl font-semibold text-gray-700 mb-4">Sleep Analysis</h3>
-        <div className="grid grid-cols-1 gap-4">
-          <div ref={weekdayPlotRef} />
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <h3 className="text-xl font-semibold text-gray-700 mb-4">Age Distribution</h3>
+          <div ref={ageDistributionRef} />
+        </div>
+        <div>
+          <h3 className="text-xl font-semibold text-gray-700 mb-4">Sleep Analysis</h3>
+          <div className="grid grid-cols-1 gap-4">
+            <div ref={weekdayPlotRef} />
+          </div>
         </div>
       </div>
-      <div>
+      <div className="mt-8">
         <h3 className="text-xl font-semibold text-gray-700 mb-4">Sleep Data Analysis</h3>
         <SleepMosaicPlot />
       </div>
     </>
   );
 };
+
+export default HealthyAgingViz;
