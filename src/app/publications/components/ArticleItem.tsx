@@ -52,6 +52,9 @@ const ArticleItem: React.FC<ArticleItemProps> = ({ article }) => {
             {t("cited_by")}{" "}
             {article.cited_by_count ? article.cited_by_count : t("unknown")}
           </p>
+          <p className={cn("text-sm", "text-gray-700", "font-medium")}>
+            {article.topics.join(", ")}
+          </p>
         </div>
         <div className="flex flex-col gap-2">
           <Link

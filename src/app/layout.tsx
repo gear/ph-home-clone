@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { PopupWidget } from "@/components/PopupWidget";
 import { LanguageProvider } from "@/context/LanguageContext";
 import StoreProvider from "@/components/provider/StoreProvider";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        <NextTopLoader showSpinner={false} />
         <StoreProvider>
           <LanguageProvider>
             <Navbar />

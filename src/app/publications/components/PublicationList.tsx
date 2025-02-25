@@ -7,14 +7,16 @@ import { useTranslation } from "react-i18next";
 
 const PublicationList = () => {
   const { t } = useTranslation("common");
-  const { articles, yearFilter } = usePublicationsContext();
+  const { articles, yearFilter, topicFilter } = usePublicationsContext();
 
-  // TODO: implement filtering for articles
   const filteredArticles = useMemo(() => {
     return articles.filter(
-      (article) => !yearFilter || article.publication_year === yearFilter
+      (article) =>
+        !yearFilter ||
+        (article.publication_year === yearFilter &&
+          article.topics.includes(topicFilter))
     );
-  }, [articles, yearFilter]);
+  }, [articles, yearFilter, topicFilter]);
 
   if (filteredArticles.length > 0) {
     return (
