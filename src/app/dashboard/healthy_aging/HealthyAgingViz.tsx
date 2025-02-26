@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import * as Plot from "@observablehq/plot";
 import { DatasetProps } from "@/types/sleep";
 import { healthyAgingData, weekdayData } from "./data";
-import { SleepMosaicPlot } from "../SleepMosaicPlot";
+import { SleepMosaicPlot } from "./SleepMosaicPlot";
 
 export const HealthyAgingViz = ({ ageDistributionRef, weekdayPlotRef }: DatasetProps) => {
   useEffect(() => {

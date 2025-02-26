@@ -1,9 +1,9 @@
 "use client";
 import { useRef, useState } from "react";
-import { HealthyAgingViz } from "./sleep/HealthyAgingViz";
-import { JMDCViz } from "./sleep/JMDCViz";
+import { HealthyAgingViz } from "../app/dashboard/healthy_aging/HealthyAgingViz";
+import { JMDCViz } from "../app/dashboard/JMDCViz";
 
-export const SleepBarPlot = () => {
+export const LoadDashboard = () => {
   const [selectedDataset, setSelectedDataset] = useState("healthy-aging");
   const weekdayPlotRef = useRef<HTMLDivElement>(null);
   const ageDistributionRef = useRef<HTMLDivElement>(null);

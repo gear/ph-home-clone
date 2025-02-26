@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import * as Plot from "@observablehq/plot";
 import { DatasetProps } from "@/types/sleep";
-import { jmdcData } from "./data";
+import { jmdcData } from "./healthy_aging/data";
 
 export const JMDCViz = ({ ageDistributionRef }: DatasetProps) => {
   useEffect(() => {
