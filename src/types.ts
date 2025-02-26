@@ -4,7 +4,7 @@ export interface PageProps {
   params: {
     slug: string;
   };
-  searchParams: {};
+  searchParams: unknown;
 }
 
 export interface SelectOption<T> {

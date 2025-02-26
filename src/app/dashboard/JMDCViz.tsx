@@ -1,14 +1,25 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import * as Plot from "@observablehq/plot";
 import { DatasetProps } from "@/types/sleep";
-import { jmdcData } from "./healthy_aging/data";
 
+/* eslint-disable react/display-name */
 export const JMDCViz = ({ ageDistributionRef }: DatasetProps) => {
-  useEffect(() => {
-    if (!ageDistributionRef.current) return;
+  const jmdcData = useMemo(
+    () => ({
+      participants: Array.from({ length: 100 }, (_, i) => ({
+        id: i + 1,
+        age: Math.floor(25 + Math.random() * 40), // Random ages between 25-65
+      })),
+    }),
+    []
+  );
 
-    ageDistributionRef.current.innerHTML = "";
+  useEffect(() => {
+    const ageDistributionCurrent = ageDistributionRef.current;
+    if (!ageDistributionCurrent) return;
+
+    ageDistributionCurrent.innerHTML = "";
 
     const ageDistPlot = Plot.plot({
       marginLeft: 60,
@@ -32,10 +43,10 @@ export const JMDCViz = ({ ageDistributionRef }: DatasetProps) => {
       ]
     });
 
-    ageDistributionRef.current.appendChild(ageDistPlot);
+    ageDistributionCurrent.appendChild(ageDistPlot);
 
     return () => {
-      if (ageDistributionRef.current) ageDistributionRef.current.innerHTML = "";
+      if (ageDistributionCurrent) { ageDistributionCurrent.innerHTML = ""; }
     };
   }, [ageDistributionRef]);
 

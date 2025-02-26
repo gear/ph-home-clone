@@ -2,15 +2,18 @@
 import { useEffect, useRef, useState } from "react";
 import * as vg from "@uwdata/vgplot";
 
+/* eslint-disable react/display-name */
 export const SleepMosaicPlot = () => {
   const plotRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Store a reference to the current value of plotRef to use in cleanup
+    const currentPlotRef = plotRef.current;
     const initializePlot = async () => {
       setMounted(true);
       console.log("=== initializePlot started ===");
-      if (!plotRef.current) {
+      if (!currentPlotRef) {
         console.log("plotRef is null");
         return;
       }
@@ -53,17 +56,17 @@ export const SleepMosaicPlot = () => {
         // Create a container for each plot with title
         const createTitledPlot = (title: string, plot: vg.Plot) => {
           const container = document.createElement('div');
-          
+
           // Add title
           const titleElement = document.createElement('h4');
           titleElement.textContent = title;
           titleElement.style.textAlign = 'center';
           titleElement.style.marginBottom = '6px';
           container.appendChild(titleElement);
-          
+
           // Add plot
           container.appendChild(plot);
-          
+
           return container;
         };
 
@@ -83,8 +86,8 @@ export const SleepMosaicPlot = () => {
         container.appendChild(titledWakeUp);
         container.appendChild(titledDuration);
 
-        plotRef.current.innerHTML = "";
-        plotRef.current.appendChild(container);
+        currentPlotRef.innerHTML = "";
+        currentPlotRef.appendChild(container);
       } catch (error) {
         console.error("Type:", error);
       }
@@ -95,8 +98,8 @@ export const SleepMosaicPlot = () => {
     });
 
     return () => {
-      if (plotRef.current) {
-        plotRef.current.innerHTML = "";
+      if (currentPlotRef) {
+        currentPlotRef.innerHTML = "";
       }
     };
   }, [mounted]);

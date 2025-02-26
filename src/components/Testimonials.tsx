@@ -54,7 +54,7 @@ export const Testimonials = () => {
 };
 
 interface AvatarProps {
-  image: any;
+  image: string;
   name: string;
   title: string;
 }
