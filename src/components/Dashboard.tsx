@@ -24,7 +24,7 @@ export const LoadDashboard = () => {
         </div>
       </div>
 
-      <div className="text-2xl font-bold text-gray-700">
+      <div className="text-3xl font-bold text-gray-700">
         {selectedDataset === "healthy-aging" ? "Healthy Aging" : "JMDC"}
       </div>
 

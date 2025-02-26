@@ -65,6 +65,9 @@ export const HealthyAgingViz = ({ ageDistributionRef, weekdayPlotRef }: DatasetP
 
   return (
     <>
+      <p className="text font text-gray-550 text-center">This project aims to study healthy aging by analyzing activity tracker and biomarker data from 150 participants, including Fitbit and Oura Ring data for sleep and activity patterns, and Olink blood inflammation markers to understand key proteins in healthy aging.</p>
+      <h2 className="text-2xl font-bold text-gray-700">⌚ Insights from Wearable Devices</h2>
+      <p className="text font text-gray-550 text-center">We continuously track activity levels and sleep behavior of the population using Fitbit and Oura ring devices. On average a single participant was observed for 365.3 (±32.3) days.</p>
       <div className="grid grid-cols-2 gap-4">
         <div>
           <h3 className="text-xl font-semibold text-gray-700 mb-4">Age Distribution</h3>
