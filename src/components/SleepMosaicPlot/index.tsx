@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
-
+/* eslint-disable react/display-name */
 const Plot = dynamic(
   () =>
     import("./Plot").catch((err) => {
@@ -16,7 +16,7 @@ const Plot = dynamic(
     ),
   }
 );
-
+/* eslint-disable react/display-name */
 const SleepMosaicPlot = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -25,4 +25,6 @@ const SleepMosaicPlot = () => {
   );
 };
 
+Plot.displayName = "DynamicPlot";
+SleepMosaicPlot.displayName = "SleepMosaicPlot";
 export default SleepMosaicPlot;

@@ -9,14 +9,15 @@ import React, {
   useState,
   ReactNode,
   useMemo,
+  useCallback,
 } from "react";
 
 interface PublicationsContextType {
   publications: Publication[];
   topicFilter: string;
   yearFilter: number;
-  setTopicFilter: (topic: string) => void;
-  setYearFilter: (year: number) => void;
+  handleSetTopicFilter: (topic: string) => void;
+  handleSetYearFilter: (year: number) => void;
   articles: Article[];
 }
 
@@ -31,10 +32,18 @@ const PublicationsProvider: React.FC<{ children: ReactNode }> = ({
     return publications.reduce((acc, publication) => {
       return [...acc, ...publication.articles];
     }, [] as Article[]);
-  }, [publications]);
+  }, []);
 
   const [topicFilter, setTopicFilter] = useState<string>("");
   const [yearFilter, setYearFilter] = useState<number>(moment().year());
+
+  const handleSetYearFilter = useCallback((year: number) => {
+    setYearFilter(year);
+  }, []);
+
+  const handleSetTopicFilter = useCallback((topic: string) => {
+    setTopicFilter(topic);
+  }, []);
 
   return (
     <PublicationsContext.Provider
@@ -42,8 +51,8 @@ const PublicationsProvider: React.FC<{ children: ReactNode }> = ({
         publications,
         topicFilter,
         yearFilter,
-        setTopicFilter,
-        setYearFilter,
+        handleSetTopicFilter,
+        handleSetYearFilter,
         articles,
       }}
     >

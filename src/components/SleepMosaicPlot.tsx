@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
 import * as vg from "@uwdata/vgplot";
 
 export const SleepMosaicPlot = () => {
@@ -78,9 +77,12 @@ export const SleepMosaicPlot = () => {
       console.error(error);
     });
 
+    // Store a reference to the current value of plotRef to use in cleanup
+    const currentPlotRef = plotRef.current;
+
     return () => {
-      if (plotRef.current) {
-        plotRef.current.innerHTML = "";
+      if (currentPlotRef) {
+        currentPlotRef.innerHTML = "";
       }
     };
   }, [mounted]);

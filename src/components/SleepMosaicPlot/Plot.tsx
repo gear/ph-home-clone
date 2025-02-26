@@ -7,6 +7,9 @@ const Plot = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Store ref value in a variable to avoid the stale ref issue
+    const currentRef = plotRef.current;
+
     const initializePlot = async () => {
       try {
         if (
@@ -17,13 +20,13 @@ const Plot = () => {
         }
 
         // Wait for plotRef to be available
-        if (!plotRef.current) {
+        if (!currentRef) {
           return;
         }
 
         // Clear any existing content
-        while (plotRef.current.firstChild) {
-          plotRef.current.removeChild(plotRef.current.firstChild);
+        while (currentRef.firstChild) {
+          currentRef.removeChild(currentRef.firstChild);
         }
 
         const coordinator = vg.coordinator();
@@ -45,9 +48,9 @@ const Plot = () => {
 
     // Cleanup function
     return () => {
-      if (plotRef.current) {
-        while (plotRef.current.firstChild) {
-          plotRef.current.removeChild(plotRef.current.firstChild);
+      if (currentRef) {
+        while (currentRef.firstChild) {
+          currentRef.removeChild(currentRef.firstChild);
         }
       }
     };

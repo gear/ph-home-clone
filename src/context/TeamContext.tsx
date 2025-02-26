@@ -33,7 +33,7 @@ const TeamProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
         return [...acc, publication.info];
       }
     }, [] as Info[]);
-  }, [publications]);
+  }, []);
 
   return (
     <TeamContext.Provider
