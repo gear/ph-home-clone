@@ -29,7 +29,7 @@ export default function ResearchPage() {
           t("rp_title_flip_1"),
         ]}
         fixedWord={t("rp_title_flip_fixed")}
-    />
+        />
       </div>
       <div className="flex gap-[30px] justify-center flex-row mt-10">
         <FlipCard
@@ -65,6 +65,12 @@ export default function ResearchPage() {
           title="Machine Learning"
         />
       </div>
+      <SectionTitle
+        preTitle={t("privacy_policy_pretitle")}
+        title={t("privacy_policy_title")}
+      >
+        {t("privacy_policy")}
+      </SectionTitle>
     </div>
   );
 }
