@@ -5,8 +5,8 @@ import { JMDCViz } from "../app/dashboard/JMDCViz";
 
 export const LoadDashboard = () => {
   const [selectedDataset, setSelectedDataset] = useState("healthy-aging");
-  const weekdayPlotRef = useRef<HTMLDivElement>(null);
-  const ageDistributionRef = useRef<HTMLDivElement>(null);
+  const weekdayPlotRef = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
+  const ageDistributionRef = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
 
   return (
     <div className="space-y-8">

@@ -65,7 +65,8 @@ export const SleepMosaicPlot = () => {
           container.appendChild(titleElement);
 
           // Add plot
-          container.appendChild(plot);
+          // FIXME: This is a hack to get around the type mismatch between vg.Plot and HTMLElement
+          container.appendChild(plot as unknown as HTMLElement);
 
           return container;
         };

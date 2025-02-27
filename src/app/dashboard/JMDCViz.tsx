@@ -33,9 +33,6 @@ export const JMDCViz = ({ ageDistributionRef }: DatasetProps) => {
             { y: "count" },
             {
               x: "age",
-              fill: "steelblue",
-              title: (d) => `${d.count} participants\nAge: ${Math.floor(d.age)}-${Math.floor(d.age + 5)}`,
-              thresholds: 20,
             }
           )
         ),
