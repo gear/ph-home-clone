@@ -15,7 +15,7 @@ const InfoList = () => {
       {members.map((member: Info) => (
         <div
           key={member.email}
-          className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow items-center justify-center"
+          className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
           <div className="relative w-full h-36 bg-gray-100 flex items-center justify-center">
             <div className="relative w-32 h-32">
