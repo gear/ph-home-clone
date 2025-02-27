@@ -2,15 +2,18 @@
 import { useEffect, useRef, useState } from "react";
 import * as vg from "@uwdata/vgplot";
 
+/* eslint-disable react/display-name */
 export const SleepMosaicPlot = () => {
   const plotRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Store a reference to the current value of plotRef to use in cleanup
+    const currentPlotRef = plotRef.current;
     const initializePlot = async () => {
       setMounted(true);
       console.log("=== initializePlot started ===");
-      if (!plotRef.current) {
+      if (!currentPlotRef) {
         console.log("plotRef is null");
         return;
       }
@@ -50,24 +53,41 @@ export const SleepMosaicPlot = () => {
           );
         };
 
-        const dashboard = vg.vconcat(
-          makePlot("start_hour", "Sleep onset (hour)", "Number of records"),
-          makePlot(
-            "end_hour",
-            "Wake-up time (hour)",
-            "Number of records",
-            "#8B4513"
-          ),
-          makePlot(
-            "FB_minutesasleep_stages",
-            "Sleep duration (minutes)",
-            "Number of records",
-            "green"
-          )
-        );
+        // Create a container for each plot with title
+        const createTitledPlot = (title: string, plot: vg.Plot) => {
+          const container = document.createElement('div');
 
-        plotRef.current.innerHTML = "";
-        plotRef.current.appendChild(dashboard);
+          // Add title
+          const titleElement = document.createElement('h4');
+          titleElement.textContent = title;
+          titleElement.style.textAlign = 'center';
+          titleElement.style.marginBottom = '6px';
+          container.appendChild(titleElement);
+
+          // Add plot
+          container.appendChild(plot);
+
+          return container;
+        };
+
+        // Create individual plots
+        const sleepOnsetPlot = makePlot("start_hour", "Sleep onset (hour)", "Number of records");
+        const wakeUpPlot = makePlot("end_hour", "Wake-up time (hour)", "Number of records", "#8B4513");
+        const durationPlot = makePlot("FB_minutesasleep_stages", "Sleep duration (minutes)", "Number of records", "green");
+
+        // Create titled containers
+        const titledSleepOnset = createTitledPlot("Sleep Onset Time", sleepOnsetPlot);
+        const titledWakeUp = createTitledPlot("Wake-up Time", wakeUpPlot);
+        const titledDuration = createTitledPlot("Sleep Duration", durationPlot);
+
+        // Create master container
+        const container = document.createElement('div');
+        container.appendChild(titledSleepOnset);
+        container.appendChild(titledWakeUp);
+        container.appendChild(titledDuration);
+
+        currentPlotRef.innerHTML = "";
+        currentPlotRef.appendChild(container);
       } catch (error) {
         console.error("Type:", error);
       }
@@ -76,9 +96,6 @@ export const SleepMosaicPlot = () => {
     initializePlot().catch((error) => {
       console.error(error);
     });
-
-    // Store a reference to the current value of plotRef to use in cleanup
-    const currentPlotRef = plotRef.current;
 
     return () => {
       if (currentPlotRef) {

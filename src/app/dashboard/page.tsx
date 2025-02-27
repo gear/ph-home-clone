@@ -2,7 +2,7 @@
 
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
-import { SleepBarPlot } from "@/components/SleepBarPlot";
+import { LoadDashboard } from "@/components/Dashboard";
 import { Suspense } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -26,7 +26,7 @@ export default function Dashboard() {
               </div>
             }
           >
-            <SleepBarPlot />
+            <LoadDashboard />
           </Suspense>
         </div>
         {/* Additional section for sleep statistics */}
