@@ -17,14 +17,16 @@ const InfoList = () => {
           key={member.email}
           className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
         >
-          <div className="relative w-full h-48">
-            <div className="absolute inset-0">
-              <Image
-                src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
-                alt={`${member.name}'s profile`}
-                fill
-                className="object-cover rounded-full"
-              />
+          <div className="relative w-full h-36 bg-gray-100 flex items-center justify-center">
+            <div className="relative w-32 h-32">
+              <div className="absolute inset-0">
+                <Image
+                  src="/img/precision-health-logo.svg"
+                  alt={`${member.name}'s profile`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
           <div className="p-6">
