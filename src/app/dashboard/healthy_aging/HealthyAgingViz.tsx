@@ -28,7 +28,7 @@ export const HealthyAgingViz = ({ ageDistributionRef, weekdayPlotRef }: DatasetP
   ];
 
   useEffect(() => {
-    const ageDistributionCurrent = ageDistributionRef.current;
+    const ageDistributionCurrent = ageDistributionRef?.current;
     const weekdayPlotCurrent = weekdayPlotRef?.current;
     if (!ageDistributionCurrent || !weekdayPlotCurrent) return;
     // Store refs in variables to avoid stale refs in cleanup
@@ -49,12 +49,9 @@ export const HealthyAgingViz = ({ ageDistributionRef, weekdayPlotRef }: DatasetP
             { y: "count" },
             {
               x: "age",
-              fill: "steelblue",
-              title: (d) =>
-                `${d.count} participants\nAge: ${Math.floor(d.age)}-${Math.floor(d.age + 5)}`,
               thresholds: 10,
             }
-          )
+          ),
         ),
         Plot.ruleY([0])
       ]

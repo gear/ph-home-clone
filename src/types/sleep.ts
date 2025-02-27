@@ -14,6 +14,6 @@ export interface WeekdayData {
 }
 
 export interface DatasetProps {
-  ageDistributionRef: React.RefObject<HTMLDivElement>;
+  ageDistributionRef: React.RefObject<HTMLDivElement>; 
   weekdayPlotRef?: React.RefObject<HTMLDivElement>;
 }
