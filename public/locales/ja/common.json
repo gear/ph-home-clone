@@ -5,6 +5,7 @@
   "members": "メンバー",
   "news": "ニュース",
   "datasets": "データセット",
+  "dashboard": "ダッシュボード",
   "contact": "お問い合わせ",
   "hero": "私たちはヘルスケア分野において、ウェアラブルデバイスから得られるリアルタイムデータ、炎症マーカー、オミクスプロファイルに基づくデータドリブンの研究を行い、長寿や一般的な疾患リスクを解明することを目指しています。",
   "explore": "私たちの研究",
@@ -61,5 +62,7 @@
   "cited_by": "引用数",
   "unknown": "不明",
   "filter_sidebar_topics_label": "トピック",
-  "filter_sidebar_years_label": "年"
+  "filter_sidebar_years_label": "年",
+  "our_lab": "研究室",
+  "data": "データ"
 }

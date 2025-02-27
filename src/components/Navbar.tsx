@@ -27,21 +27,31 @@ export const Navbar = () => {
       href: "/research",
       value: "research",
       links: [
-        { href: "/research/healthy-aging", label: "Healthy Aging" },
-        { href: "/research/sleep-medicine", label: "Sleep Medicine" },
-        { href: "/research/metabolic-syndrome", label: "Metabolic Syndrome" },
-        { href: "/research/machine-learning", label: "Machine Learning" },
+        { href: "/publications", label: t("publications") },
+        { href: "/research/healthy-aging", label: t("rp_title_flip_1") },
+        { href: "/research/sleep-medicine", label: t("rp_title_flip_2") },
+        { href: "/research/metabolic-syndrome", label: t("rp_title_flip_3") },
+        { href: "/research/machine-learning", label: t("rp_title_flip_4") },
       ],
     },
-    { name: t("publications"), href: "/publications", value: "publications" },
     {
-      name: t("members"),
+      name: t("our_lab"),
       href: "/members",
       value: "members",
+      links: [
+        { href: "/members", label: t("members") },
+        { href: "/news", label: t("news") },
+      ],
     },
-    { name: t("news"), href: "/news", value: "news" },
-    { name: t("datasets"), href: "/datasets", value: "datasets" },
-    { name: t("dashboard"), href: "/dashboard", value: "dashboard" },
+    {
+      name: t("data"),
+      href: "/datasets",
+      value: "datasets",
+      links: [
+        { href: "/datasets", label: t("datasets") },
+        { href: "/dashboard", label: t("dashboard") },
+      ],
+    },
   ];
   return (
     <nav className="w-full container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between">
@@ -140,7 +150,7 @@ export const Navbar = () => {
                       href={menu.href}
                       className={cn(
                         "inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-blue-500 focus:text-blue-500 focus:bg-indigo-100 focus:outline-none",
-                        currentTab === menu.value && "text-blue-500"
+                        currentTab === menu.value
                       )}
                       onClick={() => {
                         dispatch(setCurrentTab(menu.value as NavBar));

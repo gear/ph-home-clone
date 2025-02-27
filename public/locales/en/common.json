@@ -55,6 +55,9 @@
   "rp_vision_pretitle": "Our Vision",
   "rp_vision_title": "Disease-free Society",
   "rp_vision_desc": "The Precision Health Group studies mechanisms of healthy aging from multiple modalities including wearable device data, blood proteomics, metabolomics, and medical imaging.",
+  "privacy_policy_pretitle": "Privacy Policy",
+  "privacy_policy_title": "Our Research Data Privacy Policy",
+  "privacy_policy": "This Privacy Policy constitutes part of the terms of use that apply to users when using the MiraSleep application (hereinafter referred to as this application and collectively the services provided through this application (hereinafter referred to as this service)) provided by the Department of Personalized Health Care, Department of Bioengineering, Graduate School of Engineering, The University of Tokyo (hereinafter referred to as our team), and applies when using this service. Registered users (hereinafter referred to as users) are required to provide user information (information in 1. (a) to (e) below) and use this service in accordance with this policy. Our team will endeavor to protect user information in order to provide this service smoothly.  If the User does not wish to provide User Information through this Application, the User may refuse to provide such information at his/her own discretion. In this case, please note that you may not be able to use this Application and this Service.  Our Team promises to comply with applicable laws, ordinances, guidelines established by relevant ministries and agencies, and guidelines of affiliated organizations regarding the User's personal information (meaning personal information as defined in the Act on the Protection of Personal Information, hereinafter simply referred to as personal information) and to handle such information appropriately in accordance with the contents described.",
   "no_articles_found": "No articles found",
   "adjust_filters_message": "Adjust your filters to find more articles.",
   "read_more": "Read More",
@@ -64,5 +67,7 @@
   "cited_by": "Cited By",
   "unknown": "Unknown",
   "filter_sidebar_topics_label": "Topics",
-  "filter_sidebar_years_label": "Years"
+  "filter_sidebar_years_label": "Years",
+  "our_lab": "Our Lab",
+  "data": "Data"
 }
