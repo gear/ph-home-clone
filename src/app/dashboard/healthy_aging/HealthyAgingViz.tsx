@@ -2,11 +2,13 @@
 import { useEffect, useMemo } from "react";
 import * as Plot from "@observablehq/plot";
 import { DatasetProps } from "@/types/sleep";
-// import { healthyAgingData, weekdayData } from "./data";
 import { SleepMosaicPlot } from "./SleepMosaicPlot";
+import { useTranslation } from "react-i18next";
 
 /* eslint-disable react/display-name */
 export const HealthyAgingViz = ({ ageDistributionRef, weekdayPlotRef }: DatasetProps) => {
+  const { t } = useTranslation("common");
+
   const healthyAgingData = useMemo(
     () => ({
       participants: Array.from({ length: 50 }, (_, i) => ({
@@ -85,23 +87,23 @@ export const HealthyAgingViz = ({ ageDistributionRef, weekdayPlotRef }: DatasetP
 
   return (
     <>
-      <p className="text font text-gray-550 text-center">This project aims to study healthy aging by analyzing activity tracker and biomarker data from 150 participants, including Fitbit and Oura Ring data for sleep and activity patterns, and Olink blood inflammation markers to understand key proteins in healthy aging.</p>
-      <h2 className="text-2xl font-bold text-gray-700">⌚ Insights from Wearable Devices</h2>
-      <p className="text font text-gray-550 text-center">We continuously track activity levels and sleep behavior of the population using Fitbit and Oura ring devices. On average a single participant was observed for 365.3 (±32.3) days.</p>
+      <p className="text font text-gray-550 text-center">{t('healthy_aging_intro')}</p>
+      <h2 className="text-2xl font-bold text-gray-700">{t('wearable_insights')}</h2>
+      <p className="text font text-gray-550 text-center">{t('wearable_tracking')}</p>
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <h3 className="text-xl font-semibold text-gray-700 mb-4">Age Distribution</h3>
+          <h3 className="text-xl font-semibold text-gray-700 mb-4">{t('age_distribution')}</h3>
           <div ref={ageDistributionRef} />
         </div>
         <div>
-          <h3 className="text-xl font-semibold text-gray-700 mb-4">Sleep Analysis</h3>
+          <h3 className="text-xl font-semibold text-gray-700 mb-4">{t('sleep_analysis')}</h3>
           <div className="grid grid-cols-1 gap-4">
             <div ref={weekdayPlotRef} />
           </div>
         </div>
       </div>
       <div className="mt-8">
-        <h3 className="text-xl font-semibold text-gray-700 mb-4">Sleep Data Analysis</h3>
+        <h3 className="text-xl font-semibold text-gray-700 mb-4">{t('sleep_data_analysis')}</h3>
         <SleepMosaicPlot />
       </div>
     </>
