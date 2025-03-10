@@ -6,6 +6,7 @@
   "news": "News",
   "datasets": "Dataset",
   "dashboard": "Dashboard",
+  "dashboard_desc": "Discover dynamic, interactive visualizations of datasets from the Precision Health research team.",
   "contact": "Contact",
   "hero": "We work on data-driven research in healthcare to understand longevity and common diseases risk from real-time wearable devices data, inflammation markers, and omics profiles.",
   "explore": "Our Research",
@@ -69,5 +70,11 @@
   "filter_sidebar_topics_label": "Topics",
   "filter_sidebar_years_label": "Years",
   "our_lab": "Our Lab",
-  "data": "Data"
+  "data": "Data",
+  "healthy_aging_intro": "This project aims to study healthy aging by analyzing activity tracker and biomarker data from 150 participants, including Fitbit and Oura Ring data for sleep and activity patterns, and Olink blood inflammation markers to understand key proteins in healthy aging.",
+  "wearable_insights": "Insights from Wearable Devices",
+  "wearable_tracking": "We continuously track activity levels and sleep behavior of the population using Fitbit and Oura ring devices. On average a single participant was observed for 365.3 (±32.3) days.",
+  "age_distribution": "Age Distribution",
+  "sleep_analysis": "Sleep Analysis",
+  "sleep_data_analysis": "Sleep Data Analysis"
 }

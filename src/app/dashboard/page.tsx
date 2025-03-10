@@ -13,9 +13,7 @@ export default function Dashboard() {
     <Container>
       <SectionTitle preTitle={t("dashboard")} title={t("Data Dashboard")}>
         <div className="text-pretty text-justify mb-8">
-          {t(
-            "A showcase of the datasets collected by the Precision Health research team."
-          )}
+          {t("dashboard_desc")}
         </div>
         <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow p-6">
           {/* <h3 className="text-lg font-semibold mb-4">Select the dataset</h3> */}
