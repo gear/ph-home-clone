@@ -26,11 +26,15 @@
   "author": "Hoang NT",
   "license": "",
   "dependencies": {
+    "@duckdb/duckdb-wasm": "^1.27.1",
     "@headlessui/react": "^2.1",
     "@heroicons/react": "^2.1.5",
     "@observablehq/plot": "^0.6.16",
+    "@observablehq/stdlib": "^5.8.5",
     "@reduxjs/toolkit": "^2.5.1",
     "@typescript-eslint/parser": "^8.20.0",
+    "@uwdata/vgplot": "^0.12.2",
+    "apache-arrow": "^14.0.2",
     "clsx": "^2.1.1",
     "i18next": "^24.2.2",
     "lucide-react": "^0.474.0",
@@ -43,11 +47,7 @@
     "react-i18next": "^15.4.0",
     "react-redux": "^9.2.0",
     "tailwind-merge": "^3.0.1",
-    "tailwindcss-animate": "^1.0.7",
-    "@uwdata/vgplot": "^0.10.0",
-    "@duckdb/duckdb-wasm": "^1.27.1",
-    "@observablehq/stdlib": "^5.8.5",
-    "apache-arrow": "^14.0.2"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",

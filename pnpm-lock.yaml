@@ -30,8 +30,8 @@ importers:
         specifier: ^8.20.0
         version: 8.20.0(eslint@9.18.0(jiti@1.21.7))(typescript@5.7.3)
       '@uwdata/vgplot':
-        specifier: ^0.10.0
-        version: 0.10.0
+        specifier: ^0.12.2
+        version: 0.12.2
       apache-arrow:
         specifier: ^14.0.2
         version: 14.0.2
@@ -567,20 +567,23 @@ packages:
     resolution: {integrity: sha512-v/BpkeeYAsPkKCkR8BDwcno0llhzWVqPOamQrAEMdpZav2Y9OVjd9dwJyBLJWwf335B5DmlifECIkZRJCaGaHA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@uwdata/mosaic-core@0.10.0':
-    resolution: {integrity: sha512-0/KpAlzh6TrnwBn6kNtUV5VMB9ktswO9eCWjLVnzr21KREPN/RAUYUi03ZPvdNtHzJchKc3EVCAx5hGFDqdsKQ==}
+  '@uwdata/flechette@1.1.2':
+    resolution: {integrity: sha512-hhtAgXlJbibLIHHIyFJ2fcPQ/hAK43HtEirRgrb/v2xEQv4It/KcUOyMklaVPUv2Z7+agKjSWLAXGyAQglRPvQ==}
 
-  '@uwdata/mosaic-inputs@0.10.0':
-    resolution: {integrity: sha512-Zq4+ZO2F8P7GLVmpgtuNGs0eRwCcNc9ufhbchlb3puGEGIDNBdrqyqlOfH9yufylkIdpFPyhWEJwdXTAPVzbkw==}
+  '@uwdata/mosaic-core@0.12.2':
+    resolution: {integrity: sha512-O8Ju7EQE9fGZqrhMP+5U0gyyCtXklkpG9GahGuhiXnHuNtoO2vzIMIs/78LB9SjULVQ1zsww4ov5PbUnlEMmIg==}
 
-  '@uwdata/mosaic-plot@0.10.0':
-    resolution: {integrity: sha512-QuQkZrYlKM1Cwr6UeRjQlxgXyLV5SMahHdbobnauyV5tU4Bv5lJa6t0LMN1tVp+f04UZPdPimVwL9Wky+jrPIQ==}
+  '@uwdata/mosaic-inputs@0.12.2':
+    resolution: {integrity: sha512-+zhkldLn+Qa7CYs9R/ig/MHy72hgheRsKQPPwv/dZUb7JwaTBosuSbuCFfynEkJVXpSpbEiNpoU3oz9aciHs3w==}
 
-  '@uwdata/mosaic-sql@0.10.0':
-    resolution: {integrity: sha512-tPsgrHO8zTwLFMBR+BiG4fskK9RSbH+nXS9ju8433NDq3qicAq4Z46CnYpCs0vWIR7AUAxMvncqP6YPbiQhOug==}
+  '@uwdata/mosaic-plot@0.12.2':
+    resolution: {integrity: sha512-uYV/OqN/VVyH/RKzTxK1jl1TxprmUhMuyWYN2ySd6/W7609e11CR4+v4hwsXXKn8T39/sFSrYQiu0qfz4V8gMw==}
 
-  '@uwdata/vgplot@0.10.0':
-    resolution: {integrity: sha512-ptlcdKNz2aFn08jht4mdNcfZUM5mBkpjL6af0R7eDS359Hp06SndfHXuLFmCgZgJJssk3mQ9mlYLjs64UEk2mA==}
+  '@uwdata/mosaic-sql@0.12.2':
+    resolution: {integrity: sha512-K/BkncYYmiXmSlkHZhHoOx8Un0Z4zG1XqsWugorspyy9Q9IAiZJG8w1VAqpOUqVafaFCytnNs3QigWlKVu2iiQ==}
+
+  '@uwdata/vgplot@0.12.2':
+    resolution: {integrity: sha512-ADt9t8apullBEZ0ItMqy6/u0c7CVzdfWaK8cY+sPeoUxBdaj+ymIc40nXfCjbxkYMjcXOlS7gPnFOLlBJv0iAA==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -620,10 +623,6 @@ packages:
 
   apache-arrow@14.0.2:
     resolution: {integrity: sha512-EBO2xJN36/XoY81nhLcwCJgFwkboDZeyNQ+OPsG7bCoQjc2BT0aTyH/MR6SrL+LirSNz+cYqjGRlupMMlP1aEg==}
-    hasBin: true
-
-  apache-arrow@16.1.0:
-    resolution: {integrity: sha512-G6GiM6tzPDdGnKUnVkvVr1Nt5+hUaCMBISiasMSiJwI5L5GKDv5Du7Avc2kxlFfB/LEK2LTqh2GKSxutMdf8vQ==}
     hasBin: true
 
   apache-arrow@17.0.0:
@@ -2665,34 +2664,36 @@ snapshots:
       '@typescript-eslint/types': 8.20.0
       eslint-visitor-keys: 4.2.0
 
-  '@uwdata/mosaic-core@0.10.0':
+  '@uwdata/flechette@1.1.2': {}
+
+  '@uwdata/mosaic-core@0.12.2':
     dependencies:
       '@duckdb/duckdb-wasm': 1.29.0
-      '@uwdata/mosaic-sql': 0.10.0
-      apache-arrow: 16.1.0
+      '@uwdata/flechette': 1.1.2
+      '@uwdata/mosaic-sql': 0.12.2
 
-  '@uwdata/mosaic-inputs@0.10.0':
+  '@uwdata/mosaic-inputs@0.12.2':
     dependencies:
-      '@uwdata/mosaic-core': 0.10.0
-      '@uwdata/mosaic-sql': 0.10.0
+      '@uwdata/mosaic-core': 0.12.2
+      '@uwdata/mosaic-sql': 0.12.2
       isoformat: 0.2.1
 
-  '@uwdata/mosaic-plot@0.10.0':
+  '@uwdata/mosaic-plot@0.12.2':
     dependencies:
       '@observablehq/plot': 0.6.16
-      '@uwdata/mosaic-core': 0.10.0
-      '@uwdata/mosaic-sql': 0.10.0
+      '@uwdata/mosaic-core': 0.12.2
+      '@uwdata/mosaic-sql': 0.12.2
       d3: 7.9.0
       isoformat: 0.2.1
 
-  '@uwdata/mosaic-sql@0.10.0': {}
+  '@uwdata/mosaic-sql@0.12.2': {}
 
-  '@uwdata/vgplot@0.10.0':
+  '@uwdata/vgplot@0.12.2':
     dependencies:
-      '@uwdata/mosaic-core': 0.10.0
-      '@uwdata/mosaic-inputs': 0.10.0
-      '@uwdata/mosaic-plot': 0.10.0
-      '@uwdata/mosaic-sql': 0.10.0
+      '@uwdata/mosaic-core': 0.12.2
+      '@uwdata/mosaic-inputs': 0.12.2
+      '@uwdata/mosaic-plot': 0.12.2
+      '@uwdata/mosaic-sql': 0.12.2
 
   acorn-jsx@5.3.2(acorn@8.14.0):
     dependencies:
@@ -2735,18 +2736,6 @@ snapshots:
       flatbuffers: 23.5.26
       json-bignum: 0.0.3
       pad-left: 2.1.0
-      tslib: 2.8.1
-
-  apache-arrow@16.1.0:
-    dependencies:
-      '@swc/helpers': 0.5.15
-      '@types/command-line-args': 5.2.3
-      '@types/command-line-usage': 5.0.4
-      '@types/node': 20.17.12
-      command-line-args: 5.2.1
-      command-line-usage: 7.0.3
-      flatbuffers: 24.12.23
-      json-bignum: 0.0.3
       tslib: 2.8.1
 
   apache-arrow@17.0.0:

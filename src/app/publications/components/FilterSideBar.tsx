@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 
 const FilterSideBar = () => {
   const { t } = useTranslation("common");
-  const { setTopicFilter, setYearFilter, yearFilter, topicFilter } =
+  const { handleSetTopicFilter, handleSetYearFilter, yearFilter, topicFilter } =
     usePublicationsContext();
 
   useEffect(() => {
@@ -21,19 +21,16 @@ const FilterSideBar = () => {
         label: (currentYear - i).toString(),
       })
     );
-    setYearFilter(yearOptions[0].value);
-  }, []);
+    handleSetYearFilter(yearOptions[0].value);
+  }, [handleSetYearFilter]);
 
   useEffect(() => {
     const topicOptions = FILTER_TOPICS.map((topic) => ({
       value: topic,
       label: topic,
     }));
-    setTopicFilter(topicOptions[0].value);
-  }, []);
-
-  const handleTopicChange = (topic: string) => setTopicFilter(topic);
-  const handleYearChange = (year: number) => setYearFilter(year);
+    handleSetTopicFilter(topicOptions[0].value);
+  }, [handleSetTopicFilter]);
 
   return (
     <div className="min-w-[20vw]">
@@ -43,7 +40,7 @@ const FilterSideBar = () => {
           value: topic,
           label: topic,
         }))}
-        onChange={(value) => handleTopicChange(value as string)}
+        onChange={(value) => handleSetTopicFilter(value as string)}
         selected={topicFilter}
       />
       <FilterColumn
@@ -55,7 +52,7 @@ const FilterSideBar = () => {
             label: (moment().year() - i).toString(),
           })
         )}
-        onChange={(value) => handleYearChange(value as number)}
+        onChange={(value) => handleSetYearFilter(value as number)}
         selected={yearFilter}
       />
     </div>

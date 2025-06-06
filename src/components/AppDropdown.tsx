@@ -63,7 +63,7 @@ const AppDropdown: React.FC<AppDropdownProps> = ({ links, content }) => {
             >
               <MenuItems
                 anchor="bottom"
-                className="absolute right-0 mt-0 w-48 origin-top-right menu-items bg-white shadow-lg rounded-md py-2 border-t border-blue-500 focus:outline-none"
+                className="absolute right-0 mt-0 min-w-max origin-top-right bg-white shadow-lg rounded-md py-1 border-t border-blue-500 focus:outline-none text-center"
                 onMouseLeave={close}
               >
                 {links.map((link) => (
@@ -71,7 +71,7 @@ const AppDropdown: React.FC<AppDropdownProps> = ({ links, content }) => {
                     {({ focus }) => (
                       <a
                         className={clsx(
-                          "block px-4 py-2 text-sm text-gray-700 transition-colors duration-150",
+                          "block px-4 py-2 text-sm text-gray-700 transition-colors duration-150 text-center",
                           "hover:bg-blue-500 hover:text-white",
                           "focus:bg-blue-500 focus:text-white focus:outline-none",
                           focus && "bg-blue-500 text-white"

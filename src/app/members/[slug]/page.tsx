@@ -31,7 +31,7 @@ const TeamDetailPage = () => {
           <div className="md:w-1/3">
             <div className="relative h-64 w-full">
               <Image
-                src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+                src=""
                 alt={`${info.name}'s profile`}
                 fill
                 className="object-cover"

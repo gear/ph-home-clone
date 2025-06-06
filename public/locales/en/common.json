@@ -6,6 +6,7 @@
   "news": "News",
   "datasets": "Dataset",
   "dashboard": "Dashboard",
+  "dashboard_desc": "Discover dynamic, interactive visualizations of datasets from the Precision Health research team.",
   "contact": "Contact",
   "hero": "We work on data-driven research in healthcare to understand longevity and common diseases risk from real-time wearable devices data, inflammation markers, and omics profiles.",
   "explore": "Our Research",
@@ -55,6 +56,9 @@
   "rp_vision_pretitle": "Our Vision",
   "rp_vision_title": "Disease-free Society",
   "rp_vision_desc": "The Precision Health Group studies mechanisms of healthy aging from multiple modalities including wearable device data, blood proteomics, metabolomics, and medical imaging.",
+  "privacy_policy_pretitle": "Privacy Policy",
+  "privacy_policy_title": "Our Research Data Privacy Policy",
+  "privacy_policy": "This Privacy Policy constitutes part of the terms of use that apply to users when using the MiraSleep application (hereinafter referred to as this application and collectively the services provided through this application (hereinafter referred to as this service)) provided by the Department of Personalized Health Care, Department of Bioengineering, Graduate School of Engineering, The University of Tokyo (hereinafter referred to as our team), and applies when using this service. Registered users (hereinafter referred to as users) are required to provide user information (information in 1. (a) to (e) below) and use this service in accordance with this policy. Our team will endeavor to protect user information in order to provide this service smoothly.  If the User does not wish to provide User Information through this Application, the User may refuse to provide such information at his/her own discretion. In this case, please note that you may not be able to use this Application and this Service.  Our Team promises to comply with applicable laws, ordinances, guidelines established by relevant ministries and agencies, and guidelines of affiliated organizations regarding the User's personal information (meaning personal information as defined in the Act on the Protection of Personal Information, hereinafter simply referred to as personal information) and to handle such information appropriately in accordance with the contents described.",
   "no_articles_found": "No articles found",
   "adjust_filters_message": "Adjust your filters to find more articles.",
   "read_more": "Read More",
@@ -64,5 +68,13 @@
   "cited_by": "Cited By",
   "unknown": "Unknown",
   "filter_sidebar_topics_label": "Topics",
-  "filter_sidebar_years_label": "Years"
+  "filter_sidebar_years_label": "Years",
+  "our_lab": "Our Lab",
+  "data": "Data",
+  "healthy_aging_intro": "This project aims to study healthy aging by analyzing activity tracker and biomarker data from 150 participants, including Fitbit and Oura Ring data for sleep and activity patterns, and Olink blood inflammation markers to understand key proteins in healthy aging.",
+  "wearable_insights": "Insights from Wearable Devices",
+  "wearable_tracking": "We continuously track activity levels and sleep behavior of the population using Fitbit and Oura ring devices. On average a single participant was observed for 365.3 (±32.3) days.",
+  "age_distribution": "Age Distribution",
+  "sleep_analysis": "Sleep Analysis",
+  "sleep_data_analysis": "Sleep Data Analysis"
 }
