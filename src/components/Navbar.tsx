@@ -52,6 +52,7 @@ export const Navbar = () => {
         { href: "/dashboard", label: t("dashboard") },
       ],
     },
+    { name: t("shi-dashboard"), href: "/shi-dashboard", value: "shi-dashboard" },
   ];
   return (
     <nav className="w-full container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between">
