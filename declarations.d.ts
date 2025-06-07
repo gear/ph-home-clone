@@ -14,12 +14,26 @@ declare module "@uwdata/vgplot" {
   export function yLabel(label: string): any;
   export function vconcat(...plots: Plot[]): any;
   export const Fixed: any;
-  
+
   export namespace Selection {
     export function crossfilter(): any;
   }
-  
+
   export function coordinator(): any;
   export function wasmConnector(): any;
   export function loadParquet(name: string, url: string): any;
+  export function sql(query: string): any;
+  export function loadCSV(name: string, url: string): any;
+  export function ruleX(...args: any[]): any;
+  export function ruleY(...args: any[]): any;
+  export function lineY(...args: any[]): any;
+  export function text(...args: any[]): any;
+  export function yGrid(...args: any[]): any;
+  export function yTickFormat(...args: any[]): any;
+  export function yLabel(...args: any[]): any;
+  export function yDomain(...args: any[]): any;
+  export function y(...args: any[]): any;
+  export function xTickFormat(...args: any[]): any;
+  export function xDomain(...args: any[]): any;
+  export function xLabel(...args: any[]): any;
 }
