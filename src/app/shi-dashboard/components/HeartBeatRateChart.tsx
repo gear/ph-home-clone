@@ -99,7 +99,8 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
 
       // Build plot layers
       const layers: any[] = [];
-      subjects.forEach(({ rawTable, endpointTable }, i) => {
+      const layersText: any[] = [];
+      subjects.forEach(({ rawTable }, i) => {
         const color = colors[i % colors.length];
 
         // Line layer
@@ -112,9 +113,13 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
             curve: "monotone-x",
           })
         );
+      });
+
+      subjects.forEach(({ endpointTable }, i) => {
+        const color = colors[i % colors.length];
 
         // Endpoint text layer
-        layers.push(
+        layersText.push(
           vg.text(vg.from(endpointTable), {
             x: "time_hours",
             y: "hr_min",
@@ -129,6 +134,7 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
       // Add axes, labels, grid, size
       const chart = vg.plot(
         ...layers,
+        ...layersText,
         vg.intervalX({ as: brush }),
         vg.xLabel("Time (h)"),
         vg.yGrid(true),
@@ -142,6 +148,7 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
 
       const chartZoomed = vg.plot(
         ...layers,
+        ...layersText,
         vg.xDomain(brush),
         vg.yGrid(true),
         vg.yTickFormat("s"),

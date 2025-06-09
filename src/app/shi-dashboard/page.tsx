@@ -19,7 +19,7 @@ export default function SHIDashboard() {
 
       <HeartBeatRateChart
         csvPaths={csvPaths}
-        width={1040}
+        width={1184}
         height={500}
         text="Heart Rate"
       />
