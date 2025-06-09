@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import * as vg from "@uwdata/vgplot";
 import { withClientSideRendering } from "@/components/hoc";
+import StatsBox from "./StatsBox";
 
 // Predefined colors for lines (wraps if more subjects than colors)
 const colors = [
@@ -38,10 +39,12 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
   text = "Line",
 }) => {
   const chartRef = useRef<HTMLDivElement>(null);
+  const chartZoomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const container = chartRef.current;
-    if (!container) return;
+    const containerZoomed = chartZoomRef.current;
+    if (!container || !containerZoomed) return;
 
     let initialized = false;
 
@@ -135,10 +138,25 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
         vg.height(height)
       );
 
+      const scaleWidthPercent = 0.6;
+
+      const chartZoomed = vg.plot(
+        ...layers,
+        vg.xDomain(brush),
+        vg.yGrid(true),
+        vg.yTickFormat("s"),
+        vg.width(width * scaleWidthPercent),
+        vg.height(height),
+        vg.xLabel("Time (h)"),
+        vg.yLabel("↑ Heart Rate (bpm)")
+      );
+
       // Mount chart once
       if (!initialized) {
         container.innerHTML = "";
+        containerZoomed.innerHTML = "";
         container.appendChild(chart as unknown as HTMLElement);
+        containerZoomed.appendChild(chartZoomed as unknown as HTMLElement);
         initialized = true;
       }
     })().catch(console.error);
@@ -146,13 +164,73 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
     // Cleanup on unmount
     return () => {
       if (container) container.innerHTML = "";
+      if (containerZoomed) containerZoomed.innerHTML = "";
     };
   }, []);
 
   return (
-    <div style={{ textAlign: "center", padding: 16 }}>
-      <h2>Heart Rate Data</h2>
-      <div ref={chartRef} />
+    <div className="flex flex-col gap-4">
+      <div className="flex gap-4">
+        <div className="flex flex-col gap-4 grow">
+          <StatsBox
+            label="30-year fixed-rate"
+            rate="7.22%"
+            rows={[
+              {
+                label: "1-week change",
+                rate: "+0.05%",
+              },
+              {
+                label: "1-year change",
+                rate: "+0.83%",
+              },
+              {
+                label: "4-week average",
+                rate: "7.09%",
+              },
+              {
+                label: "52-week average",
+                rate: "6.97%",
+              },
+            ]}
+            color="blue"
+          />
+
+          <StatsBox
+            label="15-year fixed-rate"
+            rate="6.47%"
+            rows={[
+              {
+                label: "1-week change",
+                rate: "+0.03%",
+              },
+              {
+                label: "1-year change",
+                rate: "+0.71%",
+              },
+              {
+                label: "4-week average",
+                rate: "6.37%",
+              },
+              {
+                label: "52-week average",
+                rate: "6.29%",
+              },
+            ]}
+            color="yellow"
+          />
+        </div>
+
+        <div className="bg-slate-100 rounded-md p-6 w-fit">
+          <h2 className="text-start mb-2">Heart Rate Zoomed</h2>
+          <div ref={chartZoomRef} className="w-fit" />
+        </div>
+      </div>
+
+      <div className="bg-slate-100 rounded-md p-6">
+        <h2 className="text-start mb-2">Heart Rate Data</h2>
+        <div ref={chartRef} />
+      </div>
     </div>
   );
 };
