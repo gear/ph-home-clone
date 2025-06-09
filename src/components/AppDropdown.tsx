@@ -30,12 +30,12 @@ const AppDropdown: React.FC<AppDropdownProps> = ({ links, content }) => {
     <Menu
       as="div"
       className="relative"
-      onMouseEnter={({ target }) =>
-        openRef.current ? "" : (target as HTMLDivElement).click()
-      }
-      onMouseLeave={() => {
-        if (openRef.current) closeFuncRef.current?.();
-      }}
+      // onMouseEnter={({ target }) =>
+      //   openRef.current ? "" : (target as HTMLDivElement).click()
+      // }
+      // onMouseLeave={() => {
+      //   if (openRef.current) closeFuncRef.current?.();
+      // }}
     >
       {({ open, close }) => {
         openRef.current = open;
