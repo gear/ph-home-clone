@@ -6,15 +6,7 @@ import { withClientSideRendering } from "@/components/hoc";
 import StatsBox from "./StatsBox";
 
 // Predefined colors for lines (wraps if more subjects than colors)
-const colors = [
-  "steelblue",
-  "orange",
-  "seagreen",
-  "purple",
-  "crimson",
-  "teal",
-  "goldenrod",
-];
+const colors = ["#60a5fa", "#facc15"];
 
 interface HeartBeatRateChartProps {
   /*
