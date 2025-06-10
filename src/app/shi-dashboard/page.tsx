@@ -1,12 +1,45 @@
+"use client";
+
 import HeartBeatRateChart from "@/app/shi-dashboard/components/HeartBeatRateChart";
+import { cn } from "@/libs/utils";
+import {
+  Description,
+  Field,
+  Label,
+  Listbox,
+  ListboxButton,
+  ListboxOption,
+  ListboxOptions
+} from "@headlessui/react";
+import { CheckIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
+import { useState } from "react";
 
 const csvPaths = [
-  "/data/subject_001.csv",
-  "/data/subject_002.csv",
-  "/data/subject_003.csv",
+  {
+    path: "/data/subject_001.csv",
+    color: "#60a5fa",
+  },
+  {
+    path: "/data/subject_002.csv",
+    color: "#facc15",
+  },
+  {
+    path: "/data/subject_003.csv",
+    color: "#8B4513",
+  },
 ];
 
+const datasets = csvPaths.map((item, index) => ({
+  color: item.color,
+  path: item.path,
+  id: item.path,
+  label: `Heart rate ${index + 1}`,
+}));
+
 export default function SHIDashboard() {
+  const [selectedDataset, setSelectedDataset] = useState([...datasets]);
+  console.log("🚀 ~ SHIDashboard ~ selectedDataset:", selectedDataset)
+
   return (
     <div className="flex flex-col px-6 max-w-screen-xl mx-auto gap-4">
       <h1 className="text-5xl font-bold">SHI Summer School July 2025</h1>
@@ -14,12 +47,69 @@ export default function SHIDashboard() {
       <h2 className="text-3xl font-bold">Daily Heart Rate Patterns</h2>
 
       <span className="text-sm">
-        There are 
-        <span className="border-b-2 border-b-blue-400"> 15 interactive graphs</span>, showing the relationship between sleep and other lifestyle aspects. These data is synthesized by sampling from a real data distribution, which consists of 16290 person-days of minute-by-minute recordings.
+        There are
+        <span className="border-b-2 border-b-blue-400">
+          {" "}
+          15 interactive graphs
+        </span>
+        , showing the relationship between sleep and other lifestyle aspects.
+        These data is synthesized by sampling from a real data distribution,
+        which consists of 16290 person-days of minute-by-minute recordings.
       </span>
 
+      <Field>
+        <Label>Select datasets</Label>
+        <Description className={"mb-2 text-xs text-gray-500"}>
+          Only datasets with checked data will be shown in the chart.
+        </Description>
+
+        <Listbox value={selectedDataset} onChange={setSelectedDataset} multiple>
+          <ListboxButton
+            className={cn(
+              "relative block w-[200px] max-w-[200px] h-[36px] text-ellipsis whitespace-nowrap overflow-hidden rounded-lg bg-gray-200 py-1.5 pr-8 pl-3 text-left text-sm/6",
+              "focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+            )}
+          >
+            {selectedDataset.map((person) => person.label).join(", ")}
+
+            <ChevronDownIcon
+              className="group pointer-events-none absolute top-2.5 right-2.5 size-4"
+              aria-hidden="true"
+            />
+          </ListboxButton>
+          <ListboxOptions
+            anchor="bottom"
+            transition
+            className={cn(
+              "w-[200px] rounded-xl border bg-gray-100 p-1 mt-1 focus:outline-none",
+              "transition duration-100 ease-in data-leave:data-closed:opacity-0"
+            )}
+          >
+            {datasets.map((data) => {
+              const isSelected = selectedDataset.some(
+                (item) => item.id === data.id
+              );
+              return (
+                <ListboxOption
+                  className="group text-sm flex justify-between cursor-default items-center gap-2 rounded-lg px-3 py-1.5 select-none data-focus:bg-gray-400"
+                  key={data.id}
+                  value={data}
+                >
+                  {data.label}
+
+                  <CheckIcon
+                    className={cn("invisible size-4", isSelected && "visible")}
+                  />
+                </ListboxOption>
+              );
+            })}
+          </ListboxOptions>
+        </Listbox>
+      </Field>
+
       <HeartBeatRateChart
-        csvPaths={csvPaths}
+        key={selectedDataset.map((d) => d.id).join(",")}
+        csvPaths={selectedDataset}
         width={1184}
         height={500}
         text="Heart Rate"
