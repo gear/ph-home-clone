@@ -9,7 +9,7 @@ import {
   Listbox,
   ListboxButton,
   ListboxOption,
-  ListboxOptions
+  ListboxOptions,
 } from "@headlessui/react";
 import { CheckIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
@@ -33,12 +33,13 @@ const datasets = csvPaths.map((item, index) => ({
   color: item.color,
   path: item.path,
   id: item.path,
+  rawTable: `heart_rate_raw_${index}`,
+  endpointTable: `endpoint_${index}`,
   label: `Heart rate ${index + 1}`,
 }));
 
 export default function SHIDashboard() {
   const [selectedDataset, setSelectedDataset] = useState([...datasets]);
-  console.log("🚀 ~ SHIDashboard ~ selectedDataset:", selectedDataset)
 
   return (
     <div className="flex flex-col px-6 max-w-screen-xl mx-auto gap-4">
@@ -63,48 +64,70 @@ export default function SHIDashboard() {
           Only datasets with checked data will be shown in the chart.
         </Description>
 
-        <Listbox value={selectedDataset} onChange={setSelectedDataset} multiple>
-          <ListboxButton
-            className={cn(
-              "relative block w-[200px] max-w-[200px] h-[36px] text-ellipsis whitespace-nowrap overflow-hidden rounded-lg bg-gray-200 py-1.5 pr-8 pl-3 text-left text-sm/6",
-              "focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
-            )}
+        <div className="flex items-center gap-3">
+          <Listbox
+            value={selectedDataset}
+            onChange={setSelectedDataset}
+            multiple
           >
-            {selectedDataset.map((person) => person.label).join(", ")}
+            <ListboxButton
+              className={cn(
+                "relative block w-[200px] max-w-[200px] h-[36px] text-ellipsis whitespace-nowrap overflow-hidden rounded-lg bg-gray-200 py-1.5 pr-8 pl-3 text-left text-sm/6",
+                "focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+              )}
+            >
+              {selectedDataset.map((person) => person.label).join(", ")}
 
-            <ChevronDownIcon
-              className="group pointer-events-none absolute top-2.5 right-2.5 size-4"
-              aria-hidden="true"
-            />
-          </ListboxButton>
-          <ListboxOptions
-            anchor="bottom"
-            transition
-            className={cn(
-              "w-[200px] rounded-xl border bg-gray-100 p-1 mt-1 focus:outline-none",
-              "transition duration-100 ease-in data-leave:data-closed:opacity-0"
-            )}
-          >
-            {datasets.map((data) => {
-              const isSelected = selectedDataset.some(
-                (item) => item.id === data.id
-              );
-              return (
-                <ListboxOption
-                  className="group text-sm flex justify-between cursor-default items-center gap-2 rounded-lg px-3 py-1.5 select-none data-focus:bg-gray-400"
-                  key={data.id}
-                  value={data}
-                >
-                  {data.label}
+              <ChevronDownIcon
+                className="group pointer-events-none absolute top-2.5 right-2.5 size-4"
+                aria-hidden="true"
+              />
+            </ListboxButton>
+            <ListboxOptions
+              anchor="bottom"
+              transition
+              className={cn(
+                "w-[200px] rounded-xl border bg-gray-100 p-1 mt-1 focus:outline-none",
+                "transition duration-100 ease-in data-leave:data-closed:opacity-0"
+              )}
+            >
+              {datasets.map((data) => {
+                const isSelected = selectedDataset.some(
+                  (item) => item.id === data.id
+                );
+                return (
+                  <ListboxOption
+                    className="group text-sm flex justify-between cursor-default items-center gap-2 rounded-lg px-3 py-1.5 select-none data-focus:bg-gray-400"
+                    key={data.id}
+                    value={data}
+                  >
+                    {data.label}
 
-                  <CheckIcon
-                    className={cn("invisible size-4", isSelected && "visible")}
-                  />
-                </ListboxOption>
-              );
-            })}
-          </ListboxOptions>
-        </Listbox>
+                    <CheckIcon
+                      className={cn(
+                        "invisible size-4",
+                        isSelected && "visible"
+                      )}
+                    />
+                  </ListboxOption>
+                );
+              })}
+            </ListboxOptions>
+          </Listbox>
+
+          <div className="flex gap-2">
+            {selectedDataset.map((dataset) => (
+              <div className="flex items-center gap-1" key={dataset.id}>
+                <span
+                  key={dataset.id}
+                  className="inline-block w-3 h-3 rounded-full"
+                  style={{ backgroundColor: dataset.color }}
+                ></span>
+                <span className="text-sm">{dataset.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </Field>
 
       <HeartBeatRateChart

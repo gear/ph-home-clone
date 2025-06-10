@@ -20,6 +20,8 @@ interface HeartBeatRateChartProps {
     path: string;
     color: string;
     label: string;
+    rawTable: string;
+    endpointTable: string;
   }[];
   width?: number;
   height?: number;
@@ -53,13 +55,14 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
       await coord.databaseConnector(vg.wasmConnector());
 
       // Derive subject metadata from csvPaths
-      const subjects = csvPaths.map(({ color, path, label }, index) => {
-        // Extract numeric id from filename: subject_001.csv
-        const rawTable = `heart_rate_raw_${index}`;
-        const endpointTable = `endpoint_${index}`;
-        const dataUrl = `${window.location.origin}${path}`;
-        return { rawTable, endpointTable, dataUrl, color, label };
-      });
+      const subjects = csvPaths.map(
+        ({ color, path, label, rawTable, endpointTable }, index) => {
+          // Extract numeric id from filename: subject_001.csv
+
+          const dataUrl = `${window.location.origin}${path}`;
+          return { rawTable, endpointTable, dataUrl, color, label };
+        }
+      );
 
       // Build exec commands dynamically
       const commands: string[] = [];
@@ -109,23 +112,24 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
             stroke: color,
             strokeOpacity: 0.7,
             curve: "monotone-x",
+            clip: true,
           })
         );
       });
 
-      subjects.forEach(({ endpointTable, color, label }, i) => {
-        // Endpoint text layer
-        layersText.push(
-          vg.text(vg.from(endpointTable), {
-            x: "time_hours",
-            y: "hr_min",
-            text: [label],
-            fill: color,
-            lineAnchor: "bottom",
-            dy: -6,
-          })
-        );
-      });
+      // subjects.forEach(({ endpointTable, color, label }, i) => {
+      //   // Endpoint text layer
+      //   layersText.push(
+      //     vg.text(vg.from(endpointTable), {
+      //       x: "time_hours",
+      //       y: "hr_min",
+      //       text: [label],
+      //       fill: color,
+      //       lineAnchor: "bottom",
+      //       dy: -6,
+      //     })
+      //   );
+      // });
 
       // Add axes, labels, grid, size
       const chart = vg.plot(
