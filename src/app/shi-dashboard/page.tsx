@@ -9,7 +9,9 @@ const csvPaths = [
 export default function SHIDashboard() {
   return (
     <div className="flex flex-col px-6 max-w-screen-xl mx-auto gap-4">
-      <h1 className="text-3xl font-bold">SHI Summer School 2025</h1>
+      <h1 className="text-5xl font-bold">SHI Summer School 2025</h1>
+
+      <h2 className="text-3xl font-bold">Daily Heart Rate Patterns</h2>
 
       <span className="text-sm">
         There are 
