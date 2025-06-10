@@ -9,12 +9,11 @@ const csvPaths = [
 export default function SHIDashboard() {
   return (
     <div className="flex flex-col px-6 max-w-screen-xl mx-auto gap-4">
-      <h1 className="text-3xl font-bold">Primary mortgage market survey</h1>
+      <h1 className="text-3xl font-bold">SHI Summer School 2025</h1>
 
       <span className="text-sm">
-        Each week, Freddie Mac surveys lenders on rates and points for their
-        <span className="border-b-2 border-b-blue-400"> 30-year fixed-rate</span>, <span className="border-b-2 border-b-yellow-400"> 15-year fixed-rate</span>, and other mortgage
-        products. Data as of May 2, 2024.
+        There are 
+        <span className="border-b-2 border-b-blue-400"> 15 interactive graphs</span>, showing the relationship between sleep and other lifestyle aspects. These data is synthesized by sampling from a real data distribution, which consists of 16290 person-days of minute-by-minute recordings.
       </span>
 
       <HeartBeatRateChart
