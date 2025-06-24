@@ -1,94 +1,117 @@
-import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import clsx from "clsx";
-import { Fragment, useRef } from "react";
-import { Transition } from "@headlessui/react";
+import {
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+  Transition,
+} from "@headlessui/react";
+import Link from "next/link";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 interface Link {
   href: string;
   label: string;
 }
 
-type ButtonRenderPropArg = {
-  open: boolean;
-  active: boolean;
-  hover: boolean;
-  focus: boolean;
-  disabled: boolean;
-  autofocus: boolean;
-};
-
 interface AppDropdownProps {
   links: Link[];
-  content: (props: ButtonRenderPropArg) => React.ReactElement;
+  label: string;
+  link: string;
 }
 
-const AppDropdown: React.FC<AppDropdownProps> = ({ links, content }) => {
-  const openRef = useRef(false);
-  const closeFuncRef = useRef<Function>(undefined);
+const AppDropdown: React.FC<AppDropdownProps> = ({ links, label, link }) => {
+  let timeout: string | number | NodeJS.Timeout | undefined; // NodeJS.Timeout
+  const timeoutDuration = 0;
+
+  const buttonRef = useRef<HTMLButtonElement>(null); // useRef<HTMLButtonElement>(null)
+  const [openState, setOpenState] = useState(false);
+
+  const toggleMenu = (open: boolean) => {
+    // log the current open state in React (toggle open state)
+    setOpenState((openState) => !openState);
+    // toggle the menu by clicking on buttonRef
+    buttonRef?.current?.click(); // eslint-disable-line
+  };
+
+  const onHover = (open: boolean, action: string) => {
+    // if the modal is currently closed, we need to open it
+    // OR
+    // if the modal is currently open, we need to close it
+    if (
+      (!open && !openState && action === "onMouseEnter") ||
+      (open && openState && action === "onMouseLeave")
+    ) {
+      // clear the old timeout, if any
+      clearTimeout(timeout);
+      // open the modal after a timeout
+      timeout = setTimeout(() => toggleMenu(open), timeoutDuration);
+    }
+    // else: don't click! 😁
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      buttonRef.current &&
+      !buttonRef.current.contains(event.target as unknown as Node)
+    ) {
+      event.stopPropagation();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <Menu
-      as="div"
-      className="relative"
-      // onMouseEnter={({ target }) =>
-      //   openRef.current ? "" : (target as HTMLDivElement).click()
-      // }
-      // onMouseLeave={() => {
-      //   if (openRef.current) closeFuncRef.current?.();
-      // }}
-    >
-      {({ open, close }) => {
-        openRef.current = open;
-        closeFuncRef.current = close;
-        return (
-          <>
-            <MenuButton as={Fragment}>
-              {content({
-                open,
-                active: false,
-                hover: true,
-                focus: false,
-                disabled: false,
-                autofocus: false,
-              })}
-            </MenuButton>
+    <Popover className="relative">
+      {({ open }) => (
+        <div
+          onMouseEnter={() => onHover(open, "onMouseEnter")}
+          onMouseLeave={() => onHover(open, "onMouseLeave")}
+          className="flex flex-col"
+        >
+          <PopoverButton
+            ref={buttonRef}
+            className="inline-block text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-blue-500 focus:text-blue-500 focus:bg-indigo-100 focus:outline-none"
+          >
+            <Link href={link} className="px-4 py-2 inline-block">
+              {label}
+            </Link>
+          </PopoverButton>
 
-            <Transition
-              enter="transition duration-100 ease-out"
-              enterFrom="transform scale-95 opacity-0"
-              enterTo="transform scale-100 opacity-100"
-              leave="transition duration-75 ease-in"
-              leaveFrom="transform scale-100 opacity-100"
-              leaveTo="transform scale-95 opacity-0"
+          <Transition
+            show={open}
+            as={Fragment}
+            enter="transition ease-out duration-200"
+            enterFrom="opacity-0 translate-y-1"
+            enterTo="opacity-100 translate-y-0"
+            leave="transition ease-in duration-150"
+            leaveFrom="opacity-100 translate-y-0"
+            leaveTo="opacity-0 translate-y-1"
+          >
+            <PopoverPanel
+              anchor="bottom"
+              className="divide-y border bg-white divide-white/5 rounded-xl text-sm/6 transition duration-200 ease-in-out [--anchor-gap:--spacing(5)] data-closed:-translate-y-1 data-closed:opacity-0 py-2"
+              transition
             >
-              <MenuItems
-                anchor="bottom"
-                className="absolute right-0 mt-0 min-w-max origin-top-right bg-white shadow-lg rounded-md py-1 border-t border-blue-500 focus:outline-none text-center"
-                onMouseLeave={close}
-              >
-                {links.map((link) => (
-                  <MenuItem key={link.href} as={Fragment}>
-                    {({ focus }) => (
-                      <a
-                        className={clsx(
-                          "block px-4 py-2 text-sm text-gray-700 transition-colors duration-150 text-center",
-                          "hover:bg-blue-500 hover:text-white",
-                          "focus:bg-blue-500 focus:text-white focus:outline-none",
-                          focus && "bg-blue-500 text-white"
-                        )}
-                        href={link.href}
-                      >
-                        {link.label}
-                      </a>
-                    )}
-                  </MenuItem>
-                ))}
-              </MenuItems>
-            </Transition>
-          </>
-        );
-      }}
-    </Menu>
+              {links.map(({ href, label }) => (
+                <div className="px-2" key={href}>
+                  <Link
+                    href={href}
+                    className="block rounded-lg px-3 py-2 transition hover:bg-gray-100"
+                  >
+                    <p className="font-semibold ">{label}</p>
+                  </Link>
+                </div>
+              ))}
+            </PopoverPanel>
+          </Transition>
+        </div>
+      )}
+    </Popover>
   );
 };
 
