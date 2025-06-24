@@ -13,6 +13,7 @@ import {
 } from "@headlessui/react";
 import { CheckIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
+import PlotColsGroup from "@/components/PlotColsGroup";
 
 const csvPaths = [
   {
@@ -127,6 +128,33 @@ export default function SHIDashboard() {
         width={1184}
         height={500}
         text="Heart Rate"
+      />
+
+      <PlotColsGroup
+        fields={[
+          {
+            color: "steelblue",
+            label: "Sleep Onset Time",
+            column: "start_hour",
+            xlabel: "Sleep onset (hour)",
+            ylabel: "Number of records",
+          },
+          {
+            color: "#8B4513",
+            label: "Wake-up Time",
+            column: "end_hour",
+            xlabel: "Wake-up time (hour)",
+            ylabel: "Number of records",
+          },
+          {
+            color: "green",
+            label: "Sleep Duration",
+            column: "FB_minutesasleep_stages",
+            xlabel: "Sleep duration (minutes)",
+            ylabel: "Number of records",
+          },
+        ]}
+        filePath="/data/fitbit_main_sleep.parquet"
       />
     </div>
   );
