@@ -1,12 +1,15 @@
 "use client";
-import { useEffect, useMemo } from "react";
-import * as Plot from "@observablehq/plot";
 import { DatasetProps } from "@/types/sleep";
-import { SleepMosaicPlot } from "./SleepMosaicPlot";
+import * as Plot from "@observablehq/plot";
+import { useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
+import { SleepMosaicPlot } from "./SleepMosaicPlot";
 
 /* eslint-disable react/display-name */
-export const HealthyAgingViz = ({ ageDistributionRef, weekdayPlotRef }: DatasetProps) => {
+export const HealthyAgingViz = ({
+  ageDistributionRef,
+  weekdayPlotRef,
+}: DatasetProps) => {
   const { t } = useTranslation("common");
 
   const healthyAgingData = useMemo(
@@ -53,17 +56,17 @@ export const HealthyAgingViz = ({ ageDistributionRef, weekdayPlotRef }: DatasetP
               x: "age",
               thresholds: 10,
             }
-          ),
+          )
         ),
-        Plot.ruleY([0])
-      ]
+        Plot.ruleY([0]),
+      ],
     });
 
     // Create weekday plot
     const weekdayPlot = Plot.plot({
       marginLeft: 60,
       height: 300,
-      x: { label: "Day of Week", domain: weekdayData.map(d => d.day) },
+      x: { label: "Day of Week", domain: weekdayData.map((d) => d.day) },
       y: { label: "Average Sleep Duration (hours)", grid: true },
       marks: [
         Plot.barY(weekdayData, {
@@ -72,8 +75,8 @@ export const HealthyAgingViz = ({ ageDistributionRef, weekdayPlotRef }: DatasetP
           fill: "#8B4513",
           title: (d) => `${d.day}\nAverage: ${d.avgSleep.toFixed(1)} hours\n`,
         }),
-        Plot.ruleY([0])
-      ]
+        Plot.ruleY([0]),
+      ],
     });
 
     ageDistributionCurrent.appendChild(ageDistPlot);
@@ -87,23 +90,35 @@ export const HealthyAgingViz = ({ ageDistributionRef, weekdayPlotRef }: DatasetP
 
   return (
     <>
-      <p className="text font text-gray-550 text-center">{t('healthy_aging_intro')}</p>
-      <h2 className="text-2xl font-bold text-gray-700">{t('wearable_insights')}</h2>
-      <p className="text font text-gray-550 text-center">{t('wearable_tracking')}</p>
+      <p className="text font text-gray-550 text-center">
+        {t("healthy_aging_intro")}
+      </p>
+      <h2 className="text-2xl font-bold text-gray-700">
+        {t("wearable_insights")}
+      </h2>
+      <p className="text font text-gray-550 text-center">
+        {t("wearable_tracking")}
+      </p>
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <h3 className="text-xl font-semibold text-gray-700 mb-4">{t('age_distribution')}</h3>
+          <h3 className="text-xl font-semibold text-gray-700 mb-4">
+            {t("age_distribution")}
+          </h3>
           <div ref={ageDistributionRef} />
         </div>
         <div>
-          <h3 className="text-xl font-semibold text-gray-700 mb-4">{t('sleep_analysis')}</h3>
+          <h3 className="text-xl font-semibold text-gray-700 mb-4">
+            {t("sleep_analysis")}
+          </h3>
           <div className="grid grid-cols-1 gap-4">
             <div ref={weekdayPlotRef} />
           </div>
         </div>
       </div>
       <div className="mt-8">
-        <h3 className="text-xl font-semibold text-gray-700 mb-4">{t('sleep_data_analysis')}</h3>
+        <h3 className="text-xl font-semibold text-gray-700 mb-4">
+          {t("sleep_data_analysis")}
+        </h3>
         <SleepMosaicPlot />
       </div>
     </>
