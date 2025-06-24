@@ -52,7 +52,11 @@ export const Navbar = () => {
         { href: "/dashboard", label: t("dashboard") },
       ],
     },
-    { name: t("shi-dashboard"), href: "/shi-dashboard", value: "shi-dashboard" },
+    {
+      name: t("shi-dashboard"),
+      href: "/shi-dashboard",
+      value: "shi-dashboard",
+    },
   ];
   return (
     <nav className="w-full container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between">
@@ -144,23 +148,7 @@ export const Navbar = () => {
           {navigation.map((menu, index) => (
             <li className="mr-3" key={index}>
               {menu.links ? (
-                <AppDropdown
-                  links={menu.links}
-                  content={() => (
-                    <Link
-                      href={menu.href}
-                      className={cn(
-                        "inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-blue-500 focus:text-blue-500 focus:bg-indigo-100 focus:outline-none",
-                        currentTab === menu.value
-                      )}
-                      onClick={() => {
-                        dispatch(setCurrentTab(menu.value as NavBar));
-                      }}
-                    >
-                      {menu.name}
-                    </Link>
-                  )}
-                />
+                <AppDropdown links={menu.links} label={menu.name} link={menu.href} />
               ) : (
                 <Link
                   href={menu.href}
