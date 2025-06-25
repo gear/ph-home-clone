@@ -53,7 +53,7 @@ export const Navbar = () => {
       ],
     },
     {
-      name: t("shi-dashboard"),
+      name: "SHI Dashboard",
       href: "/shi-dashboard",
       value: "shi-dashboard",
     },
