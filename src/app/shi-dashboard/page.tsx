@@ -20,13 +20,13 @@ const csvPaths = [
     path: "/data/subject_001.csv",
     color: "#60a5fa",
   },
-  {
-    path: "/data/subject_002.csv",
-    color: "#facc15",
-  },
+  //{
+  //  path: "/data/subject_002.csv",
+  //  color: "#facc15",
+  //},
   {
     path: "/data/subject_003.csv",
-    color: "#8B4513",
+    color: "#facc15",
   },
 ];
 
@@ -130,6 +130,83 @@ export default function SHIDashboard() {
         text="Heart Rate"
       />
 
+      <h2 className="text-3xl font-bold mt-8">Sleep Parameters</h2>
+
+      <span className="text-sm">
+        This section explores {" "}
+        <span className="border-b-2 border-b-blue-400">
+          sleep parameters
+        </span>
+        , including sleep efficiency, sleep start time, sleep duration, and wake up time.
+        The synthesized data shows the relationship between sleep parameters and other lifestyle factors.
+      </span>
+
+      <h3 className="text-2xl font-bold">Sleep Start Time / Sleep Duration / Wake Up Time</h3>
+      <span className="text-sm">
+        <ul className="list-disc ml-5">
+          <li>Sleep Start Time (Sleep Onset): 24-hour</li>
+          <li>Wake-up Time: 24-hour</li>
+          <li>Sleep Duration: Minute</li>
+        </ul>
+      </span>
+
+      <PlotColsGroup
+        fields={[
+          {
+            color: "steelblue",
+            label: "Sleep Start Time",
+            column: "start_hour",
+            xlabel: "Sleep onset (hour)",
+            ylabel: "Number of records",
+          },
+          {
+            color: "pink",
+            label: "Sleep Duration",
+            column: "FB_minutesasleep_stages",
+            xlabel: "Sleep duration (minutes)",
+            ylabel: "Number of records",
+          },
+          {
+            color: "gold",
+            label: "Wake-up Time",
+            column: "end_hour",
+            xlabel: "Wake-up time (hour)",
+            ylabel: "Number of records",
+          },
+        ]}
+        filePath="/data/fitbit_main_sleep.parquet"
+      />
+
+      <h3 className="text-2xl font-bold">Caffeine Consumption / Sleep Start Time</h3>
+      <span className="text-sm">
+        <ul className="list-disc ml-5">
+          <li>Caffeine Consumption: Cups per day</li>
+          <li>Sleep Start Time: 24-hour</li>
+        </ul>
+      </span>
+      <PlotColsGroup
+        fields={[
+          {
+            color: "black",
+            label: "Caffeine Consumption",
+            column: "start_hour",
+            xlabel: "Amount per day (cup)",
+            ylabel: "Number of records",
+          },
+          {
+            color: "gold",
+            label: "Wake-up Time",
+            column: "end_hour",
+            xlabel: "Wake-up Time (hour)",
+            ylabel: "Number of records",
+          },
+        ]}
+        filePath="/data/fitbit_main_sleep.parquet"
+      />
+
+      <h2 className="text-3xl font-bold mt-8">Sleep Architecture: Light/REM/Deep</h2>
+      
+
       <PlotColsGroup
         fields={[
           {
@@ -137,13 +214,6 @@ export default function SHIDashboard() {
             label: "Sleep Onset Time",
             column: "start_hour",
             xlabel: "Sleep onset (hour)",
-            ylabel: "Number of records",
-          },
-          {
-            color: "#8B4513",
-            label: "Wake-up Time",
-            column: "end_hour",
-            xlabel: "Wake-up time (hour)",
             ylabel: "Number of records",
           },
           {
@@ -156,6 +226,8 @@ export default function SHIDashboard() {
         ]}
         filePath="/data/fitbit_main_sleep.parquet"
       />
+
+
     </div>
   );
 }

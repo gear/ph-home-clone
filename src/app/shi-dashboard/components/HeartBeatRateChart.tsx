@@ -207,48 +207,48 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
         <div className="flex gap-4">
           <div className="flex flex-col gap-4 grow">
             <StatsBox
-              label="30-year fixed-rate"
-              rate="7.22%"
+              label="Participant 1"
+              rate="Heart Rate Range: 52-110"
               rows={[
                 {
-                  label: "1-week change",
-                  rate: "+0.05%",
+                  label: "Sleeping HR Range",
+                  rate: "?",
                 },
                 {
-                  label: "1-year change",
-                  rate: "+0.83%",
+                  label: "Max Sleeping HR",
+                  rate: "?",
                 },
                 {
-                  label: "4-week average",
-                  rate: "7.09%",
+                  label: "Min Sleeping HR",
+                  rate: "?",
                 },
                 {
-                  label: "52-week average",
-                  rate: "6.97%",
+                  label: "Physical Activity Level",
+                  rate: "Low",
                 },
               ]}
               color="blue"
             />
 
             <StatsBox
-              label="15-year fixed-rate"
-              rate="6.47%"
+              label="Participant 2"
+              rate="Heart Rate Range: 40-106"
               rows={[
                 {
-                  label: "1-week change",
-                  rate: "+0.03%",
+                  label: "Sleeping HR Range",
+                  rate: "?",
                 },
                 {
-                  label: "1-year change",
-                  rate: "+0.71%",
+                  label: "Max Sleeping HR",
+                  rate: "?",
                 },
                 {
-                  label: "4-week average",
-                  rate: "6.37%",
+                  label: "Min Sleeping HR",
+                  rate: "?",
                 },
                 {
-                  label: "52-week average",
-                  rate: "6.29%",
+                  label: "Physical Activity Level",
+                  rate: "High",
                 },
               ]}
               color="yellow"
