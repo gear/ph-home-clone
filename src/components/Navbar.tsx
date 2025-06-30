@@ -15,6 +15,15 @@ import { setCurrentTab } from "@/lib/features/appSlice";
 import { NavBar } from "@/types";
 import AppDropdown from "./AppDropdown";
 
+export const linksSHIDashboard = [
+  {
+    href: "/shi-dashboard/daily_heart_rate_patterns",
+    label: "daily_heart_rate_patterns",
+  },
+  { href: "/shi-dashboard/sleep_architecture", label: "sleep_architecture" },
+  { href: "/shi-dashboard/sleep_parameters", label: "sleep_parameters" },
+];
+
 export const Navbar = () => {
   const { t } = useTranslation("common");
   const currentTab = useAppSelector((state) => state.app.currentTab);
@@ -56,6 +65,10 @@ export const Navbar = () => {
       name: "SHI Dashboard",
       href: "/shi-dashboard",
       value: "shi-dashboard",
+      links: linksSHIDashboard.map((item) => ({
+        href: item.href,
+        label: t(item.label),
+      })),
     },
   ];
   return (
@@ -148,7 +161,11 @@ export const Navbar = () => {
           {navigation.map((menu, index) => (
             <li className="mr-3" key={index}>
               {menu.links ? (
-                <AppDropdown links={menu.links} label={menu.name} link={menu.href} />
+                <AppDropdown
+                  links={menu.links}
+                  label={menu.name}
+                  link={menu.href}
+                />
               ) : (
                 <Link
                   href={menu.href}

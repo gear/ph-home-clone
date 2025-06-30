@@ -175,6 +175,7 @@ export default function SHIDashboard() {
           },
         ]}
         filePath="/data/fitbit_main_sleep.parquet"
+        parquetName="sleep_start_time"
       />
 
       <h3 className="text-2xl font-bold">Caffeine Consumption Time / Sleep Start Time</h3>
@@ -202,6 +203,7 @@ export default function SHIDashboard() {
           },
         ]}
         filePath="/data/shi_caffeine.parquet"
+        parquetName="caffeine_consumption"
       />
 
       <h2 className="text-3xl font-bold mt-8">Sleep Architecture: Light/REM/Deep</h2>
@@ -232,6 +234,7 @@ export default function SHIDashboard() {
           },
         ]}
         filePath="/data/fitbit_main_sleep.parquet"
+        parquetName="deep_sleep_time"
       />
 
 
@@ -261,6 +264,7 @@ export default function SHIDashboard() {
           },
         ]}
         filePath="/data/fitbit_main_sleep.parquet"
+        parquetName="rem_sleep_time"
       />
 
     </div>

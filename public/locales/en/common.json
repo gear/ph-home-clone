@@ -76,5 +76,8 @@
   "wearable_tracking": "We continuously track activity levels and sleep behavior of the population using Fitbit and Oura ring devices. On average a single participant was observed for 365.3 (±32.3) days.",
   "age_distribution": "Age Distribution",
   "sleep_analysis": "Sleep Analysis",
-  "sleep_data_analysis": "Sleep Data Analysis"
+  "sleep_data_analysis": "Sleep Data Analysis",
+  "daily_heart_rate_patterns": "Daily Heart Rate Patterns",
+  "sleep_architecture": "Sleep Architecture",
+  "sleep_parameters": "Sleep Parameters"
 }

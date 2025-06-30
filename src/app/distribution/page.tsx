@@ -45,6 +45,7 @@ export default function Distribution() {
           },
         ]}
         filePath="/data/fitbit_main_sleep.parquet"
+        parquetName="sleep_start_time"
       />
     </div>
   );

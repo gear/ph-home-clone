@@ -13,9 +13,10 @@ interface PropsType {
     ylabel: string;
   }[];
   filePath: string;
+  parquetName: string;
 }
 
-const PlotColsGroup = ({ fields, filePath }: PropsType) => {
+const PlotColsGroup = ({ fields, filePath, parquetName }: PropsType) => {
   const plotRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
 
@@ -39,7 +40,7 @@ const PlotColsGroup = ({ fields, filePath }: PropsType) => {
         const parquetPath = filePath;
         const sleep_url = `${window.location.origin}${parquetPath}`;
 
-        await coordinator.exec([vg.loadParquet("sleep_patterns", sleep_url)]);
+        await coordinator.exec([vg.loadParquet(parquetName, sleep_url)]);
 
         const brush = vg.Selection.crossfilter();
 
@@ -57,7 +58,7 @@ const PlotColsGroup = ({ fields, filePath }: PropsType) => {
               : height1Chart;
 
           return vg.plot(
-            vg.rectY(vg.from("sleep_patterns", { filterBy: brush }), {
+            vg.rectY(vg.from(parquetName, { filterBy: brush }), {
               x: vg.bin(column),
               y: vg.count(),
               fill: color,
@@ -144,6 +145,11 @@ const PlotColsGroup = ({ fields, filePath }: PropsType) => {
     initializePlot().catch((error) => {
       console.error(error);
     });
+
+    // Cleanup on unmount
+    return () => {
+      if (plotRef.current) plotRef.current.innerHTML = "";
+    };
   }, [mounted]);
 
   // Don't render anything until mounted

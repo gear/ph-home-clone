@@ -71,5 +71,8 @@
   "filter_sidebar_topics_label": "トピック",
   "filter_sidebar_years_label": "年",
   "our_lab": "研究室",
-  "data": "データ"
+  "data": "データ",
+  "daily_heart_rate_patterns": "Daily Heart Rate Patterns",
+  "sleep_architecture": "Sleep Architecture",
+  "sleep_parameters": "Sleep Parameters"
 }
