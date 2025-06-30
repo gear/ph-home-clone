@@ -178,11 +178,18 @@ export default function SHIDashboard() {
         parquetName="sleep_start_time"
       />
 
-      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Sleep Start Time</h3>
+
+
+
+
+
+
+
+      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Sleep Time (Duration)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Caffeine Consumption: Cups per day</li>
-          <li>Sleep Start Time: 24-hour</li>
+          <li>Last Caffeine Time: 24-hour Format</li>
+          <li>Sleep Time: Hour</li>
         </ul>
       </span>
       <PlotColsGroup
@@ -195,16 +202,107 @@ export default function SHIDashboard() {
             ylabel: "Number of records",
           },
           {
-            color: "gold",
-            label: "Wake-up Time",
-            column: "wake_time",
-            xlabel: "Wake-up Time (Hour)",
+            color: "steelblue",
+            label: "Sleep Time",
+            column: "sleep_time",
+            xlabel: "Sleep Time (Hour)",
             ylabel: "Number of records",
           },
         ]}
         filePath="/data/shi_caffeine.parquet"
         parquetName="caffeine_consumption"
       />
+
+
+
+      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Light Sleep Time (Duration)</h3>
+      <span className="text-sm">
+        <ul className="list-disc ml-5">
+          <li>Last Caffeine Time: 24-hour Format</li>
+          <li>Total Light Sleep Time: Hour</li>
+        </ul>
+      </span>
+      <PlotColsGroup
+        fields={[
+          {
+            color: "black",
+            label: "Last Caffeine Consumption Time",
+            column: "last_coffee_time",
+            xlabel: "Last Coffee Time (Hour)",
+            ylabel: "Number of records",
+          },
+          {
+            color: "aqua",
+            label: "Total Light Sleep Duration",
+            column: "light",
+            xlabel: "Total Light Sleep Duration",
+            ylabel: "Number of records",
+          },
+        ]}
+        filePath="/data/shi_caffeine.parquet"
+        parquetName="caffeine_consumption"
+      />
+
+
+
+
+      <h3 className="text-2xl font-bold">Caffeine Consumption Time / REM Time (Duration)</h3>
+      <span className="text-sm">
+        <ul className="list-disc ml-5">
+          <li>Last Caffeine Time: 24-hour Format</li>
+          <li>REM Time: Hour</li>
+        </ul>
+      </span>
+      <PlotColsGroup
+        fields={[
+          {
+            color: "black",
+            label: "Last Caffeine Consumption Time",
+            column: "last_coffee_time",
+            xlabel: "Last Coffee Time (Hour)",
+            ylabel: "Number of records",
+          },
+          {
+            color: "steelblue",
+            label: "Total REM Sleep Duration",
+            column: "rem",
+            xlabel: "Total REM Sleep Duration",
+            ylabel: "Number of records",
+          },
+        ]}
+        filePath="/data/shi_caffeine.parquet"
+        parquetName="caffeine_consumption"
+      />
+
+
+      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Deep Time (Duration)</h3>
+      <span className="text-sm">
+        <ul className="list-disc ml-5">
+          <li>Last Caffeine Time: 24-hour Format</li>
+          <li>Deep Time: Hour</li>
+        </ul>
+      </span>
+      <PlotColsGroup
+        fields={[
+          {
+            color: "black",
+            label: "Last Caffeine Consumption Time",
+            column: "last_coffee_time",
+            xlabel: "Last Coffee Time (Hour)",
+            ylabel: "Number of records",
+          },
+          {
+            color: "darkblue",
+            label: "Total Deep Sleep Duration",
+            column: "deep",
+            xlabel: "Total Deep Sleep Duration",
+            ylabel: "Number of records",
+          },
+        ]}
+        filePath="/data/shi_caffeine.parquet"
+        parquetName="caffeine_consumption"
+      />
+
 
       <h2 className="text-3xl font-bold mt-8">Sleep Architecture: Light/REM/Deep</h2>
       
