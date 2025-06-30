@@ -177,7 +177,7 @@ export default function SHIDashboard() {
         filePath="/data/fitbit_main_sleep.parquet"
       />
 
-      <h3 className="text-2xl font-bold">Caffeine Consumption / Sleep Start Time</h3>
+      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Sleep Start Time</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Caffeine Consumption: Cups per day</li>
@@ -188,20 +188,20 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "black",
-            label: "Caffeine Consumption",
-            column: "start_hour",
-            xlabel: "Amount per day (cup)",
+            label: "Last Caffeine Consumption Time",
+            column: "last_coffee_time",
+            xlabel: "Last Coffee Time (Hour)",
             ylabel: "Number of records",
           },
           {
             color: "gold",
             label: "Wake-up Time",
-            column: "end_hour",
-            xlabel: "Wake-up Time (hour)",
+            column: "wake_time",
+            xlabel: "Wake-up Time (Hour)",
             ylabel: "Number of records",
           },
         ]}
-        filePath="/data/fitbit_main_sleep.parquet"
+        filePath="/data/shi_caffeine.parquet"
       />
 
       <h2 className="text-3xl font-bold mt-8">Sleep Architecture: Light/REM/Deep</h2>
