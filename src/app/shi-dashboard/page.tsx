@@ -137,16 +137,16 @@ export default function SHIDashboard() {
         <span className="border-b-2 border-b-blue-400">
           sleep parameters
         </span>
-        , including sleep efficiency, sleep start time, sleep duration, and wake up time.
+        , including sleep efficiency, sleep start time, sleep time, and wake up time.
         The synthesized data shows the relationship between sleep parameters and other lifestyle factors.
       </span>
 
-      <h3 className="text-2xl font-bold">Sleep Start Time / Sleep Duration / Wake Up Time</h3>
+      <h3 className="text-2xl font-bold">Sleep Start Time / Sleep Time / Wake Up Time</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Sleep Start Time (Sleep Onset): 24-hour</li>
           <li>Wake-up Time: 24-hour</li>
-          <li>Sleep Duration: Minute</li>
+          <li>Total Sleep Time: Minute</li>
         </ul>
       </span>
 
@@ -161,9 +161,9 @@ export default function SHIDashboard() {
           },
           {
             color: "pink",
-            label: "Sleep Duration",
+            label: "Sleep Time",
             column: "FB_minutesasleep_stages",
-            xlabel: "Sleep duration (minutes)",
+            xlabel: "Sleep Time (minutes)",
             ylabel: "Number of records",
           },
           {
@@ -185,7 +185,7 @@ export default function SHIDashboard() {
 
 
 
-      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Sleep Time (Duration)</h3>
+      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Total Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Last Caffeine Time: 24-hour Format</li>
@@ -215,7 +215,7 @@ export default function SHIDashboard() {
 
 
 
-      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Light Sleep Time (Duration)</h3>
+      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Light Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Last Caffeine Time: 24-hour Format</li>
@@ -233,9 +233,9 @@ export default function SHIDashboard() {
           },
           {
             color: "aqua",
-            label: "Total Light Sleep Duration",
+            label: "Total Light Sleep Time",
             column: "light",
-            xlabel: "Total Light Sleep Duration",
+            xlabel: "Total Light Sleep Time",
             ylabel: "Number of records",
           },
         ]}
@@ -246,7 +246,7 @@ export default function SHIDashboard() {
 
 
 
-      <h3 className="text-2xl font-bold">Caffeine Consumption Time / REM Time (Duration)</h3>
+      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Total REM Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Last Caffeine Time: 24-hour Format</li>
@@ -264,9 +264,9 @@ export default function SHIDashboard() {
           },
           {
             color: "steelblue",
-            label: "Total REM Sleep Duration",
+            label: "Total REM Sleep Time",
             column: "rem",
-            xlabel: "Total REM Sleep Duration",
+            xlabel: "Total REM Sleep Time",
             ylabel: "Number of records",
           },
         ]}
@@ -275,7 +275,7 @@ export default function SHIDashboard() {
       />
 
 
-      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Deep Time (Duration)</h3>
+      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Total Deep Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Last Caffeine Time: 24-hour Format</li>
@@ -293,9 +293,9 @@ export default function SHIDashboard() {
           },
           {
             color: "darkblue",
-            label: "Total Deep Sleep Duration",
+            label: "Total Deep Sleep Time",
             column: "deep",
-            xlabel: "Total Deep Sleep Duration",
+            xlabel: "Total Deep Sleep Time",
             ylabel: "Number of records",
           },
         ]}
@@ -355,9 +355,9 @@ export default function SHIDashboard() {
           },
           {
             color: "green",
-            label: "Sleep Duration",
+            label: "Total Sleep Time",
             column: "FB_minutesasleep_stages",
-            xlabel: "Sleep duration (minutes)",
+            xlabel: "Total Sleep Time (in minutes)",
             ylabel: "Number of records",
           },
         ]}
