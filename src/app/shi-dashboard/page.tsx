@@ -188,7 +188,7 @@ export default function SHIDashboard() {
       <h3 className="text-2xl font-bold">Caffeine Consumption Time / Total Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Last Caffeine Time: 24-hour Format</li>
+          <li>Time of Last Coffee: 24-hour Format</li>
           <li>Sleep Time: Hour</li>
         </ul>
       </span>
@@ -196,9 +196,9 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "black",
-            label: "Last Caffeine Consumption Time",
+            label: "Time of Last Coffee (hour)",
             column: "last_coffee_time",
-            xlabel: "Last Coffee Time (Hour)",
+            xlabel: "Time of Last Coffee (hour)",
             ylabel: "Number of records",
           },
           {
@@ -218,7 +218,7 @@ export default function SHIDashboard() {
       <h3 className="text-2xl font-bold">Caffeine Consumption Time / Light Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Last Caffeine Time: 24-hour Format</li>
+          <li>Time of Last Coffee: 24-hour Format</li>
           <li>Total Light Sleep Time: Hour</li>
         </ul>
       </span>
@@ -226,9 +226,9 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "black",
-            label: "Last Caffeine Consumption Time",
+            label: "Time of Last Coffee (hour)",
             column: "last_coffee_time",
-            xlabel: "Last Coffee Time (Hour)",
+            xlabel: "Time of Last Coffee (hour)",
             ylabel: "Number of records",
           },
           {
@@ -249,7 +249,7 @@ export default function SHIDashboard() {
       <h3 className="text-2xl font-bold">Caffeine Consumption Time / Total REM Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Last Caffeine Time: 24-hour Format</li>
+          <li>Time of Last Coffee: 24-hour Format</li>
           <li>REM Time: Hour</li>
         </ul>
       </span>
@@ -257,9 +257,9 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "black",
-            label: "Last Caffeine Consumption Time",
+            label: "Time of Last Coffee (hour)",
             column: "last_coffee_time",
-            xlabel: "Last Coffee Time (Hour)",
+            xlabel: "Time of Last Coffee (hour)",
             ylabel: "Number of records",
           },
           {
@@ -301,68 +301,6 @@ export default function SHIDashboard() {
         ]}
         filePath="/data/shi_caffeine.parquet"
         parquetName="caffeine_consumption"
-      />
-
-
-      <h2 className="text-3xl font-bold mt-8">Sleep Architecture: Light/REM/Deep</h2>
-      
-      <h3 className="text-2xl font-bold">Caffeine Consumption / Deep Sleep</h3>
-      <span className="text-sm">
-        <ul className="list-disc ml-5">
-          <li>Caffeine Consumption: Cups per day</li>
-          <li>Deep Sleep Time: Minute</li>
-        </ul>
-      </span>
-
-      <PlotColsGroup
-        fields={[
-          {
-            color: "black",
-            label: "Caffeine Consumption",
-            column: "start_hour",
-            xlabel: "Amount per day (cup)",
-            ylabel: "Number of records",
-          },
-          {
-            color: "darkblue",
-            label: "Deep Sleep Time",
-            column: "FB_minutesasleep_stages",
-            xlabel: "Deep Sleep Time (minutes)",
-            ylabel: "Number of records",
-          },
-        ]}
-        filePath="/data/fitbit_main_sleep.parquet"
-        parquetName="deep_sleep_time"
-      />
-
-
-      <h3 className="text-2xl font-bold">Caffeine Consumption / REM Sleep</h3>
-      <span className="text-sm">
-        <ul className="list-disc ml-5">
-          <li>Caffeine Consumption: Cups per day</li>
-          <li>Sleep Start Time: 24-hour</li>
-        </ul>
-      </span>
-
-      <PlotColsGroup
-        fields={[
-          {
-            color: "steelblue",
-            label: "Sleep Onset Time",
-            column: "start_hour",
-            xlabel: "Sleep onset (hour)",
-            ylabel: "Number of records",
-          },
-          {
-            color: "green",
-            label: "Total Sleep Time",
-            column: "FB_minutesasleep_stages",
-            xlabel: "Total Sleep Time (in minutes)",
-            ylabel: "Number of records",
-          },
-        ]}
-        filePath="/data/fitbit_main_sleep.parquet"
-        parquetName="rem_sleep_time"
       />
 
     </div>
