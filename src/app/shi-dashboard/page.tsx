@@ -130,7 +130,15 @@ export default function SHIDashboard() {
         text="Heart Rate"
       />
 
-      <h2 className="text-3xl font-bold mt-8">Sleep Parameters</h2>
+      {/*
+      ***************************
+      ***************************
+      Sleep Parameters
+      ***************************
+      ***************************
+      */}
+
+      <h2 className="text-3xl font-bold mt-8">1. Sleep Parameters</h2>
 
       <span className="text-sm">
         This section explores {" "}
@@ -141,12 +149,12 @@ export default function SHIDashboard() {
         The synthesized data shows the relationship between sleep parameters and other lifestyle factors.
       </span>
 
-      <h3 className="text-2xl font-bold">Sleep Start Time / Sleep Time / Wake Up Time</h3>
+      <h3 className="text-2xl font-bold">Sleep Start Time / Total Sleep Time / Wake Up Time</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Sleep Start Time (Sleep Onset): 24-hour</li>
+          <li>Sleep Start Time: 24-hour</li>
           <li>Wake-up Time: 24-hour</li>
-          <li>Total Sleep Time: Minute</li>
+          <li>Total Sleep Time: Hour</li>
         </ul>
       </span>
 
@@ -155,37 +163,41 @@ export default function SHIDashboard() {
           {
             color: "steelblue",
             label: "Sleep Start Time",
-            column: "start_hour",
-            xlabel: "Sleep onset (hour)",
+            column: "bedtime",
+            xlabel: "Sleep Start Time (hour)",
             ylabel: "Number of records",
           },
           {
             color: "pink",
-            label: "Sleep Time",
-            column: "FB_minutesasleep_stages",
-            xlabel: "Sleep Time (minutes)",
+            label: "Total Sleep Time",
+            column: "sleep_time",
+            xlabel: "Total Sleep Time (hour)",
             ylabel: "Number of records",
           },
           {
             color: "gold",
             label: "Wake-up Time",
-            column: "end_hour",
+            column: "wake_time",
             xlabel: "Wake-up time (hour)",
             ylabel: "Number of records",
           },
         ]}
-        filePath="/data/fitbit_main_sleep.parquet"
-        parquetName="sleep_start_time"
+        filePath="/data/sleep_arch.parquet"
+        parquetName="sleep_arch"
       />
 
+      {/*
+      ***************************
+      ***************************
+      Caffeine Consumption Effect
+      ***************************
+      ***************************
+      */}
+
+      <h2 className="text-3xl font-bold mt-8">2. Caffeine Consumption Effect</h2>
 
 
-
-
-
-
-
-      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Total Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">Last Coffee Time / Total Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Time of Last Coffee: 24-hour Format</li>
@@ -203,9 +215,9 @@ export default function SHIDashboard() {
           },
           {
             color: "steelblue",
-            label: "Sleep Time",
+            label: "Total Sleep Time",
             column: "sleep_time",
-            xlabel: "Sleep Time (Hour)",
+            xlabel: "Total Sleep Time (Hour)",
             ylabel: "Number of records",
           },
         ]}
@@ -215,7 +227,7 @@ export default function SHIDashboard() {
 
 
 
-      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Light Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">Last Coffee Time / Light Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Time of Last Coffee: 24-hour Format</li>
@@ -246,7 +258,7 @@ export default function SHIDashboard() {
 
 
 
-      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Total REM Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">Last Coffee Time / Total REM Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Time of Last Coffee: 24-hour Format</li>
@@ -275,7 +287,7 @@ export default function SHIDashboard() {
       />
 
 
-      <h3 className="text-2xl font-bold">Caffeine Consumption Time / Total Deep Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">Last Coffee Time / Total Deep Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Last Caffeine Time: 24-hour Format</li>
@@ -302,6 +314,125 @@ export default function SHIDashboard() {
         filePath="/data/shi_caffeine.parquet"
         parquetName="caffeine_consumption"
       />
+
+
+      <h3 className="text-2xl font-bold">Last Coffee Time / Total Wake During Sleep Time (in hours)</h3>
+      <span className="text-sm">
+        <ul className="list-disc ml-5">
+          <li>Last Caffeine Time: 24-hour Format</li>
+          <li>Total Wake During Sleep Deep Time: Hour</li>
+        </ul>
+      </span>
+      <PlotColsGroup
+        fields={[
+          {
+            color: "black",
+            label: "Last Caffeine Consumption Time",
+            column: "last_coffee_time",
+            xlabel: "Last Coffee Time (Hour)",
+            ylabel: "Number of records",
+          },
+          {
+            color: "darkgoldenrod",
+            label: "Total Wake During Sleep Time (in hours)",
+            column: "wake",
+            xlabel: "Total Wake During Sleep Time",
+            ylabel: "Number of records",
+          },
+        ]}
+        filePath="/data/shi_caffeine.parquet"
+        parquetName="caffeine_consumption"
+      />
+
+
+      <h3 className="text-2xl font-bold">Last Coffee Time / Sleep Efficiency (ranges 0 to 1)</h3>
+      <span className="text-sm">
+        <ul className="list-disc ml-5">
+          <li>Last Caffeine Time: 24-hour Format</li>
+          <li>Sleep Efficiency: Fraction from 0 to 1</li>
+        </ul>
+      </span>
+      <PlotColsGroup
+        fields={[
+          {
+            color: "black",
+            label: "Last Caffeine Consumption Time",
+            column: "last_coffee_time",
+            xlabel: "Last Coffee Time (Hour)",
+            ylabel: "Number of records",
+          },
+          {
+            color: "greenyellow",
+            label: "Sleep Efficiency (in fraction)",
+            column: "sleep_efficiency",
+            xlabel: "Sleep Efficiency",
+            ylabel: "Number of records",
+          },
+        ]}
+        filePath="/data/shi_caffeine.parquet"
+        parquetName="caffeine_consumption"
+      />
+
+
+      <h3 className="text-2xl font-bold">Last Coffee Time / Sleep Start Time / Wake Up Time</h3>
+      <span className="text-sm">
+        <ul className="list-disc ml-5">
+          <li>Sleep Start Time: 24-hour</li>
+          <li>Wake Up Time: 24-hour</li>
+          <li>Last Coffee Time: 24-hour</li>
+        </ul>
+      </span>
+
+      <PlotColsGroup
+        fields={[
+          {
+            color: "steelblue",
+            label: "Sleep Start Time",
+            column: "bedtime",
+            xlabel: "Sleep Start Time (hour)",
+            ylabel: "Number of records",
+          },
+          {
+            color: "black",
+            label: "Last Coffee Time",
+            column: "last_coffee_time",
+            xlabel: "Last Coffee Time (hour)",
+            ylabel: "Number of records",
+          },
+          {
+            color: "gold",
+            label: "Wake-up Time",
+            column: "wake_time_corrected",
+            xlabel: "Wake-up Time (hour)",
+            ylabel: "Number of records",
+          },
+        ]}
+        filePath="/data/shi_caffeine.parquet"
+        parquetName="caffeine_consumption"
+      />
+
+
+    
+      {/*
+      ***************************
+      ***************************
+      Activity Effect: Steps, BMI, Screen Time
+      ***************************
+      ***************************
+      */}
+
+      <h2 className="text-3xl font-bold mt-8">3. Activity Effect</h2>
+
+
+      {/*
+      ***************************
+      ***************************
+      Weekend / Weekday Effect
+      ***************************
+      ***************************
+      */}
+
+      <h2 className="text-3xl font-bold mt-8">4. Weekend/Weekday Effect</h2>
 
     </div>
   );
