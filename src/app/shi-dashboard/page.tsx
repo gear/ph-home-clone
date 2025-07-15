@@ -482,7 +482,7 @@ export default function SHIDashboard() {
       />
 
 
-
+      {/*
       <h3 className="text-2xl font-bold">Body Mass Index / Sleep Efficiency (ranges 0 to 1)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
@@ -538,8 +538,7 @@ export default function SHIDashboard() {
         filePath="/data/activity_sleep.parquet"
         parquetName="activity"
       />
-
-
+      */}
 
       <h3 className="text-2xl font-bold">Screen Time / Sleep Efficiency (ranges 0 to 1)</h3>
       <span className="text-sm">
@@ -605,9 +604,11 @@ export default function SHIDashboard() {
       Weekend / Weekday Effect
       ***************************
       ***************************
-      */}
 
       <h2 className="text-3xl font-bold mt-8">4. Weekend/Weekday Effect</h2>
+
+      */}
+
 
     </div>
   );
