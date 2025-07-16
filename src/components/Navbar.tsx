@@ -36,7 +36,6 @@ export const Navbar = () => {
       href: "/research",
       value: "research",
       links: [
-        { href: "/publications", label: t("publications") },
         { href: "/research/healthy-aging", label: t("rp_title_flip_1") },
         { href: "/research/sleep-medicine", label: t("rp_title_flip_2") },
         { href: "/research/metabolic-syndrome", label: t("rp_title_flip_3") },
@@ -48,6 +47,7 @@ export const Navbar = () => {
       href: "/members",
       value: "members",
       links: [
+        { href: "/publications", label: t("publications") },
         { href: "/members", label: t("members") },
         { href: "/news", label: t("news") },
       ],
