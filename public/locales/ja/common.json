@@ -5,7 +5,7 @@
     "members": "メンバー",
     "news": "ニュース",
     "datasets": "データセット",
-    "dashboard": "ダッシュボード",
+    "dashboards": "ダッシュボード",
     "dashboard_desc": "Precision Health研究チームが収集したデータセットを、インタラクティブなビジュアライゼーションで探求しよう。",
     "contact": "お問い合わせ",
     "hero": "私たちはヘルスケア分野において、ウェアラブルデバイスから得られるリアルタイムデータ、炎症マーカー、オミクスプロファイルに基づくデータドリブンの研究を行い、長寿や一般的な疾患リスクを解明することを目指しています。",
@@ -79,5 +79,7 @@
     "sleep_data_analysis": "睡眠データ分析",
     "daily_heart_rate_patterns": "Daily Heart Rate Patterns",
     "sleep_architecture": "Sleep Architecture",
-    "sleep_parameters": "Sleep Parameters"
+    "sleep_parameters": "Sleep Parameters",
+    "resources": "リソース",
+    "shi-dashboard": "SHI ダッシュボード"
 }

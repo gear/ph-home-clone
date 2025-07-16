@@ -5,13 +5,13 @@
   "members": "Members",
   "news": "News",
   "datasets": "Dataset",
-  "dashboard": "Dashboard",
+  "dashboards": "Dashboards",
   "dashboard_desc": "Discover dynamic, interactive visualizations of datasets from the Precision Health research team.",
   "contact": "Contact",
   "hero": "We work on data-driven research in healthcare to understand longevity and common diseases risk from real-time wearable devices data, inflammation markers, and omics profiles.",
   "explore": "Our Research",
   "github": "Visit our GitHub",
-  "partners": "Academia and industry collaborators",
+  "partners": "Academia and Industry Collaborators",
   "highlights": "Research highlights",
   "goal": "Toward extending healthy lifespan",
   "department_p1": "We are the Department of Bioengineering's Social Collaboration Course, named \"Personalized Health and Medical Care Course\". We aim to integrate engineering techniques such as digital data analysis, high-resolution omics analysis of biological information, and AI (artificial intelligence) to refine individual health conditions and present them in a clear, accessible way. By doing so, we provide society with effective tools for preventing the onset and progression of diseases.",
@@ -79,5 +79,9 @@
   "sleep_data_analysis": "Sleep Data Analysis",
   "daily_heart_rate_patterns": "Daily Heart Rate Patterns",
   "sleep_architecture": "Sleep Architecture",
-  "sleep_parameters": "Sleep Parameters"
+  "sleep_parameters": "Sleep Parameters",
+  "resources": "Resources",
+  "shi-dashboard": "SHI Dashboard",
+  "academia-colabs": "• AMED • Hokkaido University • Lund University • Okinawa Institute of Technology",
+  "industry-colabs": "• Mitsubishi Chemical • MUFG • Sawai Pharmaceutical"
 }

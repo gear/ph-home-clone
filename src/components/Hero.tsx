@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { useTranslation } from "react-i18next";
+import ScrollVelocity from "./ScrollVelocity";
 
 export const Hero = () => {
   const { t } = useTranslation("common");
@@ -67,7 +68,17 @@ export const Hero = () => {
             <span className="text-gray-500">{t("partners")}</span>{" "}
           </div>
 
-          <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around items-center">
+          <div className="flex flex-wrap justify-center mt-5 md:justify-around items-center overflow-hidden">
+            <ScrollVelocity
+              texts={[
+                t("academia-colabs"),
+                t("industry-colabs"),
+              ]} 
+              velocity={10} 
+              className="custom-scroll-text text-2xl text-gray-500 font-light"
+            />
+
+              {/*
             <div className="pt-2 align-middle">
               <Image
                 src="/img/brands/amed.svg"
@@ -128,6 +139,7 @@ export const Hero = () => {
                 loading="eager"
               />
             </div>
+            */}
           </div>
         </div>
       </Container>

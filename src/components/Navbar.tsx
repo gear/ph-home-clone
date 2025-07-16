@@ -53,22 +53,14 @@ export const Navbar = () => {
       ],
     },
     {
-      name: t("data"),
-      href: "/datasets",
-      value: "datasets",
+      name: t("resources"),
+      href: "/resources",
+      value: "resources",
       links: [
         { href: "/datasets", label: t("datasets") },
-        { href: "/dashboard", label: t("dashboard") },
+        { href: "/dashboards", label: t("dashboards") },
+        { href: "/shi-dashboard", label: t("shi-dashboard") },
       ],
-    },
-    {
-      name: "SHI Dashboard",
-      href: "/shi-dashboard",
-      value: "shi-dashboard",
-      links: linksSHIDashboard.map((item) => ({
-        href: item.href,
-        label: t(item.label),
-      })),
     },
   ];
   return (
