@@ -1,11 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from "@headlessui/react";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import Logo from "@/assets/precision-health-logo.svg";
 import { mont } from "./fonts";
 import LanguageToggle from "./LanguageToggle";
 import { useTranslation } from "react-i18next";
@@ -80,7 +77,7 @@ export const Navbar = () => {
         >
           <span>
             <Image
-              src="img/precision-health-logo.svg"
+              src={Logo}
               width="38"
               alt="N"
               height="38"
@@ -92,8 +89,59 @@ export const Navbar = () => {
       </Link>
 
       {/* contact  */}
-      <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2 hidden">
-        <div className="hidden mr-3 lg:flex nav__item">
+      <div className="gap-3 nav__item mr-2 flex ml-auto flex items-center ml-0 order-2">
+        <Menu as="div">
+          <MenuButton
+            aria-label="Toggle Menu"
+            className="px-2 py-1 text-gray-500 rounded-md xl:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none  "
+          >
+            <svg
+              className="w-6 h-6 fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fillRule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              />
+            </svg>
+          </MenuButton>
+
+          <MenuItems
+            anchor="bottom end"
+            className="xl:hidden p-2 bg-white rounded-md shadow-md outline-none"
+          >
+            <>
+              {navigation.map((item, index) => (
+                <div key={index}>
+                  <MenuItem>
+                    <Link
+                      href={item.href}
+                      className="block w-full px-4 py-2 text-gray-500 rounded-md data-focus:bg-blue-100 data-focus:text-indigo-500 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none"
+                    >
+                      {item.name}
+                    </Link>
+                  </MenuItem>
+                  {item.links && (
+                    <div className="ml-4 mb-2">
+                      {item.links.map((subItem, subIndex) => (
+                        <MenuItem key={subIndex}>
+                          <Link
+                            href={subItem.href}
+                            className="block w-full px-3 py-1 text-sm text-gray-400 rounded-md data-focus:bg-blue-50 data-focus:text-indigo-400 hover:text-indigo-400 focus:text-indigo-400 focus:bg-blue-50 focus:outline-none"
+                          >
+                            {subItem.label}
+                          </Link>
+                        </MenuItem>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </>
+          </MenuItems>
+        </Menu>
+        <div className="mr-3 flex nav__item">
           <Link
             href="/"
             className="px-6 py-2 text-white bg-blue-500 rounded-md md:ml-5"
@@ -104,59 +152,8 @@ export const Navbar = () => {
         <LanguageToggle />
       </div>
 
-      <Disclosure as="div">
-        {({ open }) => (
-          <>
-            <DisclosureButton
-              aria-label="Toggle Menu"
-              className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none  "
-            >
-              <svg
-                className="w-6 h-6 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                {open && (
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-                  />
-                )}
-                {!open && (
-                  <path
-                    fillRule="evenodd"
-                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                  />
-                )}
-              </svg>
-            </DisclosureButton>
-
-            <DisclosurePanel className="flex flex-wrap w-full my-5 lg:hidden">
-              <>
-                {navigation.map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md  hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100  focus:outline-none"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-                <Link
-                  href="/contact"
-                  className="w-full px-6 py-2 mt-3 text-center text-white bg-blue-600 rounded-md lg:ml-5"
-                >
-                  Contact
-                </Link>
-              </>
-            </DisclosurePanel>
-          </>
-        )}
-      </Disclosure>
-
       {/* menu  */}
-      <div className="hidden text-center lg:flex lg:items-center">
+      <div className="hidden text-center xl:flex xl:items-center">
         <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
           {navigation.map((menu, index) => (
             <li className="mr-3" key={index}>
