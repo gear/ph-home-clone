@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
 import HeartBeatRateChart from "@/app/shi-dashboard/components/HeartBeatRateChart";
 import { cn } from "@/libs/utils";
 import {
@@ -41,7 +42,7 @@ const datasets = csvPaths.map((item, index) => ({
 
 export default function SHIDashboard() {
   const [selectedDataset, setSelectedDataset] = useState([...datasets]);
-
+  const { t } = useTranslation("common");
   return (
     <div className="flex flex-col px-6 max-w-screen-xl mx-auto gap-4">
       <h1 className="text-5xl font-bold">SHI Summer School July 2025</h1>
@@ -49,20 +50,13 @@ export default function SHIDashboard() {
       <h2 className="text-3xl font-bold">Daily Heart Rate Patterns</h2>
 
       <span className="text-sm">
-        There are
-        <span className="border-b-2 border-b-blue-400">
-          {" "}
-          15 interactive graphs
-        </span>
-        , showing the relationship between sleep and other lifestyle aspects.
-        These data is synthesized by sampling from a real data distribution,
-        which consists of 16290 person-days of minute-by-minute recordings.
+        {t("shi-intro")}
       </span>
 
       <Field>
-        <Label>Select datasets</Label>
+        <Label>{t("select-datasets")}</Label>
         <Description className={"mb-2 text-xs text-gray-500"}>
-          Only datasets with checked data will be shown in the chart.
+          {t("select-datasets-instruction")}
         </Description>
 
         <Listbox value={selectedDataset} onChange={setSelectedDataset} multiple>
@@ -127,7 +121,7 @@ export default function SHIDashboard() {
         csvPaths={selectedDataset}
         width={1184}
         height={500}
-        text="Heart Rate"
+        text={t("heart-rate")}
       />
 
       {/*
@@ -138,18 +132,14 @@ export default function SHIDashboard() {
       ***************************
       */}
 
-      <h2 className="text-3xl font-bold mt-8">1. Sleep Parameters</h2>
+      <h2 className="text-3xl font-bold mt-8">{t("title-sleep-params")}</h2>
 
       <span className="text-sm">
-        This section explores {" "}
-        <span className="border-b-2 border-b-blue-400">
-          sleep parameters
-        </span>
-        , including sleep efficiency, sleep start time, sleep time, and wake up time.
-        The synthesized data shows the relationship between sleep parameters and other lifestyle factors.
+        {t("sleep-params-intro")}
+        
       </span>
 
-      <h3 className="text-2xl font-bold">Sleep Start Time / Total Sleep Time / Wake Up Time</h3>
+      <h3 className="text-2xl font-bold">{t("sleep-start-time-wake")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Sleep Start Time: 24-hour</li>
