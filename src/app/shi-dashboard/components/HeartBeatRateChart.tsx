@@ -211,20 +211,12 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
               rate="Heart Rate Range: 52-110"
               rows={[
                 {
-                  label: "Sleeping HR Range",
-                  rate: "?",
-                },
-                {
                   label: "Max Sleeping HR",
                   rate: "?",
                 },
                 {
                   label: "Min Sleeping HR",
                   rate: "?",
-                },
-                {
-                  label: "Physical Activity Level",
-                  rate: "Low",
                 },
               ]}
               color="blue"
@@ -235,20 +227,12 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
               rate="Heart Rate Range: 40-106"
               rows={[
                 {
-                  label: "Sleeping HR Range",
-                  rate: "?",
-                },
-                {
                   label: "Max Sleeping HR",
                   rate: "?",
                 },
                 {
                   label: "Min Sleeping HR",
                   rate: "?",
-                },
-                {
-                  label: "Physical Activity Level",
-                  rate: "High",
                 },
               ]}
               color="yellow"
