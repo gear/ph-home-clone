@@ -345,11 +345,11 @@ export default function SHIDashboard() {
       />
 
 
-      <h3 className="text-2xl font-bold">Last Caffeine Time / Sleep Efficiency (ranges 0 to 1)</h3>
+      <h3 className="text-2xl font-bold">Last Caffeine Time / Sleep Efficiency</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Last Caffeine Time: 24-hour Format</li>
-          <li>Sleep Efficiency: Fraction from 0 to 1</li>
+          <li>Sleep Efficiency: Percentage</li>
         </ul>
       </span>
       <PlotColsGroup
@@ -362,10 +362,10 @@ export default function SHIDashboard() {
             ylabel: "Number of records",
           },
           {
-            color: "greenyellow",
-            label: "Sleep Efficiency (in fraction)",
+            color: "teal",
+            label: "Sleep Efficiency",
             column: "sleep_efficiency",
-            xlabel: "Sleep Efficiency",
+            xlabel: "Sleep Efficiency (%)",
             ylabel: "Number of records",
           },
         ]}
@@ -425,11 +425,11 @@ export default function SHIDashboard() {
       
 
 
-      <h3 className="text-2xl font-bold">Steps per Day / Sleep Efficiency (ranges 0 to 1)</h3>
+      <h3 className="text-2xl font-bold">Steps per Day / Sleep Efficiency</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Steps per Day: Steps count per day</li>
-          <li>Sleep Efficiency: Fraction from 0 to 1</li>
+          <li>Sleep Efficiency: Percentage</li>
         </ul>
       </span>
       <PlotColsGroup
@@ -443,9 +443,9 @@ export default function SHIDashboard() {
           },
           {
             color: "teal",
-            label: "Sleep Efficiency (in fraction)",
+            label: "Sleep Efficiency",
             column: "Sleep_efficiency",
-            xlabel: "Sleep Efficiency",
+            xlabel: "Sleep Efficiency (%)",
             ylabel: "Number of records",
           },
         ]}
@@ -540,11 +540,11 @@ export default function SHIDashboard() {
       />
       */}
 
-      <h3 className="text-2xl font-bold">Screen Time / Sleep Efficiency (ranges 0 to 1)</h3>
+      <h3 className="text-2xl font-bold">Screen Time / Sleep Efficiency</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Screen Time: Hour</li>
-          <li>Sleep Efficiency: Fraction from 0 to 1</li>
+          <li>Sleep Efficiency: Percentage</li>
         </ul>
       </span>
       <PlotColsGroup
@@ -558,9 +558,9 @@ export default function SHIDashboard() {
           },
           {
             color: "teal",
-            label: "Sleep Efficiency (in fraction)",
+            label: "Sleep Efficiency",
             column: "Sleep_efficiency",
-            xlabel: "Sleep Efficiency",
+            xlabel: "Sleep Efficiency (%)",
             ylabel: "Number of records",
           },
         ]}
