@@ -223,7 +223,7 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
                   rate: "7.09%",
                 },
                 {
-                  label: "52-week average",
+                  label: "One day Heart Rate",
                   rate: "6.97%",
                 },
               ]}
@@ -247,7 +247,7 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
                   rate: "6.37%",
                 },
                 {
-                  label: "52-week average",
+                  label: "One day Heart Rate",
                   rate: "6.29%",
                 },
               ]}

@@ -83,5 +83,12 @@
   "resources": "Resources",
   "shi-dashboard": "SHI Dashboard",
   "academia-colabs": "• AMED • Hokkaido University • Lund University • Okinawa Institute of Technology",
-  "industry-colabs": "• Mitsubishi Chemical • MUFG • Sawai Pharmaceutical"
+  "industry-colabs": "• Mitsubishi Chemical • MUFG • Sawai Pharmaceutical",
+  "shi-intro": "There are 15 interactive graphs, showing the relationship between sleep and other lifestyle aspects. These data is synthesized by sampling from a real data distribution, which consists of 16290 person-days of minute-by-minute recordings.",
+  "select-datasets": "Select Datasets",
+  "select-datasets-instruction": "Only datasets with checked data will be shown in the chart.",
+  "heart-rate": "Heart Rate",
+  "title-sleep-params": "1. Sleep Parameters",
+  "sleep-params-intro": "This section explores sleep parameters,including sleep start time, sleep time, and wake up time. The synthesized data shows the relationship between these parameters.",
+  "sleep-start-time-wake": "Sleep Start Time / Total Sleep Time / Wake Up Time"
 }

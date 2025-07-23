@@ -43,7 +43,7 @@ const StatsBox: React.FC<PropsType> = ({ label, rate, rows, color }) => {
         })}
       </div>
 
-      <div className="text-xs text-gray-400">52-week range</div>
+      <div className="text-xs text-gray-400">One day Heart Rate</div>
     </div>
   );
 };

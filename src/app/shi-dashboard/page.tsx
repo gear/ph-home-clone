@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
 import HeartBeatRateChart from "@/app/shi-dashboard/components/HeartBeatRateChart";
 import { cn } from "@/libs/utils";
 import {
@@ -41,7 +42,7 @@ const datasets = csvPaths.map((item, index) => ({
 
 export default function SHIDashboard() {
   const [selectedDataset, setSelectedDataset] = useState([...datasets]);
-
+  const { t } = useTranslation("common");
   return (
     <div className="flex flex-col px-6 max-w-screen-xl mx-auto gap-4">
       <h1 className="text-5xl font-bold">SHI Summer School July 2025</h1>
@@ -49,20 +50,13 @@ export default function SHIDashboard() {
       <h2 className="text-3xl font-bold">Daily Heart Rate Patterns</h2>
 
       <span className="text-sm">
-        There are
-        <span className="border-b-2 border-b-blue-400">
-          {" "}
-          15 interactive graphs
-        </span>
-        , showing the relationship between sleep and other lifestyle aspects.
-        These data is synthesized by sampling from a real data distribution,
-        which consists of 16290 person-days of minute-by-minute recordings.
+        {t("shi-intro")}
       </span>
 
       <Field>
-        <Label>Select datasets</Label>
+        <Label>{t("select-datasets")}</Label>
         <Description className={"mb-2 text-xs text-gray-500"}>
-          Only datasets with checked data will be shown in the chart.
+          {t("select-datasets-instruction")}
         </Description>
 
         <Listbox value={selectedDataset} onChange={setSelectedDataset} multiple>
@@ -127,7 +121,7 @@ export default function SHIDashboard() {
         csvPaths={selectedDataset}
         width={1184}
         height={500}
-        text="Heart Rate"
+        text={t("heart-rate")}
       />
 
       {/*
@@ -138,18 +132,14 @@ export default function SHIDashboard() {
       ***************************
       */}
 
-      <h2 className="text-3xl font-bold mt-8">1. Sleep Parameters</h2>
+      <h2 className="text-3xl font-bold mt-8">{t("title-sleep-params")}</h2>
 
       <span className="text-sm">
-        This section explores {" "}
-        <span className="border-b-2 border-b-blue-400">
-          sleep parameters
-        </span>
-        , including sleep efficiency, sleep start time, sleep time, and wake up time.
-        The synthesized data shows the relationship between sleep parameters and other lifestyle factors.
+        {t("sleep-params-intro")}
+        
       </span>
 
-      <h3 className="text-2xl font-bold">Sleep Start Time / Total Sleep Time / Wake Up Time</h3>
+      <h3 className="text-2xl font-bold">{t("sleep-start-time-wake")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Sleep Start Time: 24-hour</li>
@@ -197,10 +187,10 @@ export default function SHIDashboard() {
       <h2 className="text-3xl font-bold mt-8">2. Caffeine Consumption Effect</h2>
 
 
-      <h3 className="text-2xl font-bold">Last Coffee Time / Total Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">Last Caffeine Time / Total Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Time of Last Coffee: 24-hour Format</li>
+          <li>Time of Last Caffeine: 24-hour Format</li>
           <li>Sleep Time: Hour</li>
         </ul>
       </span>
@@ -208,9 +198,9 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "black",
-            label: "Time of Last Coffee (hour)",
+            label: "Time of Last Caffeine (hour)",
             column: "last_coffee_time",
-            xlabel: "Time of Last Coffee (hour)",
+            xlabel: "Time of Last Caffeine (hour)",
             ylabel: "Number of records",
           },
           {
@@ -227,10 +217,10 @@ export default function SHIDashboard() {
 
 
 
-      <h3 className="text-2xl font-bold">Last Coffee Time / Light Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">Last Caffeine Time / Light Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Time of Last Coffee: 24-hour Format</li>
+          <li>Time of Last Caffeine: 24-hour Format</li>
           <li>Total Light Sleep Time: Hour</li>
         </ul>
       </span>
@@ -238,9 +228,9 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "black",
-            label: "Time of Last Coffee (hour)",
+            label: "Time of Last Caffeine (hour)",
             column: "last_coffee_time",
-            xlabel: "Time of Last Coffee (hour)",
+            xlabel: "Time of Last Caffeine (hour)",
             ylabel: "Number of records",
           },
           {
@@ -258,10 +248,10 @@ export default function SHIDashboard() {
 
 
 
-      <h3 className="text-2xl font-bold">Last Coffee Time / Total REM Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">Last Caffeine Time / Total REM Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Time of Last Coffee: 24-hour Format</li>
+          <li>Time of Last Caffeine: 24-hour Format</li>
           <li>REM Time: Hour</li>
         </ul>
       </span>
@@ -269,9 +259,9 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "black",
-            label: "Time of Last Coffee (hour)",
+            label: "Time of Last Caffeine (hour)",
             column: "last_coffee_time",
-            xlabel: "Time of Last Coffee (hour)",
+            xlabel: "Time of Last Caffeine (hour)",
             ylabel: "Number of records",
           },
           {
@@ -287,7 +277,7 @@ export default function SHIDashboard() {
       />
 
 
-      <h3 className="text-2xl font-bold">Last Coffee Time / Total Deep Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">Last Caffeine Time / Total Deep Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Last Caffeine Time: 24-hour Format</li>
@@ -300,7 +290,7 @@ export default function SHIDashboard() {
             color: "black",
             label: "Last Caffeine Consumption Time",
             column: "last_coffee_time",
-            xlabel: "Last Coffee Time (Hour)",
+            xlabel: "Last Caffeine Time (Hour)",
             ylabel: "Number of records",
           },
           {
@@ -316,7 +306,7 @@ export default function SHIDashboard() {
       />
 
 
-      <h3 className="text-2xl font-bold">Last Coffee Time / Total Wake During Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">Last Caffeine Time / Total Wake During Sleep Time (in hours)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Last Caffeine Time: 24-hour Format</li>
@@ -329,7 +319,7 @@ export default function SHIDashboard() {
             color: "black",
             label: "Last Caffeine Consumption Time",
             column: "last_coffee_time",
-            xlabel: "Last Coffee Time (Hour)",
+            xlabel: "Last Caffeine Time (Hour)",
             ylabel: "Number of records",
           },
           {
@@ -345,11 +335,11 @@ export default function SHIDashboard() {
       />
 
 
-      <h3 className="text-2xl font-bold">Last Coffee Time / Sleep Efficiency (ranges 0 to 1)</h3>
+      <h3 className="text-2xl font-bold">Last Caffeine Time / Sleep Efficiency</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Last Caffeine Time: 24-hour Format</li>
-          <li>Sleep Efficiency: Fraction from 0 to 1</li>
+          <li>Sleep Efficiency: Percentage</li>
         </ul>
       </span>
       <PlotColsGroup
@@ -358,14 +348,14 @@ export default function SHIDashboard() {
             color: "black",
             label: "Last Caffeine Consumption Time",
             column: "last_coffee_time",
-            xlabel: "Last Coffee Time (Hour)",
+            xlabel: "Last Caffeine Time (Hour)",
             ylabel: "Number of records",
           },
           {
-            color: "greenyellow",
-            label: "Sleep Efficiency (in fraction)",
+            color: "teal",
+            label: "Sleep Efficiency",
             column: "sleep_efficiency",
-            xlabel: "Sleep Efficiency",
+            xlabel: "Sleep Efficiency (%)",
             ylabel: "Number of records",
           },
         ]}
@@ -374,12 +364,12 @@ export default function SHIDashboard() {
       />
 
 
-      <h3 className="text-2xl font-bold">Last Coffee Time / Sleep Start Time / Wake Up Time</h3>
+      <h3 className="text-2xl font-bold">Last Caffeine Time / Sleep Start Time / Wake Up Time</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Sleep Start Time: 24-hour</li>
           <li>Wake Up Time: 24-hour</li>
-          <li>Last Coffee Time: 24-hour</li>
+          <li>Last Caffeine Time: 24-hour</li>
         </ul>
       </span>
 
@@ -394,9 +384,9 @@ export default function SHIDashboard() {
           },
           {
             color: "black",
-            label: "Last Coffee Time",
+            label: "Last Caffeine Time",
             column: "last_coffee_time",
-            xlabel: "Last Coffee Time (hour)",
+            xlabel: "Last Caffeine Time (hour)",
             ylabel: "Number of records",
           },
           {
@@ -425,11 +415,11 @@ export default function SHIDashboard() {
       
 
 
-      <h3 className="text-2xl font-bold">Steps per Day / Sleep Efficiency (ranges 0 to 1)</h3>
+      <h3 className="text-2xl font-bold">Steps per Day / Sleep Efficiency</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Steps per Day: Steps count per day</li>
-          <li>Sleep Efficiency: Fraction from 0 to 1</li>
+          <li>Sleep Efficiency: Percentage</li>
         </ul>
       </span>
       <PlotColsGroup
@@ -443,9 +433,9 @@ export default function SHIDashboard() {
           },
           {
             color: "teal",
-            label: "Sleep Efficiency (in fraction)",
+            label: "Sleep Efficiency",
             column: "Sleep_efficiency",
-            xlabel: "Sleep Efficiency",
+            xlabel: "Sleep Efficiency (%)",
             ylabel: "Number of records",
           },
         ]}
@@ -555,7 +545,7 @@ export default function SHIDashboard() {
       <span className="text-sm">
         <ul className="list-disc ml-5">
           <li>Screen Time: Hour</li>
-          <li>Sleep Efficiency: Fraction from 0 to 1</li>
+          <li>Sleep Efficiency: Percentage</li>
         </ul>
       </span>
       <PlotColsGroup
@@ -569,9 +559,9 @@ export default function SHIDashboard() {
           },
           {
             color: "teal",
-            label: "Sleep Efficiency (in fraction)",
+            label: "Sleep Efficiency",
             column: "Sleep_efficiency",
-            xlabel: "Sleep Efficiency",
+            xlabel: "Sleep Efficiency (%)",
             ylabel: "Number of records",
           },
         ]}
