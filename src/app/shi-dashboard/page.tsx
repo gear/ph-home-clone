@@ -540,6 +540,17 @@ export default function SHIDashboard() {
       />
       */}
 
+      {/*
+      ***************************
+      ***************************
+      Screen Effect: Steps, BMI, Screen Time
+      ***************************
+      ***************************
+      */}
+
+      <h2 className="text-3xl font-bold mt-8">4. Screen Time Effect</h2>
+      
+
       <h3 className="text-2xl font-bold">Screen Time / Sleep Efficiency (ranges 0 to 1)</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
