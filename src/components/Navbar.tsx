@@ -68,20 +68,25 @@ export const Navbar = () => {
           className={`${mont.className} flex items-center space-x-2 text-2xl text-blue-500`}
         >
           <span>
-            <Image
-              src={Logo}
-              width="38"
-              alt="N"
-              height="38"
-              className="w-8"
-            />
+            <Image src={Logo} width="38" alt="N" height="38" className="w-8" />
           </span>
-          <span className="text-lg">precision health</span>
+          <span className="text-lg hidden md:inline-block">
+            precision health
+          </span>
         </span>
       </Link>
 
       {/* contact  */}
-      <div className="gap-3 nav__item mr-2 flex ml-auto flex items-center ml-0 order-2">
+      <div className="gap-3 nav__item mr-2 flex flex items-center ml-0 order-2">
+        <div className="mr-3 flex nav__item">
+          <Link
+            href="/"
+            className="px-6 py-2 text-white bg-blue-500 rounded-md md:ml-5"
+          >
+            {t("contact")}
+          </Link>
+        </div>
+        <LanguageToggle />
         <Menu as="div">
           <MenuButton
             aria-label="Toggle Menu"
@@ -133,15 +138,6 @@ export const Navbar = () => {
             </>
           </MenuItems>
         </Menu>
-        <div className="mr-3 flex nav__item">
-          <Link
-            href="/"
-            className="px-6 py-2 text-white bg-blue-500 rounded-md md:ml-5"
-          >
-            {t("contact")}
-          </Link>
-        </div>
-        <LanguageToggle />
       </div>
 
       {/* menu  */}
