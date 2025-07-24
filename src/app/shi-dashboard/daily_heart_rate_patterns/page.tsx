@@ -17,6 +17,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import NavBarNextPrev from "../components/NavBarNextPrev";
+import { useTranslation } from "react-i18next";
 
 const csvPaths = [
   {
@@ -44,19 +45,22 @@ const datasets = csvPaths.map((item, index) => ({
 
 export default function SHIDashboard() {
   const [selectedDataset, setSelectedDataset] = useState([...datasets]);
+  const {t} = useTranslation("common");
 
   return (
     <div className="flex flex-col px-6 max-w-screen-xl mx-auto gap-4">
-      <NavBarNextPrev index={0} />
 
-      <h1 className="text-5xl font-bold">SHI Summer School July 2025</h1>
+      <h1 className="text-5xl font-bold text-gray-400">{t("shi-25-title")}</h1>
+      <h2 className="text-3xl font-bold">{t("title-daily-hr")}</h2>
 
-      <h2 className="text-3xl font-bold">Daily Heart Rate Patterns</h2>
+      <span className="text-sm">
+        {t("shi-intro")}
+      </span>
 
       <Field>
-        <Label>Select datasets</Label>
+        <Label>{t("select-datasets")}</Label>
         <Description className={"mb-2 text-xs text-gray-500"}>
-          Only datasets with checked data will be shown in the chart.
+          {t("select-datasets-instruction")}
         </Description>
 
         <Listbox value={selectedDataset} onChange={setSelectedDataset} multiple>
@@ -67,7 +71,7 @@ export default function SHIDashboard() {
             )}
           >
             {selectedDataset.map((person) => person.label).join(", ")}
-
+          
             <ChevronDownIcon
               className="group pointer-events-none absolute top-2.5 right-2.5 size-4"
               aria-hidden="true"
@@ -92,7 +96,7 @@ export default function SHIDashboard() {
                   value={data}
                 >
                   {data.label}
-
+              
                   <CheckIcon
                     className={cn("invisible size-4", isSelected && "visible")}
                   />
@@ -101,7 +105,7 @@ export default function SHIDashboard() {
             })}
           </ListboxOptions>
         </Listbox>
-
+          
         <div className="flex gap-3 mt-2 flex-wrap">
           {selectedDataset.map((dataset) => (
             <div className="flex items-center gap-1" key={dataset.id}>
@@ -115,14 +119,15 @@ export default function SHIDashboard() {
           ))}
         </div>
       </Field>
-
+        
       <HeartBeatRateChart
         key={selectedDataset.map((d) => d.id).join(",")}
         csvPaths={selectedDataset}
         width={1184}
         height={500}
-        text="Heart Rate"
+        text={t("heart-rate")}
       />
+      <NavBarNextPrev index={1} />
     </div>
   );
 }

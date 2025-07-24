@@ -14,8 +14,12 @@ import AppDropdown from "./AppDropdown";
 
 export const linksSHIDashboard = [
   {
-    href: "/shi-dashboard/daily_heart_rate_patterns",
-    label: "daily_heart_rate_patterns",
+    href: "/shi-dashboard",
+    label: "shi-dashboard-home",
+  },
+  {
+    href: "/shi-dashboard/daily_hr_patterns",
+    label: "daily_hr_patterns",
   },
   { href: "/shi-dashboard/sleep_architecture", label: "sleep_architecture" },
   { href: "/shi-dashboard/sleep_parameters", label: "sleep_parameters" },
