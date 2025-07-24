@@ -1,14 +1,13 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import Logo from "@/assets/precision-health-logo.svg";
 import { mont } from "./fonts";
 import LanguageToggle from "./LanguageToggle";
 import { useTranslation } from "react-i18next";
-import { useAppDispatch, useAppSelector } from "@/lib/hook";
 import { cn } from "@/libs/utils";
-import { setCurrentTab } from "@/lib/features/appSlice";
 import { NavBar } from "@/types";
 import AppDropdown from "./AppDropdown";
 
@@ -29,8 +28,25 @@ export const linksSHIDashboard = [
 
 export const Navbar = () => {
   const { t } = useTranslation("common");
-  const currentTab = useAppSelector((state) => state.app.currentTab);
-  const dispatch = useAppDispatch();
+  const pathname = usePathname();
+
+  const getCurrentTab = (path: string): NavBar => {
+    if (path === "/") return "home";
+    if (path.startsWith("/research")) return "research";
+    if (path.startsWith("/publications")) return "publications";
+    if (path.startsWith("/members")) return "members";
+    if (path.startsWith("/news")) return "news";
+    if (path.startsWith("/datasets")) return "datasets";
+    if (
+      path.startsWith("/resources") ||
+      path.startsWith("/dashboards") ||
+      path.startsWith("/shi-dashboard")
+    )
+      return "resources";
+    return "home";
+  };
+
+  const currentTab = getCurrentTab(pathname);
 
   const navigation = [
     { name: t("home"), href: "/", value: "home" },
@@ -66,6 +82,7 @@ export const Navbar = () => {
       ],
     },
   ];
+  console.log(currentTab, navigation);
   return (
     <nav className="w-full container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between">
       {/* Logo  */}
@@ -120,7 +137,10 @@ export const Navbar = () => {
                   <MenuItem>
                     <Link
                       href={item.href}
-                      className="block w-full px-4 py-2 text-gray-500 rounded-md data-focus:bg-blue-100 data-focus:text-indigo-500 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none"
+                      className={cn(
+                        "block w-full px-4 py-2 text-gray-500 rounded-md data-focus:bg-blue-100 data-focus:text-indigo-500 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none",
+                        currentTab === item.value && "text-indigo-500"
+                      )}
                     >
                       {item.name}
                     </Link>
@@ -131,7 +151,10 @@ export const Navbar = () => {
                         <MenuItem key={subIndex}>
                           <Link
                             href={subItem.href}
-                            className="block w-full px-3 py-1 text-sm text-gray-400 rounded-md data-focus:bg-blue-50 data-focus:text-indigo-400 hover:text-indigo-400 focus:text-indigo-400 focus:bg-blue-50 focus:outline-none"
+                            className={cn(
+                              "block w-full px-3 py-1 text-sm text-gray-400 rounded-md data-focus:bg-blue-50 data-focus:text-indigo-400 hover:text-indigo-400 focus:text-indigo-400 focus:bg-blue-50 focus:outline-none",
+                              pathname === subItem.href && "text-indigo-400"
+                            )}
                           >
                             {subItem.label}
                           </Link>
@@ -156,17 +179,17 @@ export const Navbar = () => {
                   links={menu.links}
                   label={menu.name}
                   link={menu.href}
+                  currentTab={currentTab}
+                  value={menu.value}
+                  pathname={pathname}
                 />
               ) : (
                 <Link
                   href={menu.href}
                   className={cn(
-                    "inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-blue-500 focus:text-blue-500 focus:bg-indigo-100 focus:outline-none",
+                    "inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-blue-500 hover:bg-indigo-100",
                     currentTab === menu.value && "text-blue-500"
                   )}
-                  onClick={() => {
-                    dispatch(setCurrentTab(menu.value as NavBar));
-                  }}
                 >
                   {menu.name}
                 </Link>

@@ -6,6 +6,7 @@ export const NAVBARS = [
   "news",
   "datasets",
   "dashboard",
+  "resources",
 ] as const;
 
 export const FILTER_TOPICS = [
