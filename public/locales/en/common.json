@@ -104,6 +104,12 @@
   "sp-q2": "2. What time do participants who sleep around 9 hours usually wake up?",
   "sp-q3": "3. How does Sleep Start Time impact Total Sleep Time?",
   "sp-q4": "4. How does Wake-up Time impact Total Sleep Time?",
+  "ce-q1": "1. How does late caffeine intake impact Total Sleep Time?",
+  "ce-q2": "2. How does late caffeine intake impact Light Sleep Time?",
+  "ce-q3": "3. How does late caffeine intake impact REM Sleep Time?",
+  "ce-q4": "4. How does late caffeine intake impact Deep Sleep Time?",
   "sleep-params-intro": "This section explores sleep parameters, including sleep start time, total sleep time, and wake up time. The synthesized data show the relationships among these parameters.",
+  "caffeine-intro": "This section explores the effect of last caffeine consumption time on sleep architecutre, including sleep start time, sleep efficiency, total sleep time, wake up time, duration of sleep stages (Light/REM/Deep). The synthesized data show the relationships among these parameters.",
+  "title-caffeine": "3. Caffeine Consumption and Sleep",
   "sleep-start-time-wake": "Sleep Start Time / Total Sleep Time / Wake Up Time"
 }
