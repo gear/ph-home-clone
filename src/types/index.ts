@@ -5,4 +5,4 @@ export type NavBar =
   | "members"
   | "news"
   | "datasets"
-  | "dashboard";
+  | "resources";

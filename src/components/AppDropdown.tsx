@@ -6,6 +6,7 @@ import {
 } from "@headlessui/react";
 import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
+import { cn } from "@/libs/utils";
 
 interface Link {
   href: string;
@@ -16,9 +17,12 @@ interface AppDropdownProps {
   links: Link[];
   label: string;
   link: string;
+  currentTab: string;
+  value: string;
+  pathname: string;
 }
 
-const AppDropdown: React.FC<AppDropdownProps> = ({ links, label, link }) => {
+const AppDropdown: React.FC<AppDropdownProps> = ({ links, label, link, currentTab, value, pathname }) => {
   let timeout: string | number | NodeJS.Timeout | undefined; // NodeJS.Timeout
   const timeoutDuration = 0;
 
@@ -75,7 +79,10 @@ const AppDropdown: React.FC<AppDropdownProps> = ({ links, label, link }) => {
         >
           <PopoverButton
             ref={buttonRef}
-            className="inline-block text-lg font-normal text-gray-800 no-underline rounded-md  hover:text-blue-500 focus:text-blue-500 focus:bg-indigo-100 focus:outline-none"
+            className={cn(
+              "inline-block text-lg font-normal text-gray-800 no-underline rounded-md hover:text-blue-500 hover:bg-indigo-100",
+              currentTab === value && "text-blue-500"
+            )}
           >
             <Link href={link} className="px-4 py-2 inline-block">
               {label}
@@ -101,9 +108,15 @@ const AppDropdown: React.FC<AppDropdownProps> = ({ links, label, link }) => {
                 <div className="px-2" key={href}>
                   <Link
                     href={href}
-                    className="block rounded-lg px-3 py-2 transition hover:bg-gray-100"
+                    className={cn(
+                      "block rounded-lg px-3 py-2 transition hover:bg-gray-100",
+                      pathname === href && "bg-blue-50 text-blue-600"
+                    )}
                   >
-                    <p className="font-semibold ">{label}</p>
+                    <p className={cn(
+                      "font-semibold",
+                      pathname === href && "text-blue-600"
+                    )}>{label}</p>
                   </Link>
                 </div>
               ))}
