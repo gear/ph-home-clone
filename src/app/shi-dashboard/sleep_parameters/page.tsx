@@ -38,21 +38,21 @@ export default function SHIDashboard() {
             label: "Sleep Start Time",
             column: "bedtime",
             xlabel: "Sleep Start Time (hour)",
-            ylabel: "Number of records",
+            ylabel: "Number of observations",
           },
           {
             color: "pink",
             label: "Total Sleep Time",
             column: "sleep_time",
             xlabel: "Total Sleep Time (hour)",
-            ylabel: "Number of records",
+            ylabel: "Number of observations",
           },
           {
             color: "gold",
             label: "Wake-up Time",
             column: "wake_time",
             xlabel: "Wake-up time (hour)",
-            ylabel: "Number of records",
+            ylabel: "Number of observations",
           },
         ]}
         filePath="/data/sleep_arch.parquet"

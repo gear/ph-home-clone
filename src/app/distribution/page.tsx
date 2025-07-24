@@ -27,21 +27,21 @@ export default function Distribution() {
             label: "Sleep Onset Time",
             column: "start_hour",
             xlabel: "Sleep onset (hour)",
-            ylabel: "Number of records",
+            ylabel: "Number of observations",
           },
           {
             color: "#8B4513",
             label: "Wake-up Time",
             column: "end_hour",
             xlabel: "Wake-up time (hour)",
-            ylabel: "Number of records",
+            ylabel: "Number of observations",
           },
           {
             color: "green",
             label: "Sleep Duration",
             column: "FB_minutesasleep_stages",
             xlabel: "Sleep duration (minutes)",
-            ylabel: "Number of records",
+            ylabel: "Number of observations",
           },
         ]}
         filePath="/data/fitbit_main_sleep.parquet"

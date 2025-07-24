@@ -29,14 +29,14 @@ export default function SHIDashboard() {
             label: "Caffeine Consumption",
             column: "start_hour",
             xlabel: "Amount per day (cup)",
-            ylabel: "Number of records",
+            ylabel: "Number of observations",
           },
           {
             color: "darkblue",
             label: "Deep Sleep Time",
             column: "FB_minutesasleep_stages",
             xlabel: "Deep Sleep Time (minutes)",
-            ylabel: "Number of records",
+            ylabel: "Number of observations",
           },
         ]}
         filePath="/data/fitbit_main_sleep.parquet"
@@ -58,14 +58,14 @@ export default function SHIDashboard() {
             label: "Sleep Onset Time",
             column: "start_hour",
             xlabel: "Sleep onset (hour)",
-            ylabel: "Number of records",
+            ylabel: "Number of observations",
           },
           {
             color: "green",
             label: "Sleep Duration",
             column: "FB_minutesasleep_stages",
             xlabel: "Sleep duration (minutes)",
-            ylabel: "Number of records",
+            ylabel: "Number of observations",
           },
         ]}
         filePath="/data/fitbit_main_sleep.parquet"

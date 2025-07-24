@@ -72,9 +72,9 @@ export const SleepMosaicPlot = () => {
         };
 
         // Create individual plots
-        const sleepOnsetPlot = makePlot("start_hour", "Sleep onset (hour)", "Number of records");
-        const wakeUpPlot = makePlot("end_hour", "Wake-up time (hour)", "Number of records", "#8B4513");
-        const durationPlot = makePlot("FB_minutesasleep_stages", "Sleep duration (minutes)", "Number of records", "green");
+        const sleepOnsetPlot = makePlot("start_hour", "Sleep onset (hour)", "Number of observations");
+        const wakeUpPlot = makePlot("end_hour", "Wake-up time (hour)", "Number of observations", "#8B4513");
+        const durationPlot = makePlot("FB_minutesasleep_stages", "Sleep duration (minutes)", "Number of observations", "green");
 
         // Create titled containers
         const titledSleepOnset = createTitledPlot("Sleep Onset Time", sleepOnsetPlot);
