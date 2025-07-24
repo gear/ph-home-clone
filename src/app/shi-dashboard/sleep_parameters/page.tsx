@@ -2,32 +2,32 @@
 
 import PlotColsGroup from "@/components/PlotColsGroup";
 import NavBarNextPrev from "../components/NavBarNextPrev";
+import { useTranslation } from "react-i18next";
 
 export default function SHIDashboard() {
+  const {t} = useTranslation("common");
   return (
     <div className="flex flex-col px-6 max-w-screen-xl mx-auto gap-4">
-      <NavBarNextPrev index={2} />
 
-      <h1 className="text-5xl font-bold">SHI Summer School July 2025</h1>
-
-      <h2 className="text-3xl font-bold mt-8">Sleep Parameters</h2>
+      <h1 className="text-5xl font-bold text-gray-400">{t("shi-25-title")}</h1>
+      <h2 className="text-3xl font-bold">{t("title-sleep-params")}</h2>
 
       <span className="text-sm">
-        This section explores{" "}
-        <span className="border-b-2 border-b-blue-400">sleep parameters</span>,
-        including sleep efficiency, sleep start time, sleep duration, and wake
-        up time. The synthesized data shows the relationship between sleep
-        parameters and other lifestyle factors.
+        {t("sleep-params-intro")}
       </span>
-
-      <h3 className="text-2xl font-bold">
-        Sleep Start Time / Sleep Duration / Wake Up Time
-      </h3>
+      <div className="bg-yellow-100 border-l-4 border-blue-900 text-blue-900 p-4" role="alert">
+        <p className="font-bold">{t("questions")}</p>
+          <p>{t("sp-q1")}</p>
+          <p>{t("sp-q2")}</p>
+          <p>{t("sp-q3")}</p>
+          <p>{t("sp-q4")}</p>
+      </div>
+      <h3 className="text-2xl font-bold">{t("sleep-start-time-wake")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Sleep Start Time (Sleep Onset): 24-hour</li>
+          <li>Sleep Start Time: 24-hour</li>
           <li>Wake-up Time: 24-hour</li>
-          <li>Sleep Duration: Minute</li>
+          <li>Total Sleep Time: Hour</li>
         </ul>
       </span>
 
@@ -36,58 +36,30 @@ export default function SHIDashboard() {
           {
             color: "steelblue",
             label: "Sleep Start Time",
-            column: "start_hour",
-            xlabel: "Sleep onset (hour)",
+            column: "bedtime",
+            xlabel: "Sleep Start Time (hour)",
             ylabel: "Number of records",
           },
           {
             color: "pink",
-            label: "Sleep Duration",
-            column: "FB_minutesasleep_stages",
-            xlabel: "Sleep duration (minutes)",
-            ylabel: "Number of records",
-          },
-          {
-            color: "gold",
-            label: "Wake-up Time",
-            column: "end_hour",
-            xlabel: "Wake-up time (hour)",
-            ylabel: "Number of records",
-          },
-        ]}
-        filePath="/data/fitbit_main_sleep.parquet"
-        parquetName="sleep_start_time"
-      />
-
-      <h3 className="text-2xl font-bold">
-        Caffeine Consumption Time / Sleep Start Time
-      </h3>
-      <span className="text-sm">
-        <ul className="list-disc ml-5">
-          <li>Caffeine Consumption: Cups per day</li>
-          <li>Sleep Start Time: 24-hour</li>
-        </ul>
-      </span>
-      <PlotColsGroup
-        fields={[
-          {
-            color: "black",
-            label: "Last Caffeine Consumption Time",
-            column: "last_coffee_time",
-            xlabel: "Last Coffee Time (Hour)",
+            label: "Total Sleep Time",
+            column: "sleep_time",
+            xlabel: "Total Sleep Time (hour)",
             ylabel: "Number of records",
           },
           {
             color: "gold",
             label: "Wake-up Time",
             column: "wake_time",
-            xlabel: "Wake-up Time (Hour)",
+            xlabel: "Wake-up time (hour)",
             ylabel: "Number of records",
           },
         ]}
-        filePath="/data/shi_caffeine.parquet"
-        parquetName="caffeine_consumption"
+        filePath="/data/sleep_arch.parquet"
+        parquetName="sleep_arch"
       />
+     
+      <NavBarNextPrev index={2} />
     </div>
   );
 }

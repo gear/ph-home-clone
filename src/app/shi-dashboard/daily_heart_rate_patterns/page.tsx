@@ -56,6 +56,12 @@ export default function SHIDashboard() {
       <span className="text-sm">
         {t("shi-intro")}
       </span>
+      <div className="bg-yellow-100 border-l-4 border-blue-900 text-blue-900 p-4" role="alert">
+        <p className="font-bold">{t("questions")}</p>
+          <p>{t("hr-q1")}</p>
+          <p>{t("hr-q2")}</p>
+          <p>{t("hr-q3")}</p>
+      </div>
 
       <Field>
         <Label>{t("select-datasets")}</Label>

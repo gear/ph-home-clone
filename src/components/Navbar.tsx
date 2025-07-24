@@ -21,8 +21,10 @@ export const linksSHIDashboard = [
     href: "/shi-dashboard/daily_hr_patterns",
     label: "daily_hr_patterns",
   },
-  { href: "/shi-dashboard/sleep_architecture", label: "sleep_architecture" },
   { href: "/shi-dashboard/sleep_parameters", label: "sleep_parameters" },
+  { href: "/shi-dashboard/caffeine_effect", label: "caffeine_consumption"},
+  { href: "/shi-dashboard/activity_effect", label: "activity_effect"},
+  { href: "/shi-dashboard/screentime_effect", label: "screentime_effect"},
 ];
 
 export const Navbar = () => {
