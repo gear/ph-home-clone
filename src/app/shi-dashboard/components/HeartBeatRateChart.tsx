@@ -5,6 +5,7 @@ import * as vg from "@uwdata/vgplot";
 import { withClientSideRendering } from "@/components/hoc";
 import StatsBox from "./StatsBox";
 import { cn } from "@/libs/utils";
+import { useTranslation } from "react-i18next";
 
 interface HeartBeatRateChartProps {
   /*
@@ -37,6 +38,7 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
   const chartRef = useRef<HTMLDivElement>(null);
   const chartZoomRef = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = React.useState(true);
+  const {t} = useTranslation("common");
 
   useEffect(() => {
     const container = chartRef.current;
@@ -207,8 +209,8 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
         <div className="flex gap-4">
           <div className="flex flex-col gap-4 grow">
             <StatsBox
-              label="Participant 1"
-              rate="Heart Rate Range: 52-110"
+              label={t("participant-1")}
+              rate={t("hr-range-1")}
               rows={[
                 {
                   label: "Max Sleeping HR",
@@ -223,8 +225,8 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
             />
 
             <StatsBox
-              label="Participant 2"
-              rate="Heart Rate Range: 40-106"
+              label={t("participant-2")}
+              rate={t("hr-range-2")}
               rows={[
                 {
                   label: "Max Sleeping HR",
@@ -240,13 +242,13 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
           </div>
 
           <div className="bg-slate-100 rounded-md p-6 w-fit">
-            <h2 className="text-start mb-2">Heart Rate Zoomed</h2>
+            <h2 className="text-start mb-2">{t("hr-zoomed")}</h2>
             <div ref={chartZoomRef} className="w-fit" />
           </div>
         </div>
 
         <div className="bg-slate-100 rounded-md p-6">
-          <h2 className="text-start mb-2">Heart Rate Data</h2>
+          <h2 className="text-start mb-2">{t("hr-data")}</h2>
           <div ref={chartRef} />
         </div>
       </div>

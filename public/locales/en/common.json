@@ -120,5 +120,12 @@
   "ss-q1": "1. How does screen time impact Total Sleep Time?",
   "ss-q2": "2. How does screen time impact Sleep Efficiency?",
   "shi-toc": "Table of content",
-  "num-records": "Number of observations"
+  "num-records": "Number of observations",
+  "participant-1": "Participant 1",
+  "participant-2": "Participant 2",
+  "hr-range-1": "Heart Rate Range: 52-110",
+  "hr-range-2": "Heart Rate Range: 40-106",
+  "hr-zoomed": "Heart Rate Zoomed",
+  "hr-data": "Heart Rate Data",
+  "padding": "padding"
 }

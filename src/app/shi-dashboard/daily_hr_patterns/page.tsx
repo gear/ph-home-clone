@@ -40,7 +40,7 @@ const datasets = csvPaths.map((item, index) => ({
   id: item.path,
   rawTable: `heart_rate_raw_${index}`,
   endpointTable: `endpoint_${index}`,
-  label: `Heart rate ${index + 1}`,
+  label: `Participant ${index + 1}`,
 }));
 
 export default function SHIDashboard() {
