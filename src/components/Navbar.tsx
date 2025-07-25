@@ -101,7 +101,7 @@ export const Navbar = () => {
 
       {/* contact  */}
       <div className="gap-3 nav__item mr-2 flex flex items-center ml-0 order-2">
-        <div className="mr-3 flex nav__item">
+        <div className="mr-3 hidden xl:flex nav__item">
           <Link
             href="/"
             className="px-6 py-2 text-white bg-blue-500 rounded-md md:ml-5"
@@ -164,6 +164,14 @@ export const Navbar = () => {
                   )}
                 </div>
               ))}
+              <MenuItem>
+                <Link
+                  href="/"
+                  className="block w-full px-4 py-2 mt-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:bg-blue-600 focus:outline-none text-center"
+                >
+                  {t("contact")}
+                </Link>
+              </MenuItem>
             </>
           </MenuItems>
         </Menu>
