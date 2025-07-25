@@ -133,5 +133,13 @@
   "sp-stt": "Sleep Start Time",
   "sp-tst": "Total Sleep Time",
   "sp-wut": "Wake-up Time",
+  "ce-t1": "Time of Last Caffeine Consumption",
+  "ce-t2": "Total Sleep Time",
+  "ce-t3": "Light Sleep Time",
+  "ce-l11": "Time of Last Caffeine Consumption: 24-hour (hour of day)",
+  "ce-l12": "Total Sleep Time: Hour",
+  "ce-l21": "Total Light Time: Hour",
+
+
   "padding": "padding"
 }

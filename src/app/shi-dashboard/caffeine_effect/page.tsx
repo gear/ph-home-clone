@@ -51,28 +51,28 @@ export default function SHIDashboard() {
           <p>{t("ce-q4")}</p>
       </div>
 
-      <h3 className="text-2xl font-bold">Time of Last Caffeine Consumption (hour of day) / Total Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">{t("ce-t1")} / {t("ce-t2")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Time of Last Caffeine: 24-hour Format</li>
-          <li>Sleep Time: Hour</li>
+          <li>{t("ce-l11")}</li>
+          <li>{t("ce-l12")}</li>
         </ul>
       </span>
       <PlotColsGroup
         fields={[
           {
             color: "black",
-            label: "Time of Last Caffeine Consumption (hour of day)",
+            label: t("ce-t1"),
             column: "last_coffee_time",
-            xlabel: "Time of Last Caffeine Consumption (hour of day)",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l11"),
+            ylabel: t("num-records"),
           },
           {
             color: "steelblue",
-            label: "Total Sleep Time",
+            label: t("ce-t2"),
             column: "sleep_time",
-            xlabel: "Total Sleep Time (Hour)",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l12"),
+            ylabel: t("num-records"),
           },
         ]}
         filePath="/data/shi_caffeine.parquet"
@@ -80,26 +80,25 @@ export default function SHIDashboard() {
       />
 
 
-
-      <h3 className="text-2xl font-bold">Time of Last Caffeine Consumption (hour of day) / Light Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">{t("ce-t1")} / {t("ce-t3")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Time of Last Caffeine: 24-hour Format</li>
-          <li>Total Light Sleep Time: Hour</li>
+          <li>{t("ce-l11")}</li>
+          <li>{t("ce-l21")}</li>
         </ul>
       </span>
       <PlotColsGroup
         fields={[
           {
             color: "black",
-            label: "Time of Last Caffeine Consumption (hour of day)",
+            label: t("ce-t1"),
             column: "last_coffee_time",
             xlabel: "Time of Last Caffeine Consumption (hour of day)",
             ylabel: "Number of observations",
           },
           {
             color: "aqua",
-            label: "Total Light Sleep Time",
+            label: t("ce-t3"),
             column: "light",
             xlabel: "Total Light Sleep Time",
             ylabel: "Number of observations",
@@ -123,7 +122,7 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "black",
-            label: "Time of Last Caffeine Consumption (hour of day)",
+            label: t("ce-l11"),
             column: "last_coffee_time",
             xlabel: "Time of Last Caffeine Consumption (hour of day)",
             ylabel: "Number of observations",
@@ -152,7 +151,7 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "black",
-            label: "Time of Last Caffeine Consumption (hour of day)",
+            label: t("ce-l11"),
             column: "last_coffee_time",
             xlabel: "Time of Last Caffeine Consumption (hour of day)",
             ylabel: "Number of observations",
@@ -181,7 +180,7 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "black",
-            label: "Time of Last Caffeine Consumption (hour of day)",
+            label: t("ce-l11"),
             column: "last_coffee_time",
             xlabel: "Time of Last Caffeine Consumption (hour of day)",
             ylabel: "Number of observations",
@@ -210,7 +209,7 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "black",
-            label: "Time of Last Caffeine Consumption (hour of day)",
+            label: t("ce-l11"),
             column: "last_coffee_time",
             xlabel: "Time of Last Caffeine Consumption (hour of day)",
             ylabel: "Number of observations",
@@ -248,7 +247,7 @@ export default function SHIDashboard() {
           },
           {
             color: "black",
-            label: "Time of Last Caffeine Consumption (hour of day)",
+            label: t("ce-l11"),
             column: "last_coffee_time",
             xlabel: "Time of Last Caffeine Consumption (hour of day)",
             ylabel: "Number of observations",
