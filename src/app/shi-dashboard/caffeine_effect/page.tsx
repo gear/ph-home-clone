@@ -93,15 +93,15 @@ export default function SHIDashboard() {
             color: "black",
             label: t("ce-t1"),
             column: "last_coffee_time",
-            xlabel: "Time of Last Caffeine Consumption (hour of day)",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l11"),
+            ylabel: t("num-records"),
           },
           {
             color: "aqua",
             label: t("ce-t3"),
             column: "light",
-            xlabel: "Total Light Sleep Time",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l21"),
+            ylabel: t("num-records"),
           },
         ]}
         filePath="/data/shi_caffeine.parquet"
@@ -109,30 +109,28 @@ export default function SHIDashboard() {
       />
 
 
-
-
-      <h3 className="text-2xl font-bold">Time of Last Caffeine Consumption (hour of day) / Total REM Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">{t("ce-t1")} / {t("ce-t4")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Time of Last Caffeine: 24-hour Format</li>
-          <li>REM Time: Hour</li>
+          <li>{t("ce-l11")}</li>
+          <li>{t("ce-l-r")}</li>
         </ul>
       </span>
       <PlotColsGroup
         fields={[
           {
             color: "black",
-            label: t("ce-l11"),
+            label: t("ce-t1"),
             column: "last_coffee_time",
-            xlabel: "Time of Last Caffeine Consumption (hour of day)",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l11"),
+            ylabel: t("num-records"),
           },
           {
             color: "steelblue",
-            label: "Total REM Sleep Time",
+            label: t("ce-t4"),
             column: "rem",
-            xlabel: "Total REM Sleep Time",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l-r"),
+            ylabel: t("num-records"),
           },
         ]}
         filePath="/data/shi_caffeine.parquet"
@@ -140,28 +138,28 @@ export default function SHIDashboard() {
       />
 
 
-      <h3 className="text-2xl font-bold">Time of Last Caffeine Consumption (hour of day) / Total Deep Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">{t("ce-t1")} / {t("ce-t7")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Time of Last Caffeine Consumption (hour of day): 24-hour Format</li>
-          <li>Deep Time: Hour</li>
+          <li>{t("ce-l11")}</li>
+          <li>{t("ce-l-d")}</li>
         </ul>
       </span>
       <PlotColsGroup
         fields={[
           {
             color: "black",
-            label: t("ce-l11"),
+            label: t("ce-t1"),
             column: "last_coffee_time",
-            xlabel: "Time of Last Caffeine Consumption (hour of day)",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l11"),
+            ylabel: t("num-records"),
           },
           {
             color: "darkblue",
-            label: "Total Deep Sleep Time",
+            label: t("ce-t7"),
             column: "deep",
-            xlabel: "Total Deep Sleep Time",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l-d"),
+            ylabel: t("num-records"),
           },
         ]}
         filePath="/data/shi_caffeine.parquet"
@@ -169,28 +167,28 @@ export default function SHIDashboard() {
       />
 
 
-      <h3 className="text-2xl font-bold">Time of Last Caffeine Consumption (hour of day) / Total Wake During Sleep Time (in hours)</h3>
+      <h3 className="text-2xl font-bold">{t("ce-t1")} / {t("ce-t6")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Time of Last Caffeine Consumption (hour of day): 24-hour Format</li>
-          <li>Total Wake During Sleep Deep Time: Hour</li>
+          <li>{t("ce-l11")}</li>
+          <li>{t("ce-l-tw")}</li>
         </ul>
       </span>
       <PlotColsGroup
         fields={[
           {
             color: "black",
-            label: t("ce-l11"),
+            label: t("ce-t1"),
             column: "last_coffee_time",
-            xlabel: "Time of Last Caffeine Consumption (hour of day)",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l11"),
+            ylabel: t("num-records"),
           },
           {
             color: "darkgoldenrod",
-            label: "Total Wake During Sleep Time (in hours)",
+            label: t("ce-t6"),
             column: "wake",
-            xlabel: "Total Wake During Sleep Time",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l-tw"),
+            ylabel: t("num-records"),
           },
         ]}
         filePath="/data/shi_caffeine.parquet"
@@ -198,28 +196,28 @@ export default function SHIDashboard() {
       />
 
 
-      <h3 className="text-2xl font-bold">Time of Last Caffeine Consumption (hour of day) / Sleep Efficiency</h3>
+      <h3 className="text-2xl font-bold">{t("ce-t1")} / {t("ce-t5")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Time of Last Caffeine Consumption (hour of day): 24-hour Format</li>
-          <li>Sleep Efficiency: Percentage</li>
+          <li>{t("ce-l11")}</li>
+          <li>{t("ce-l-se")}</li>
         </ul>
       </span>
       <PlotColsGroup
         fields={[
           {
             color: "black",
-            label: t("ce-l11"),
+            label: t("ce-t1"),
             column: "last_coffee_time",
-            xlabel: "Time of Last Caffeine Consumption (hour of day)",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l11"),
+            ylabel: t("num-records"),
           },
           {
             color: "teal",
-            label: "Sleep Efficiency",
+            label: t("ce-t5"),
             column: "sleep_efficiency",
-            xlabel: "Sleep Efficiency (%)",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l-se"),
+            ylabel: t("num-records"),
           },
         ]}
         filePath="/data/shi_caffeine.parquet"
@@ -227,12 +225,12 @@ export default function SHIDashboard() {
       />
 
 
-      <h3 className="text-2xl font-bold">Time of Last Caffeine Consumption (hour of day) / Sleep Start Time / Wake Up Time</h3>
+      <h3 className="text-2xl font-bold">{t("ce-t1")} / {t("sp-stt")} / {t("sp-wut")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Sleep Start Time: 24-hour</li>
-          <li>Wake Up Time: 24-hour</li>
-          <li>Time of Last Caffeine Consumption (hour of day): 24-hour</li>
+          <li>{t("sp-l1")}</li>
+          <li>{t("sp-l2")}</li>
+          <li>{t("ce-l11")}</li>
         </ul>
       </span>
 
@@ -240,24 +238,24 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "steelblue",
-            label: "Sleep Start Time",
+            label: t("sp-stt"),
             column: "bedtime",
-            xlabel: "Sleep Start Time (hour)",
-            ylabel: "Number of observations",
+            xlabel: t("sp-l1"),
+            ylabel: t("num-records"),
           },
           {
             color: "black",
-            label: t("ce-l11"),
+            label: t("ce-t1"),
             column: "last_coffee_time",
-            xlabel: "Time of Last Caffeine Consumption (hour of day)",
-            ylabel: "Number of observations",
+            xlabel: t("ce-l11"),
+            ylabel: t("num-records"),
           },
           {
             color: "gold",
-            label: t("num-records"),
+            label: t("sp-wut"),
             column: "wake_time_corrected",
-            xlabel: "Wake-up Time (hour)",
-            ylabel: "Number of observations",
+            xlabel: t("sp-l2"),
+            ylabel: t("num-records"),
           },
         ]}
         filePath="/data/shi_caffeine.parquet"

@@ -62,14 +62,14 @@ export default function SHIDashboard() {
             label: "Steps per Day",
             column: "Steps_per_day",
             xlabel: "Steps per Day (Count)",
-            ylabel: "Number of observations",
+            ylabel: t("num-records"),
           },
           {
             color: "teal",
             label: "Sleep Efficiency",
             column: "Sleep_efficiency",
             xlabel: "Sleep Efficiency (%)",
-            ylabel: "Number of observations",
+            ylabel: t("num-records"),
           },
         ]}
         filePath="/data/activity_sleep.parquet"
@@ -90,14 +90,14 @@ export default function SHIDashboard() {
             label: "Steps per Day",
             column: "Steps_per_day",
             xlabel: "Steps per Day (count)",
-            ylabel: "Number of observations",
+            ylabel: t("num-records"),
           },
           {
             color: "darkblue",
             label: "Total Sleep Time (in hour)",
             column: "Sleep_duration_h",
             xlabel: "Total Sleep Time",
-            ylabel: "Number of observations",
+            ylabel: t("num-records"),
           },
         ]}
         filePath="/data/activity_sleep.parquet"

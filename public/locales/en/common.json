@@ -135,10 +135,18 @@
   "sp-wut": "Wake-up Time",
   "ce-t1": "Time of Last Caffeine Consumption",
   "ce-t2": "Total Sleep Time",
-  "ce-t3": "Light Sleep Time",
+  "ce-t3": "Total Light Sleep Time",
+  "ce-t4": "Total REM Sleep Time",
+  "ce-t5": "Sleep Efficiency",
+  "ce-t6": "Total Wake During Sleep Time",
+  "ce-t7": "Total Deep Sleep Time",
   "ce-l11": "Time of Last Caffeine Consumption: 24-hour (hour of day)",
   "ce-l12": "Total Sleep Time: Hour",
-  "ce-l21": "Total Light Time: Hour",
+  "ce-l21": "Total Light Sleep Time: Hour",
+  "ce-l-d": "Total Deep Sleep Time: Hour",
+  "ce-l-se": "Sleep Efficiency: Percentage",
+  "ce-l-tw": "Total Wake During Sleep Time: Hour",
+  "ce-l-r": "Total REM Sleep Time: Hour",
 
 
   "padding": "padding"
