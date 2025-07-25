@@ -25,9 +25,9 @@ export default function SHIDashboard() {
       <h3 className="text-2xl font-bold">{t("sleep-start-time-wake")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Sleep Start Time: 24-hour</li>
-          <li>Wake-up Time: 24-hour</li>
-          <li>Total Sleep Time: Hour</li>
+          <li>{t("sp-l1")}</li>
+          <li>{t("sp-l2")}</li>
+          <li>{t("sp-l3")}</li>
         </ul>
       </span>
 
@@ -35,24 +35,24 @@ export default function SHIDashboard() {
         fields={[
           {
             color: "steelblue",
-            label: "Sleep Start Time",
+            label: t("sp-stt"),
             column: "bedtime",
-            xlabel: "Sleep Start Time (hour)",
-            ylabel: "Number of observations",
+            xlabel: t("sp-l1"),
+            ylabel: t("num-records"),
           },
           {
             color: "pink",
-            label: "Total Sleep Time",
+            label: t("sp-tst"),
             column: "sleep_time",
-            xlabel: "Total Sleep Time (hour)",
-            ylabel: "Number of observations",
+            xlabel: t("sp-l3"),
+            ylabel: t("num-records"),
           },
           {
             color: "gold",
-            label: "Wake-up Time",
+            label: t("sp-wut"),
             column: "wake_time",
-            xlabel: "Wake-up time (hour)",
-            ylabel: "Number of observations",
+            xlabel: t("sp-l2"),
+            ylabel: t("num-records"),
           },
         ]}
         filePath="/data/sleep_arch.parquet"

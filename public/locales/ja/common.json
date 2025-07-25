@@ -78,6 +78,7 @@
   "sleep_analysis": "睡眠分析",
   "sleep_data_analysis": "睡眠データ分析",
   "resources": "リソース",
+  "questions": "質問",
   "shi-dashboard": "SHI ダッシュボード",
   "shi-dashboard-home": "SHI ダッシュボード ホーム",
   "shi-25-title": "SHI サマースクール 2025年7月",
@@ -125,6 +126,11 @@
   "hr-range-2": "心拍数範囲: 40〜106",
   "hr-zoomed": "心拍数ズーム",
   "hr-data": "心拍数データ",
-
+  "sp-l1": "就寝時刻: 24時間制（時刻）",
+  "sp-l2": "起床時刻: 24時間制（時刻）",
+  "sp-l3": "総睡眠時間: 時間",
+  "sp-stt": "就寝時刻",
+  "sp-tst": "総睡眠時間",
+  "sp-wut": "起床時刻",
   "padding": "padding-jp"
 }

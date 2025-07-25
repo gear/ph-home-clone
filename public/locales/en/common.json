@@ -127,5 +127,11 @@
   "hr-range-2": "Heart Rate Range: 40-106",
   "hr-zoomed": "Heart Rate Zoomed",
   "hr-data": "Heart Rate Data",
+  "sp-l1": "Sleep Start Time: 24-hour (hour of day)",
+  "sp-l2": "Wake-up Time: 24-hour (hour of day)",
+  "sp-l3": "Total Sleep Time: Hour",
+  "sp-stt": "Sleep Start Time",
+  "sp-tst": "Total Sleep Time",
+  "sp-wut": "Wake-up Time",
   "padding": "padding"
 }
