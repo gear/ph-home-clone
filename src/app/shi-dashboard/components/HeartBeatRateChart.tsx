@@ -6,6 +6,7 @@ import { withClientSideRendering } from "@/components/hoc";
 import StatsBox from "./StatsBox";
 import { cn } from "@/libs/utils";
 import { useTranslation } from "react-i18next";
+import { ChartSkeleton } from "@/components/ChartSkeleton";
 
 interface HeartBeatRateChartProps {
   /*
@@ -183,13 +184,21 @@ const HeartBeatRateChart: React.FC<HeartBeatRateChartProps> = ({
 
   return (
     <>
-      <div
-        className={cn(
-          "flex items-center h-[400px] justify-center",
-          !loading && "hidden"
-        )}
-      >
-        <span className="text-gray-500">Loading...</span>
+      <div className={cn(!loading && "hidden")}>
+        <div className="flex gap-4 mb-4">
+          <div className="flex flex-col gap-4 grow">
+            <ChartSkeleton height={240} showTitle={false} />
+            <ChartSkeleton height={240} showTitle={false} />
+          </div>
+          <div className="bg-slate-100 rounded-md p-6 w-[62%]">
+            <div className="h-6 bg-gray-200 rounded mb-4 w-32"></div>
+            <ChartSkeleton height={400} showTitle={false} />
+          </div>
+        </div>
+        <div className="bg-slate-100 rounded-md p-6">
+          <div className="h-6 bg-gray-200 rounded mb-4 w-32"></div>
+          <ChartSkeleton height={600} showTitle={false} />
+        </div>
       </div>
 
       <div

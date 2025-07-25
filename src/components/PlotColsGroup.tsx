@@ -2,6 +2,7 @@
 import { cn } from "@/libs/utils";
 import React, { useEffect, useRef, useState } from "react";
 import * as vg from "@uwdata/vgplot";
+import { ChartSkeleton } from "./ChartSkeleton";
 
 // passing fields, depends on number of fields its auto align with layout
 interface PropsType {
@@ -19,6 +20,7 @@ interface PropsType {
 const PlotColsGroup = ({ fields, filePath, parquetName }: PropsType) => {
   const plotRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const height1Chart = 400;
 
@@ -137,8 +139,10 @@ const PlotColsGroup = ({ fields, filePath, parquetName }: PropsType) => {
 
         currentPlotRef.innerHTML = "";
         currentPlotRef.appendChild(container);
+        setLoading(false);
       } catch (error) {
         console.error("Type:", error);
+        setLoading(false);
       }
     };
 
@@ -155,7 +159,43 @@ const PlotColsGroup = ({ fields, filePath, parquetName }: PropsType) => {
   // Don't render anything until mounted
   if (!mounted) return null;
 
-  return <div ref={plotRef} />;
+  const gridClass = cn(
+    "grid gap-4",
+    fields.length === 1 && "grid-cols-1",
+    fields.length === 2 && "grid-cols-2",
+    fields.length === 3 && "grid-cols-2 grid-rows-2",
+    fields.length > 3 && "grid-cols-2"
+  );
+
+  return (
+    <>
+      <div ref={plotRef} />;
+      {loading && (
+        <div className={gridClass}>
+          {fields.map((field, index) => (
+            <div
+              key={index}
+              className={cn(
+                "border p-4 text-center",
+                fields.length === 1 && "col-span-2",
+                fields.length === 3 && index === 1 && "row-span-2"
+              )}
+            >
+              <div className="h-6 bg-gray-200 rounded mb-2 w-3/4 mx-auto"></div>
+              <ChartSkeleton
+                height={
+                  index === 1 && fields.length === 3
+                    ? height1Chart * 2.4
+                    : height1Chart
+                }
+                showTitle={false}
+              />
+            </div>
+          ))}
+        </div>
+      )}
+    </>
+  );
 };
 
 export default PlotColsGroup;
