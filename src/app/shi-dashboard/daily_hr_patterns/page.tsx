@@ -50,7 +50,7 @@ export default function SHIDashboard() {
   return (
     <div className="flex flex-col px-6 max-w-screen-xl mx-auto gap-4">
 
-      <h1 className="text-5xl font-bold text-gray-400">{t("shi-25-title")}</h1>
+      <h1 className="text-5xl font-bold text-gray-400"><a href="/shi-dashboard">{t("shi-25-title")}</a></h1>
       <h2 className="text-3xl font-bold">{t("title-daily-hr")}</h2>
 
       <span className="text-sm">
