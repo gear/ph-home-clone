@@ -5,6 +5,6 @@ ph-homepage
 ## Events
 
 ### SHI Summer School
-
+Updated
 
 
