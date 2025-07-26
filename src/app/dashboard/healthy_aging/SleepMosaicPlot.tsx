@@ -1,10 +1,12 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import * as vg from "@uwdata/vgplot";
+import { useTranslation } from "react-i18next";
 
 /* eslint-disable react/display-name */
 export const SleepMosaicPlot = () => {
   const plotRef = useRef<HTMLDivElement>(null);
+  const {t} = useTranslation("common");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
