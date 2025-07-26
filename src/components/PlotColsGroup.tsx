@@ -169,7 +169,7 @@ const PlotColsGroup = ({ fields, filePath, parquetName }: PropsType) => {
 
   return (
     <>
-      <div ref={plotRef} />;
+      <div ref={plotRef} />
       {loading && (
         <div className={gridClass}>
           {fields.map((field, index) => (
