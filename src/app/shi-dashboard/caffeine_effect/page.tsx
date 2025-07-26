@@ -213,7 +213,7 @@ export default function SHIDashboard() {
           {
             color: "steelblue",
             label: t("sp-stt"),
-            column: "bedtime",
+            column: "bedtime_corrected",
             xlabel: t("sp-l1"),
             ylabel: t("num-records"),
           },
