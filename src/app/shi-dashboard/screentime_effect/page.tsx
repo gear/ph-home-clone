@@ -24,63 +24,63 @@ export default function SHIDashboard() {
       </div>
 
 
-      <h3 className="text-2xl font-bold">Screen Time / Sleep Efficiency (ranges 0 to 1)</h3>
+      <h3 className="text-2xl font-bold">{t("se-t")} / {t("ce-t2")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Screen Time: Hour</li>
-          <li>Sleep Efficiency: Percentage</li>
+          <li>{t("se-l")}</li>
+          <li>{t("ce-l12")}</li>
         </ul>
       </span>
       <PlotColsGroup
         fields={[
           {
             color: "deepskyblue",
-            label: "Screen Time",
+            label: t("se-t"),
             column: "Screen_time_h",
-            xlabel: "Screen Time (in hour)",
-            ylabel: t("num-records"),
-          },
-          {
-            color: "teal",
-            label: "Sleep Efficiency",
-            column: "Sleep_efficiency",
-            xlabel: "Sleep Efficiency (%)",
-            ylabel: t("num-records"),
-          },
-        ]}
-        filePath="/data/activity_sleep.parquet"
-        parquetName="activity"
-      />
-
-
-
-      <h3 className="text-2xl font-bold">Screen Time / Total Sleep Time</h3>
-      <span className="text-sm">
-        <ul className="list-disc ml-5">
-          <li>Screen Time: Hour</li>
-          <li>Total Sleep TIme: Hour</li>
-        </ul>
-      </span>
-      <PlotColsGroup
-        fields={[
-          {
-            color: "deepskyblue",
-            label: "Screen Time",
-            column: "Screen_time_h",
-            xlabel: "Screen Time (in hour)",
+            xlabel: t("ce-l"),
             ylabel: t("num-records"),
           },
           {
             color: "darkblue",
-            label: "Total Sleep Time (in hour)",
+            label: t("ce-t2"),
             column: "Sleep_duration_h",
-            xlabel: "Total Sleep Time",
+            xlabel: t("ce-l12"),
             ylabel: t("num-records"),
           },
         ]}
         filePath="/data/activity_sleep.parquet"
         parquetName="activity"
       />
+
+
+      <h3 className="text-2xl font-bold">{t("se-t")} / {t("ce-t5")}</h3>
+      <span className="text-sm">
+        <ul className="list-disc ml-5">
+          <li>{t("se-l")}</li>
+          <li>{t("ce-l-se")}</li>
+        </ul>
+      </span>
+      <PlotColsGroup
+        fields={[
+          {
+            color: "deepskyblue",
+            label: t("se-t"),
+            column: "Screen_time_h",
+            xlabel: t("ce-l-se"),
+            ylabel: t("num-records"),
+          },
+          {
+            color: "teal",
+            label: t("ce-t5"),
+            column: "Sleep_efficiency",
+            xlabel: t("ce-l-se"),
+            ylabel: t("num-records"),
+          },
+        ]}
+        filePath="/data/activity_sleep.parquet"
+        parquetName="activity"
+      />
+
 
       <NavBarNextPrev index={5} />
     </div>

@@ -1,33 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import NavBarNextPrev from "../components/NavBarNextPrev";
 import { useTranslation } from "react-i18next";
 import PlotColsGroup from "@/components/PlotColsGroup";
 
-const csvPaths = [
-  {
-    path: "/data/subject_001.csv",
-    color: "#60a5fa",
-  },
-  //{
-  //  path: "/data/subject_002.csv",
-  //  color: "#facc15",
-  //},
-  {
-    path: "/data/subject_003.csv",
-    color: "#facc15",
-  },
-];
-
-const datasets = csvPaths.map((item, index) => ({
-  color: item.color,
-  path: item.path,
-  id: item.path,
-  rawTable: `heart_rate_raw_${index}`,
-  endpointTable: `endpoint_${index}`,
-  label: `Heart rate ${index + 1}`,
-}));
 
 export default function SHIDashboard() {
   const {t} = useTranslation("common");
@@ -47,28 +23,27 @@ export default function SHIDashboard() {
           <p>{t("as-q2")}</p>
       </div>
 
-
-      <h3 className="text-2xl font-bold">Steps per Day / Sleep Efficiency</h3>
+      <h3 className="text-2xl font-bold">{t("ae-t1")} / {t("ce-t2")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Steps per Day: Daily step count</li>
-          <li>Sleep Efficiency: Percentage</li>
+          <li>{t("ae-l1")}</li>
+          <li>{t("sp-l3")}</li>
         </ul>
       </span>
       <PlotColsGroup
         fields={[
           {
             color: "lightslategrey",
-            label: "Steps per Day",
+            label: t("ae-t1"),
             column: "Steps_per_day",
-            xlabel: "Steps per Day (Count)",
+            xlabel: t("ae-l1"),
             ylabel: t("num-records"),
           },
           {
-            color: "teal",
-            label: "Sleep Efficiency",
-            column: "Sleep_efficiency",
-            xlabel: "Sleep Efficiency (%)",
+            color: "darkblue",
+            label: t("ce-t2"),
+            column: "Sleep_duration_h",
+            xlabel: t("sp-l3"),
             ylabel: t("num-records"),
           },
         ]}
@@ -76,27 +51,27 @@ export default function SHIDashboard() {
         parquetName="activity"
       />
 
-      <h3 className="text-2xl font-bold">Steps per Day / Total Sleep Time</h3>
+      <h3 className="text-2xl font-bold">{t("ae-t1")} / {t("ce-t5")}</h3>
       <span className="text-sm">
         <ul className="list-disc ml-5">
-          <li>Steps per Day: Daily step count</li>
-          <li>Total Sleep Time: Hours</li>
+          <li>{t("ae-l1")}</li>
+          <li>{t("ce-l-se")}</li>
         </ul>
       </span>
       <PlotColsGroup
         fields={[
           {
             color: "lightslategrey",
-            label: "Steps per Day",
+            label: t("ae-t1"),
             column: "Steps_per_day",
-            xlabel: "Steps per Day (count)",
+            xlabel: t("ae-l1"),
             ylabel: t("num-records"),
           },
           {
-            color: "darkblue",
-            label: "Total Sleep Time (in hour)",
-            column: "Sleep_duration_h",
-            xlabel: "Total Sleep Time",
+            color: "teal",
+            label: t("ce-t5"),
+            column: "Sleep_efficiency",
+            xlabel: t("ce-l-se"),
             ylabel: t("num-records"),
           },
         ]}

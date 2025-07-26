@@ -147,7 +147,10 @@
   "ce-l-se": "Sleep Efficiency: Percentage",
   "ce-l-tw": "Total Wake During Sleep Time: Hour",
   "ce-l-r": "Total REM Sleep Time: Hour",
-
+  "ae-t1": "Steps per Day",
+  "ae-l1": "Steps per Day: Daily step count",
+  "se-t": "Total Screen Time",
+  "se-l": "Total Screen Time: Hour",
 
   "padding": "padding"
 }

@@ -1,37 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import NavBarNextPrev from "../components/NavBarNextPrev";
 import { useTranslation } from "react-i18next";
 import PlotColsGroup from "@/components/PlotColsGroup";
 
 
-const csvPaths = [
-  {
-    path: "/data/subject_001.csv",
-    color: "#60a5fa",
-  },
-  //{
-  //  path: "/data/subject_002.csv",
-  //  color: "#facc15",
-  //},
-  {
-    path: "/data/subject_003.csv",
-    color: "#facc15",
-  },
-];
-
-const datasets = csvPaths.map((item, index) => ({
-  color: item.color,
-  path: item.path,
-  id: item.path,
-  rawTable: `heart_rate_raw_${index}`,
-  endpointTable: `endpoint_${index}`,
-  label: `Heart rate ${index + 1}`,
-}));
-
 export default function SHIDashboard() {
-  const [selectedDataset, setSelectedDataset] = useState([...datasets]);
   const {t} = useTranslation("common");
 
   return (
