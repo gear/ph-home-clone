@@ -37,7 +37,7 @@ export default function SHIDashboard() {
           {
             color: "black",
             label: t("ce-t1"),
-            column: "last_coffee_time",
+            column: "last_coffee_time_corrected",
             xlabel: t("ce-l11"),
             ylabel: t("num-records"),
           },
@@ -66,7 +66,7 @@ export default function SHIDashboard() {
           {
             color: "black",
             label: t("ce-t1"),
-            column: "last_coffee_time",
+            column: "last_coffee_time_corrected",
             xlabel: t("ce-l11"),
             ylabel: t("num-records"),
           },
@@ -95,7 +95,7 @@ export default function SHIDashboard() {
           {
             color: "black",
             label: t("ce-t1"),
-            column: "last_coffee_time",
+            column: "last_coffee_time_corrected",
             xlabel: t("ce-l11"),
             ylabel: t("num-records"),
           },
@@ -124,7 +124,7 @@ export default function SHIDashboard() {
           {
             color: "black",
             label: t("ce-t1"),
-            column: "last_coffee_time",
+            column: "last_coffee_time_corrected",
             xlabel: t("ce-l11"),
             ylabel: t("num-records"),
           },
@@ -153,7 +153,7 @@ export default function SHIDashboard() {
           {
             color: "black",
             label: t("ce-t1"),
-            column: "last_coffee_time",
+            column: "last_coffee_time_corrected",
             xlabel: t("ce-l11"),
             ylabel: t("num-records"),
           },
@@ -182,7 +182,7 @@ export default function SHIDashboard() {
           {
             color: "black",
             label: t("ce-t1"),
-            column: "last_coffee_time",
+            column: "last_coffee_time_corrected",
             xlabel: t("ce-l11"),
             ylabel: t("num-records"),
           },
@@ -220,7 +220,7 @@ export default function SHIDashboard() {
           {
             color: "black",
             label: t("ce-t1"),
-            column: "last_coffee_time",
+            column: "last_coffee_time_corrected",
             xlabel: t("ce-l11"),
             ylabel: t("num-records"),
           },
