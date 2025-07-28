@@ -101,7 +101,7 @@ const AppDropdown: React.FC<AppDropdownProps> = ({ links, label, link, currentTa
           >
             <PopoverPanel
               anchor="bottom"
-              className="divide-y border bg-white divide-white/5 rounded-xl text-sm/6 transition duration-200 ease-in-out [--anchor-gap:--spacing(5)] data-closed:-translate-y-1 data-closed:opacity-0 py-2"
+              className="divide-y border bg-white divide-white/5 rounded-xl text-sm/6 transition duration-200 ease-in-out [--anchor-gap:--spacing(5)] data-closed:-translate-y-1 data-closed:opacity-0 py-2 z-20"
               transition
             >
               {links.map(({ href, label }) => (
