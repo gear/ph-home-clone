@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { Suspense } from "react";
 
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -44,7 +45,9 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <NextTopLoader showSpinner={false} />
-        <GoogleAnalytics />
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
         <StoreProvider>
           <LanguageProvider>
             <Navbar />
